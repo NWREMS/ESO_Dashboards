@@ -1,0 +1,376 @@
+{
+  "title": "NWREMS; Pediatric Patient Contact by Member",
+  "desc": "",
+  "source": null,
+  "type": "dashboard",
+  "style": {
+    "palette": {
+      "name": "Midnight Light",
+      "colors": [
+        "#117899",
+        "#60B8CC",
+        "#5CA793",
+        "#A2B86C",
+        "#EBC844",
+        "#ECAA38",
+        "#EF8B2C",
+        "#F16C20",
+        "#D94E1F",
+        "#C02E1D",
+        "#893B32",
+        "#0D3C55",
+        "#0F5B78"
+      ]
+    }
+  },
+  "layout": {
+    "instanceid": "F89AE-95E5-4F",
+    "type": "columnar",
+    "columns": [
+      {
+        "width": 100,
+        "cells": [
+          {
+            "subcells": [
+              {
+                "elements": [
+                  {
+                    "minHeight": 128,
+                    "maxHeight": 2048,
+                    "minWidth": 128,
+                    "maxWidth": 2048,
+                    "height": "212px",
+                    "defaultWidth": 512,
+                    "widgetid": "6a57e2f626b6b091e33c5006",
+                    "autoHeight": "212px"
+                  }
+                ],
+                "width": 100,
+                "stretchable": false,
+                "pxlWidth": 1369,
+                "index": 0
+              }
+            ]
+          }
+        ],
+        "pxlWidth": 1369,
+        "index": 0
+      }
+    ]
+  },
+  "original": null,
+  "dataExploration": true,
+  "lastOpened": null,
+  "previewLayout": [],
+  "datasource": {
+    "title": "EMS",
+    "id": "live:EMS",
+    "fullname": "live:EMS",
+    "live": true
+  },
+  "filters": [
+    {
+      "jaql": {
+        "table": "Incident Response",
+        "column": "Dispatched",
+        "dim": "[Incident Response.Dispatched (Calendar)]",
+        "datatype": "datetime",
+        "merged": true,
+        "level": "days",
+        "title": "Days in Dispatched",
+        "collapsed": true,
+        "isDashboardFilter": true,
+        "datasource": {
+          "fullname": "live:EMS",
+          "id": "live:EMS",
+          "live": true,
+          "title": "EMS"
+        },
+        "columnTitle": "Days in Dispatched",
+        "tableTitle": "Incident Response",
+        "filter": {
+          "last": {
+            "count": 360,
+            "offset": 0
+          }
+        }
+      },
+      "isCascading": false,
+      "instanceid": "960F6-203C-9C",
+      "disabled": false
+    },
+    {
+      "jaql": {
+        "table": "Incident Response",
+        "column": "Is Locked",
+        "dim": "[Incident Response.Is Locked]",
+        "datatype": "text",
+        "merged": true,
+        "collapsed": true,
+        "title": "Is Locked",
+        "datasource": {
+          "fullname": "live:EMS",
+          "id": "live:EMS",
+          "live": true,
+          "title": "EMS"
+        },
+        "filter": {
+          "explicit": true,
+          "multiSelection": true,
+          "members": [
+            "true"
+          ]
+        },
+        "isDashboardFilter": true
+      },
+      "isCascading": false,
+      "instanceid": "DE4D0-EA6C-C5"
+    },
+    {
+      "jaql": {
+        "table": "Incident Response",
+        "column": "Is Active",
+        "dim": "[Incident Response.Is Active]",
+        "datatype": "text",
+        "merged": true,
+        "collapsed": true,
+        "title": "Is Active",
+        "datasource": {
+          "fullname": "live:EMS",
+          "id": "live:EMS",
+          "live": true,
+          "title": "EMS"
+        },
+        "filter": {
+          "explicit": true,
+          "multiSelection": true,
+          "members": [
+            "true"
+          ]
+        },
+        "isDashboardFilter": true
+      },
+      "isCascading": false,
+      "instanceid": "2CD59-23D0-69"
+    },
+    {
+      "jaql": {
+        "table": "Patient",
+        "column": "Patient Age In Years",
+        "dim": "[Patient.Patient Age In Years]",
+        "datatype": "numeric",
+        "columnTitle": "Patient Age In Years",
+        "tableTitle": "Patient",
+        "isDashboardFilter": true,
+        "title": "Patient Age In Years",
+        "datasource": {
+          "title": "EMS",
+          "id": "live:EMS",
+          "fullname": "live:EMS",
+          "live": true
+        },
+        "filter": {
+          "toNotEqual": "18"
+        },
+        "collapsed": false
+      },
+      "instanceid": "20CF8-5BF5-8C",
+      "isCascading": false
+    }
+  ],
+  "oid": "6a57cec0ddc9f3600d59a4c0",
+  "settings": {
+    "autoUpdateOnFiltersChange": true
+  },
+  "filterRelations": [],
+  "filterToDatasourceMapping": {},
+  "allowChangeSubscription": false,
+  "subscription": {
+    "executionPerDay": 1,
+    "schedule": "0 0 0 * * *",
+    "isDataChange": false,
+    "type": "daily",
+    "reportType": {
+      "inline": true
+    },
+    "emailSettings": {
+      "isEmail": true,
+      "isPdf": false
+    },
+    "context": {
+      "dashboardid": "6a57cec0ddc9f3600d59a4c0"
+    },
+    "startAt": "2026-07-15",
+    "tzName": "America/Los_Angeles",
+    "timezone": 420,
+    "active": false,
+    "subscribe": false
+  },
+  "isPublic": null,
+  "widgets": [
+    {
+      "title": "Pediatric Patient Contacts",
+      "type": "pivot2",
+      "subtype": "pivot2",
+      "oid": "6a57e2f626b6b091e33c5006",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [],
+          "all": false
+        },
+        "panels": [
+          {
+            "name": "rows",
+            "items": [
+              {
+                "jaql": {
+                  "type": "calculated_dimension",
+                  "formula": "Concat([29AD4-159], \", \", [AEDD9-6B9])",
+                  "context": {
+                    "[AEDD9-6B9]": {
+                      "table": "Signatures",
+                      "column": "Lead Provider First Name",
+                      "dim": "[Signatures.Lead Provider First Name]",
+                      "datatype": "text",
+                      "columnTitle": "Lead Provider First Name",
+                      "tableTitle": "Signatures",
+                      "merged": true,
+                      "title": "Lead Provider First Name"
+                    },
+                    "[29AD4-159]": {
+                      "table": "Signatures",
+                      "column": "Lead Provider Last Name",
+                      "dim": "[Signatures.Lead Provider Last Name]",
+                      "datatype": "text",
+                      "columnTitle": "Lead Provider Last Name",
+                      "tableTitle": "Signatures",
+                      "merged": true,
+                      "title": "Lead Provider Last Name"
+                    }
+                  },
+                  "columnTitle": "Formula",
+                  "title": "Lead Provider"
+                },
+                "instanceid": "22AE9-1688-0B",
+                "panel": "rows",
+                "field": {
+                  "id": "Concat([29AD4-159], \", \", [AEDD9-6B9])",
+                  "index": 0
+                }
+              }
+            ]
+          },
+          {
+            "name": "values",
+            "items": [
+              {
+                "jaql": {
+                  "table": "Incident Response",
+                  "column": "Incident Number",
+                  "dim": "[Incident Response.Incident Number]",
+                  "datatype": "text",
+                  "columnTitle": "Incident Number",
+                  "tableTitle": "Incident Response",
+                  "merged": true,
+                  "agg": "count",
+                  "title": "Pediatric Patients",
+                  "sort": "desc",
+                  "sortDetails": {
+                    "field": 1,
+                    "dir": "desc",
+                    "sortingLastDimension": "count",
+                    "initialized": true,
+                    "isLastApplied": true
+                  }
+                },
+                "instanceid": "38B42-A99C-35",
+                "panel": "measures",
+                "field": {
+                  "id": "[Incident Response.Incident Number]_count",
+                  "index": 1
+                }
+              }
+            ]
+          },
+          {
+            "name": "columns",
+            "items": []
+          },
+          {
+            "name": "filters",
+            "items": []
+          }
+        ],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "scroll": false,
+        "pageSize": 25,
+        "automaticHeight": true,
+        "colors": {
+          "rows": true,
+          "columns": false,
+          "headers": false,
+          "members": false,
+          "totals": false
+        },
+        "narration": {
+          "display": "above",
+          "verbosity": "low",
+          "labels": []
+        }
+      },
+      "instanceid": "B4681-DAB0-35",
+      "drillToDashboardConfig": {
+        "drilledDashboardPrefix": "_drill",
+        "drilledDashboardsFolderPrefix": "",
+        "displayFilterPane": true,
+        "displayDashboardsPane": true,
+        "displayToolbarRow": true,
+        "displayHeaderRow": true,
+        "volatile": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drillToDashboardNavigateType": 2,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "excludeFilterDims": [],
+        "includeFilterDims": [],
+        "drilledDashboardDisplayType": 2,
+        "dashboardIds": [],
+        "modalWindowResize": false,
+        "showFolderNameOnMenuSelection": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "showJTDIcon": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "forceZeroInsteadNull": false,
+        "mergeTargetDashboardFilters": false,
+        "drillToDashboardByName": false
+      },
+      "realTimeRefreshing": false,
+      "options": {
+        "dashboardFiltersMode": "filter",
+        "selector": false,
+        "triggersDomready": true,
+        "drillToAnywhere": true,
+        "autoUpdateOnEveryChange": true
+      },
+      "dashboardid": "6a57cec0ddc9f3600d59a4c0"
+    }
+  ],
+  "hierarchies": []
+}
