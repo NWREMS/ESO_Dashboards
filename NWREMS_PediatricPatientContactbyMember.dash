@@ -1,5 +1,5 @@
 {
-  "title": "NWREMS; Pediatric Patient Contact by Member",
+  "title": "NWREMS: Pediatric Patient Contact by Member",
   "desc": "",
   "source": null,
   "type": "dashboard",
@@ -39,21 +39,21 @@
                     "maxHeight": 2048,
                     "minWidth": 128,
                     "maxWidth": 2048,
-                    "height": "212px",
+                    "height": "238px",
                     "defaultWidth": 512,
                     "widgetid": "6a57e2f626b6b091e33c5006",
-                    "autoHeight": "212px"
+                    "autoHeight": "238px"
                   }
                 ],
                 "width": 100,
                 "stretchable": false,
-                "pxlWidth": 1369,
+                "pxlWidth": 0,
                 "index": 0
               }
             ]
           }
         ],
-        "pxlWidth": 1369,
+        "pxlWidth": 0,
         "index": 0
       }
     ]
