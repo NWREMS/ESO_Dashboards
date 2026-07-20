@@ -1,0 +1,575 @@
+{
+  "title": "NWREMS: Calls per Member (Lead & Non-Lead)",
+  "desc": "",
+  "source": null,
+  "type": "dashboard",
+  "style": {
+    "palette": {
+      "name": "Midnight Light",
+      "colors": [
+        "#117899",
+        "#60B8CC",
+        "#5CA793",
+        "#A2B86C",
+        "#EBC844",
+        "#ECAA38",
+        "#EF8B2C",
+        "#F16C20",
+        "#D94E1F",
+        "#C02E1D",
+        "#893B32",
+        "#0D3C55",
+        "#0F5B78"
+      ]
+    }
+  },
+  "layout": {
+    "instanceid": "312D1-510A-52",
+    "type": "columnar",
+    "columns": [
+      {
+        "width": 100,
+        "cells": [
+          {
+            "subcells": [
+              {
+                "elements": [
+                  {
+                    "minHeight": 128,
+                    "maxHeight": 2048,
+                    "minWidth": 128,
+                    "maxWidth": 2048,
+                    "height": "446px",
+                    "defaultWidth": 512,
+                    "widgetid": "6a5e9d2dddc9f3600d5a5698",
+                    "autoHeight": "290px"
+                  }
+                ],
+                "width": 50,
+                "stretchable": false,
+                "pxlWidth": 804.5,
+                "index": 0
+              },
+              {
+                "elements": [
+                  {
+                    "minHeight": 128,
+                    "maxHeight": 2048,
+                    "minWidth": 128,
+                    "maxWidth": 2048,
+                    "defaultWidth": 512,
+                    "widgetid": "6a5e9d39ddc9f3600d5a569c",
+                    "height": "446px",
+                    "autoHeight": "446px"
+                  }
+                ],
+                "width": 50,
+                "stretchable": false,
+                "pxlWidth": 804.5,
+                "index": 1
+              }
+            ]
+          }
+        ],
+        "pxlWidth": 1369,
+        "index": 0
+      }
+    ]
+  },
+  "original": null,
+  "dataExploration": true,
+  "lastOpened": null,
+  "previewLayout": [],
+  "datasource": {
+    "title": "EMS",
+    "id": "live:EMS",
+    "fullname": "live:EMS",
+    "live": true
+  },
+  "filters": [
+    {
+      "jaql": {
+        "table": "Incident Response",
+        "column": "Dispatched",
+        "dim": "[Incident Response.Dispatched (Calendar)]",
+        "datatype": "datetime",
+        "merged": true,
+        "level": "days",
+        "title": "Days in Dispatched",
+        "collapsed": true,
+        "isDashboardFilter": true,
+        "datasource": {
+          "fullname": "live:EMS",
+          "id": "live:EMS",
+          "live": true,
+          "title": "EMS"
+        },
+        "columnTitle": "Days in Dispatched",
+        "tableTitle": "Incident Response",
+        "filter": {
+          "last": {
+            "count": 360,
+            "offset": 0
+          }
+        }
+      },
+      "isCascading": false,
+      "instanceid": "33545-6F10-EF",
+      "disabled": false
+    },
+    {
+      "jaql": {
+        "table": "Incident Response",
+        "column": "Is Locked",
+        "dim": "[Incident Response.Is Locked]",
+        "datatype": "text",
+        "merged": true,
+        "collapsed": true,
+        "title": "Is Locked",
+        "datasource": {
+          "fullname": "live:EMS",
+          "id": "live:EMS",
+          "live": true,
+          "title": "EMS"
+        },
+        "filter": {
+          "explicit": true,
+          "multiSelection": true,
+          "members": [
+            "true"
+          ]
+        },
+        "isDashboardFilter": true
+      },
+      "isCascading": false,
+      "instanceid": "A13C6-1665-CF"
+    },
+    {
+      "jaql": {
+        "table": "Incident Response",
+        "column": "Is Active",
+        "dim": "[Incident Response.Is Active]",
+        "datatype": "text",
+        "merged": true,
+        "collapsed": true,
+        "title": "Is Active",
+        "datasource": {
+          "fullname": "live:EMS",
+          "id": "live:EMS",
+          "live": true,
+          "title": "EMS"
+        },
+        "filter": {
+          "explicit": true,
+          "multiSelection": true,
+          "members": [
+            "true"
+          ]
+        },
+        "isDashboardFilter": true
+      },
+      "isCascading": false,
+      "instanceid": "8B3BF-975B-31"
+    }
+  ],
+  "oid": "6a5e97c726b6b091e33cf8a8",
+  "settings": {
+    "autoUpdateOnFiltersChange": true
+  },
+  "filterRelations": [],
+  "filterToDatasourceMapping": {},
+  "allowChangeSubscription": false,
+  "subscription": {
+    "executionPerDay": 1,
+    "schedule": "0 0 0 * * *",
+    "isDataChange": false,
+    "type": "daily",
+    "reportType": {
+      "inline": true
+    },
+    "emailSettings": {
+      "isEmail": true,
+      "isPdf": false
+    },
+    "context": {
+      "dashboardid": "6a5e97c726b6b091e33cf8a8"
+    },
+    "startAt": "2026-07-20",
+    "tzName": "America/Los_Angeles",
+    "timezone": 420,
+    "active": false,
+    "subscribe": false
+  },
+  "isPublic": null,
+  "widgets": [
+    {
+      "title": "Calls by Person (Lead)",
+      "type": "pivot2",
+      "subtype": "pivot2",
+      "oid": "6a5e9d2dddc9f3600d5a5698",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [],
+          "all": false
+        },
+        "panels": [
+          {
+            "name": "rows",
+            "items": [
+              {
+                "jaql": {
+                  "table": "Incident Crew",
+                  "column": "Crew Full Name",
+                  "dim": "[Incident Crew.Crew Full Name]",
+                  "datatype": "text",
+                  "columnTitle": "Crew Full Name",
+                  "tableTitle": "Incident Crew",
+                  "merged": true,
+                  "title": "Crew Member"
+                },
+                "instanceid": "8249C-A61B-AC",
+                "format": {},
+                "panel": "rows",
+                "field": {
+                  "id": "[Incident Crew.Crew Full Name]",
+                  "index": 0
+                }
+              }
+            ]
+          },
+          {
+            "name": "values",
+            "items": [
+              {
+                "jaql": {
+                  "table": "Incident Response",
+                  "column": "Incident Number",
+                  "dim": "[Incident Response.Incident Number]",
+                  "datatype": "text",
+                  "columnTitle": "Incident Number",
+                  "tableTitle": "Incident Response",
+                  "merged": true,
+                  "title": "Incidents",
+                  "agg": "count"
+                },
+                "instanceid": "4D95D-A25F-C7",
+                "panel": "measures",
+                "field": {
+                  "id": "[Incident Response.Incident Number]",
+                  "index": 1
+                }
+              }
+            ]
+          },
+          {
+            "name": "columns",
+            "items": []
+          },
+          {
+            "name": "filters",
+            "items": [
+              {
+                "jaql": {
+                  "table": "Incident Crew",
+                  "column": "Crew Standard Role",
+                  "dim": "[Incident Crew.Crew Standard Role]",
+                  "datatype": "text",
+                  "columnTitle": "Crew Standard Role",
+                  "tableTitle": "Incident Crew",
+                  "merged": true,
+                  "title": "Crew Standard Role",
+                  "collapsed": true,
+                  "datasource": {
+                    "fullname": "live:EMS",
+                    "id": "live:EMS",
+                    "live": true,
+                    "title": "EMS"
+                  },
+                  "filter": {
+                    "explicit": true,
+                    "multiSelection": true,
+                    "members": [
+                      "Lead"
+                    ]
+                  }
+                },
+                "instanceid": "2B343-22E7-A7",
+                "panel": "scope"
+              }
+            ]
+          }
+        ],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "scroll": false,
+        "pageSize": 25,
+        "automaticHeight": true,
+        "colors": {
+          "rows": true,
+          "columns": false,
+          "headers": false,
+          "members": false,
+          "totals": false
+        },
+        "narration": {
+          "display": "above",
+          "verbosity": "low",
+          "labels": [
+            {
+              "id": "crew_member",
+              "title": "Crew Member",
+              "singular": "Crew Member",
+              "plural": "Crew Member"
+            },
+            {
+              "id": "crew_standard_role",
+              "title": "Crew Standard Role",
+              "singular": "Crew Standard Role",
+              "plural": "Crew Standard Role"
+            }
+          ]
+        }
+      },
+      "instanceid": "2694E-D797-3D",
+      "drillToDashboardConfig": {
+        "drilledDashboardPrefix": "_drill",
+        "drilledDashboardsFolderPrefix": "",
+        "displayFilterPane": true,
+        "displayDashboardsPane": true,
+        "displayToolbarRow": true,
+        "displayHeaderRow": true,
+        "volatile": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drillToDashboardNavigateType": 2,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "excludeFilterDims": [],
+        "includeFilterDims": [],
+        "drilledDashboardDisplayType": 2,
+        "dashboardIds": [],
+        "modalWindowResize": false,
+        "showFolderNameOnMenuSelection": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "showJTDIcon": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "forceZeroInsteadNull": false,
+        "mergeTargetDashboardFilters": false,
+        "drillToDashboardByName": false
+      },
+      "viewState": {
+        "activeTab": "filters"
+      },
+      "realTimeRefreshing": false,
+      "options": {
+        "dashboardFiltersMode": "select",
+        "selector": false,
+        "triggersDomready": true,
+        "drillToAnywhere": true,
+        "autoUpdateOnEveryChange": true
+      },
+      "dashboardid": "6a5e97c726b6b091e33cf8a8"
+    },
+    {
+      "title": "Calls by Person (Non-Lead)",
+      "type": "pivot2",
+      "subtype": "pivot2",
+      "oid": "6a5e9d39ddc9f3600d5a569c",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [],
+          "all": false
+        },
+        "panels": [
+          {
+            "name": "rows",
+            "items": [
+              {
+                "jaql": {
+                  "table": "Incident Crew",
+                  "column": "Crew Full Name",
+                  "dim": "[Incident Crew.Crew Full Name]",
+                  "datatype": "text",
+                  "columnTitle": "Crew Full Name",
+                  "tableTitle": "Incident Crew",
+                  "merged": true,
+                  "title": "Crew Member"
+                },
+                "instanceid": "8249C-A61B-AC",
+                "format": {},
+                "panel": "rows",
+                "field": {
+                  "id": "[Incident Crew.Crew Full Name]",
+                  "index": 0
+                }
+              }
+            ]
+          },
+          {
+            "name": "values",
+            "items": [
+              {
+                "jaql": {
+                  "table": "Incident Response",
+                  "column": "Incident Number",
+                  "dim": "[Incident Response.Incident Number]",
+                  "datatype": "text",
+                  "columnTitle": "Incident Number",
+                  "tableTitle": "Incident Response",
+                  "merged": true,
+                  "title": "Incidents",
+                  "agg": "count"
+                },
+                "instanceid": "4D95D-A25F-C7",
+                "panel": "measures",
+                "field": {
+                  "id": "[Incident Response.Incident Number]",
+                  "index": 1
+                }
+              }
+            ]
+          },
+          {
+            "name": "columns",
+            "items": []
+          },
+          {
+            "name": "filters",
+            "items": [
+              {
+                "jaql": {
+                  "table": "Incident Crew",
+                  "column": "Crew Standard Role",
+                  "dim": "[Incident Crew.Crew Standard Role]",
+                  "datatype": "text",
+                  "columnTitle": "Crew Standard Role",
+                  "tableTitle": "Incident Crew",
+                  "merged": true,
+                  "title": "Crew Standard Role",
+                  "collapsed": true,
+                  "datasource": {
+                    "fullname": "live:EMS",
+                    "id": "live:EMS",
+                    "live": true,
+                    "title": "EMS"
+                  },
+                  "filter": {
+                    "explicit": false,
+                    "multiSelection": true,
+                    "exclude": {
+                      "members": [
+                        "Lead"
+                      ]
+                    }
+                  }
+                },
+                "instanceid": "2B343-22E7-A7",
+                "panel": "scope"
+              }
+            ]
+          }
+        ],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "scroll": false,
+        "pageSize": 25,
+        "automaticHeight": true,
+        "colors": {
+          "rows": true,
+          "columns": false,
+          "headers": false,
+          "members": false,
+          "totals": false
+        },
+        "narration": {
+          "display": "above",
+          "verbosity": "low",
+          "labels": [
+            {
+              "id": "crew_member",
+              "title": "Crew Member",
+              "singular": "Crew Member",
+              "plural": "Crew Member"
+            },
+            {
+              "id": "crew_standard_role",
+              "title": "Crew Standard Role",
+              "singular": "Crew Standard Role",
+              "plural": "Crew Standard Role"
+            }
+          ]
+        }
+      },
+      "instanceid": "2694E-D797-3D",
+      "drillToDashboardConfig": {
+        "drilledDashboardPrefix": "_drill",
+        "drilledDashboardsFolderPrefix": "",
+        "displayFilterPane": true,
+        "displayDashboardsPane": true,
+        "displayToolbarRow": true,
+        "displayHeaderRow": true,
+        "volatile": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drillToDashboardNavigateType": 2,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "excludeFilterDims": [],
+        "includeFilterDims": [],
+        "drilledDashboardDisplayType": 2,
+        "dashboardIds": [],
+        "modalWindowResize": false,
+        "showFolderNameOnMenuSelection": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "showJTDIcon": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "forceZeroInsteadNull": false,
+        "mergeTargetDashboardFilters": false,
+        "drillToDashboardByName": false
+      },
+      "viewState": {
+        "activeTab": "filters"
+      },
+      "realTimeRefreshing": false,
+      "options": {
+        "dashboardFiltersMode": "select",
+        "selector": false,
+        "triggersDomready": true,
+        "drillToAnywhere": true,
+        "autoUpdateOnEveryChange": true
+      },
+      "dashboardid": "6a5e97c726b6b091e33cf8a8"
+    }
+  ],
+  "hierarchies": []
+}
