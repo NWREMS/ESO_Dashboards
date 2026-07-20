@@ -1,0 +1,621 @@
+{
+  "title": "NWREMS: Naloxone Administered by Incident",
+  "desc": "",
+  "source": null,
+  "type": "dashboard",
+  "style": {
+    "palette": {
+      "name": "Midnight Light",
+      "colors": [
+        "#117899",
+        "#60B8CC",
+        "#5CA793",
+        "#A2B86C",
+        "#EBC844",
+        "#ECAA38",
+        "#EF8B2C",
+        "#F16C20",
+        "#D94E1F",
+        "#C02E1D",
+        "#893B32",
+        "#0D3C55",
+        "#0F5B78"
+      ]
+    }
+  },
+  "layout": {
+    "instanceid": "98170-F5DF-82",
+    "type": "columnar",
+    "columns": [
+      {
+        "width": 100,
+        "cells": [
+          {
+            "subcells": [
+              {
+                "elements": [
+                  {
+                    "minHeight": 256,
+                    "maxHeight": 2048,
+                    "minWidth": 256,
+                    "maxWidth": 2048,
+                    "height": "244px",
+                    "defaultWidth": 512,
+                    "widgetid": "6a5e67d5ddc9f3600d5a4864",
+                    "autoHeight": "726px"
+                  }
+                ],
+                "width": 50,
+                "stretchable": false,
+                "pxlWidth": 0,
+                "index": 0
+              },
+              {
+                "elements": [
+                  {
+                    "minHeight": 128,
+                    "maxHeight": 2048,
+                    "minWidth": 128,
+                    "maxWidth": 2048,
+                    "height": "244px",
+                    "defaultWidth": 512,
+                    "widgetid": "6a5e6b08ddc9f3600d5a493f",
+                    "autoHeight": "160px"
+                  }
+                ],
+                "width": 50,
+                "stretchable": false,
+                "pxlWidth": 0,
+                "index": 1
+              }
+            ]
+          }
+        ],
+        "pxlWidth": 0,
+        "index": 0
+      }
+    ]
+  },
+  "original": null,
+  "dataExploration": true,
+  "lastOpened": null,
+  "previewLayout": [],
+  "datasource": {
+    "title": "EMS",
+    "id": "live:EMS",
+    "fullname": "live:EMS",
+    "live": true
+  },
+  "filters": [
+    {
+      "jaql": {
+        "table": "Incident Response",
+        "column": "Dispatched",
+        "dim": "[Incident Response.Dispatched (Calendar)]",
+        "datatype": "datetime",
+        "merged": true,
+        "level": "days",
+        "title": "Days in Dispatched",
+        "collapsed": true,
+        "isDashboardFilter": true,
+        "columnTitle": "Days in Dispatched",
+        "tableTitle": "Incident Response",
+        "datasource": {
+          "fullname": "live:EMS",
+          "id": "live:EMS",
+          "live": true,
+          "title": "EMS"
+        },
+        "filter": {
+          "last": {
+            "count": 360,
+            "offset": 0
+          }
+        }
+      },
+      "isCascading": false,
+      "instanceid": "FEDD7-C6CB-69",
+      "disabled": false
+    },
+    {
+      "jaql": {
+        "table": "Incident Response",
+        "column": "Is Locked",
+        "dim": "[Incident Response.Is Locked]",
+        "datatype": "text",
+        "merged": true,
+        "collapsed": true,
+        "title": "Is Locked",
+        "datasource": {
+          "fullname": "live:EMS",
+          "id": "live:EMS",
+          "live": true,
+          "title": "EMS"
+        },
+        "filter": {
+          "explicit": true,
+          "multiSelection": true,
+          "members": [
+            "true"
+          ]
+        },
+        "isDashboardFilter": true
+      },
+      "isCascading": false,
+      "instanceid": "D96EE-8FA4-19"
+    },
+    {
+      "jaql": {
+        "table": "Incident Response",
+        "column": "Is Active",
+        "dim": "[Incident Response.Is Active]",
+        "datatype": "text",
+        "merged": true,
+        "collapsed": true,
+        "title": "Is Active",
+        "datasource": {
+          "fullname": "live:EMS",
+          "id": "live:EMS",
+          "live": true,
+          "title": "EMS"
+        },
+        "filter": {
+          "explicit": true,
+          "multiSelection": true,
+          "members": [
+            "true"
+          ]
+        },
+        "isDashboardFilter": true
+      },
+      "isCascading": false,
+      "instanceid": "0800B-D623-27"
+    }
+  ],
+  "oid": "6a5e670c26b6b091e33cebb5",
+  "settings": {
+    "autoUpdateOnFiltersChange": true
+  },
+  "filterRelations": [],
+  "filterToDatasourceMapping": {},
+  "allowChangeSubscription": false,
+  "subscription": {
+    "executionPerDay": 1,
+    "schedule": "0 0 0 * * *",
+    "isDataChange": false,
+    "type": "daily",
+    "reportType": {
+      "inline": true
+    },
+    "emailSettings": {
+      "isEmail": true,
+      "isPdf": false
+    },
+    "context": {
+      "dashboardid": "6a5e670c26b6b091e33cebb5"
+    },
+    "startAt": "2026-07-20",
+    "tzName": "America/Los_Angeles",
+    "timezone": 420,
+    "active": false,
+    "subscribe": false
+  },
+  "isPublic": null,
+  "widgets": [
+    {
+      "title": "Count",
+      "type": "indicator",
+      "subtype": "indicator/numeric",
+      "oid": "6a5e67d5ddc9f3600d5a4864",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [],
+          "all": false
+        },
+        "panels": [
+          {
+            "name": "value",
+            "items": [
+              {
+                "jaql": {
+                  "table": "Incident Response",
+                  "column": "Incident Number",
+                  "dim": "[Incident Response.Incident Number]",
+                  "datatype": "text",
+                  "columnTitle": "Incident Number",
+                  "tableTitle": "Incident Response",
+                  "merged": true,
+                  "agg": "count",
+                  "title": "Naloxone Administered"
+                },
+                "instanceid": "64CD2-D6E6-C3",
+                "format": {
+                  "mask": {
+                    "type": "number",
+                    "abbreviations": {
+                      "t": true,
+                      "b": true,
+                      "m": true,
+                      "k": false
+                    },
+                    "separated": true,
+                    "decimals": "auto",
+                    "abbreviateAll": false,
+                    "isdefault": true
+                  },
+                  "color": {
+                    "colorIndex": 0,
+                    "type": "color"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "secondary",
+            "items": []
+          },
+          {
+            "name": "min",
+            "items": []
+          },
+          {
+            "name": "max",
+            "items": []
+          },
+          {
+            "name": "filters",
+            "items": [
+              {
+                "jaql": {
+                  "table": "Flow Chart Treatment",
+                  "column": "Treatment Name",
+                  "dim": "[Flow Chart Treatment.Treatment Name]",
+                  "datatype": "text",
+                  "columnTitle": "Treatment Name",
+                  "tableTitle": "Flow Chart Treatment",
+                  "merged": true,
+                  "isPrimary": false,
+                  "isDashboardFilter": false,
+                  "title": "Treatment Name",
+                  "collapsed": true,
+                  "datasource": {
+                    "title": "EMS",
+                    "id": "live:EMS",
+                    "fullname": "live:EMS",
+                    "live": true
+                  },
+                  "filter": {
+                    "explicit": true,
+                    "multiSelection": true,
+                    "members": [
+                      "Naloxone"
+                    ]
+                  }
+                },
+                "instanceid": "9C9DB-2538-0A"
+              }
+            ]
+          }
+        ],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "subtype": "simple",
+        "skin": "vertical",
+        "components": {
+          "title": {
+            "inactive": false,
+            "enabled": true
+          },
+          "icon": {
+            "inactive": true,
+            "enabled": true
+          },
+          "secondaryTitle": {
+            "inactive": true,
+            "enabled": true
+          }
+        },
+        "narration": {
+          "display": "above",
+          "verbosity": "low",
+          "labels": [
+            {
+              "id": "treatment_name",
+              "title": "Treatment Name",
+              "singular": "Treatment Name",
+              "plural": "Treatment Name"
+            }
+          ]
+        },
+        "indicator/numeric": {
+          "subtype": "simple",
+          "skin": "vertical",
+          "components": {
+            "title": {
+              "inactive": false,
+              "enabled": true
+            },
+            "icon": {
+              "inactive": false,
+              "enabled": true
+            },
+            "secondaryTitle": {
+              "inactive": true,
+              "enabled": true
+            }
+          }
+        },
+        "indicator/gauge": {
+          "subtype": "round",
+          "skin": "1",
+          "components": {
+            "ticks": {
+              "inactive": false,
+              "enabled": true
+            },
+            "labels": {
+              "inactive": false,
+              "enabled": true
+            },
+            "title": {
+              "inactive": false,
+              "enabled": true
+            },
+            "secondaryTitle": {
+              "inactive": true,
+              "enabled": true
+            }
+          }
+        }
+      },
+      "instanceid": "F8802-04E6-38",
+      "currentPage": 0,
+      "viewState": {
+        "activeTab": "filters"
+      },
+      "realTimeRefreshing": false,
+      "options": {
+        "dashboardFiltersMode": "filter",
+        "selector": false,
+        "disallowSelector": true,
+        "triggersDomready": true,
+        "autoUpdateOnEveryChange": true,
+        "supportsHierarchies": false
+      },
+      "dashboardid": "6a5e670c26b6b091e33cebb5",
+      "drillToDashboardConfig": {
+        "drilledDashboardPrefix": "_drill",
+        "drilledDashboardsFolderPrefix": "",
+        "displayFilterPane": true,
+        "displayDashboardsPane": true,
+        "displayToolbarRow": true,
+        "displayHeaderRow": true,
+        "volatile": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drillToDashboardNavigateType": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "excludeFilterDims": [],
+        "includeFilterDims": [],
+        "drilledDashboardDisplayType": 2,
+        "dashboardIds": [],
+        "modalWindowResize": false,
+        "showFolderNameOnMenuSelection": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "showJTDIcon": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "forceZeroInsteadNull": false,
+        "mergeTargetDashboardFilters": false,
+        "drillToDashboardByName": false
+      }
+    },
+    {
+      "title": "Incidents",
+      "type": "pivot2",
+      "subtype": "pivot2",
+      "oid": "6a5e6b08ddc9f3600d5a493f",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [],
+          "all": false
+        },
+        "panels": [
+          {
+            "name": "rows",
+            "items": [
+              {
+                "jaql": {
+                  "table": "Incident Response",
+                  "column": "Incident Number",
+                  "dim": "[Incident Response.Incident Number]",
+                  "datatype": "text",
+                  "columnTitle": "Incident Number",
+                  "tableTitle": "Incident Response",
+                  "merged": true,
+                  "title": "Incident Number"
+                },
+                "instanceid": "1AE5D-1D2B-E8",
+                "panel": "rows",
+                "field": {
+                  "id": "[Incident Response.Incident Number]_count",
+                  "index": 0
+                }
+              }
+            ]
+          },
+          {
+            "name": "values",
+            "items": []
+          },
+          {
+            "name": "columns",
+            "items": []
+          },
+          {
+            "name": "filters",
+            "items": [
+              {
+                "jaql": {
+                  "table": "Flow Chart Treatment",
+                  "column": "Treatment Name",
+                  "dim": "[Flow Chart Treatment.Treatment Name]",
+                  "datatype": "text",
+                  "columnTitle": "Treatment Name",
+                  "tableTitle": "Flow Chart Treatment",
+                  "merged": true,
+                  "title": "Treatment Name",
+                  "datasource": {
+                    "fullname": "live:EMS",
+                    "id": "live:EMS",
+                    "live": true,
+                    "title": "EMS"
+                  },
+                  "collapsed": true,
+                  "filter": {
+                    "explicit": true,
+                    "multiSelection": true,
+                    "members": [
+                      "Naloxone"
+                    ]
+                  }
+                },
+                "instanceid": "699EC-9551-30",
+                "panel": "scope"
+              },
+              {
+                "jaql": {
+                  "table": "Incident Response",
+                  "column": "Incident Number",
+                  "dim": "[Incident Response.Incident Number]",
+                  "datatype": "text",
+                  "columnTitle": "Incident Number",
+                  "tableTitle": "Incident Response",
+                  "merged": true,
+                  "title": "Incident Number",
+                  "datasource": {
+                    "fullname": "live:EMS",
+                    "id": "live:EMS",
+                    "live": true,
+                    "title": "EMS"
+                  },
+                  "collapsed": true,
+                  "filter": {
+                    "explicit": false,
+                    "multiSelection": true,
+                    "all": true,
+                    "rankingMessage": "",
+                    "custom": true
+                  }
+                },
+                "instanceid": "83327-17F7-2A",
+                "panel": "scope"
+              }
+            ]
+          }
+        ],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "scroll": false,
+        "pageSize": 25,
+        "automaticHeight": true,
+        "colors": {
+          "rows": true,
+          "columns": false,
+          "headers": false,
+          "members": false,
+          "totals": false
+        },
+        "narration": {
+          "display": "above",
+          "verbosity": "low",
+          "labels": [
+            {
+              "id": "incident_number",
+              "title": "Incident Number",
+              "singular": "Incident Number",
+              "plural": "Incident Number"
+            },
+            {
+              "id": "treatment_name",
+              "title": "Treatment Name",
+              "singular": "Treatment Name",
+              "plural": "Treatment Name"
+            }
+          ]
+        }
+      },
+      "instanceid": "A222D-3AB8-65",
+      "drillToDashboardConfig": {
+        "drilledDashboardPrefix": "_drill",
+        "drilledDashboardsFolderPrefix": "",
+        "displayFilterPane": true,
+        "displayDashboardsPane": true,
+        "displayToolbarRow": true,
+        "displayHeaderRow": true,
+        "volatile": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drillToDashboardNavigateType": 2,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "excludeFilterDims": [],
+        "includeFilterDims": [],
+        "drilledDashboardDisplayType": 2,
+        "dashboardIds": [],
+        "modalWindowResize": false,
+        "showFolderNameOnMenuSelection": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "showJTDIcon": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "forceZeroInsteadNull": false,
+        "mergeTargetDashboardFilters": false,
+        "drillToDashboardByName": false
+      },
+      "realTimeRefreshing": false,
+      "viewState": {
+        "activeTab": "filters"
+      },
+      "options": {
+        "dashboardFiltersMode": "filter",
+        "selector": false,
+        "triggersDomready": true,
+        "drillToAnywhere": true,
+        "autoUpdateOnEveryChange": true
+      },
+      "dashboardid": "6a5e670c26b6b091e33cebb5"
+    }
+  ],
+  "hierarchies": []
+}
