@@ -1,0 +1,594 @@
+{
+  "title": "NWREMS: Chest Pain/STEMI Scene Time",
+  "desc": "",
+  "source": null,
+  "type": "dashboard",
+  "style": {
+    "palette": {
+      "name": "Midnight Light",
+      "colors": [
+        "#117899",
+        "#60B8CC",
+        "#5CA793",
+        "#A2B86C",
+        "#EBC844",
+        "#ECAA38",
+        "#EF8B2C",
+        "#F16C20",
+        "#D94E1F",
+        "#C02E1D",
+        "#893B32",
+        "#0D3C55",
+        "#0F5B78"
+      ]
+    }
+  },
+  "layout": {
+    "instanceid": "F8B5F-FFEE-55",
+    "type": "columnar",
+    "columns": [
+      {
+        "width": 100,
+        "cells": [
+          {
+            "subcells": [
+              {
+                "elements": [
+                  {
+                    "minHeight": 64,
+                    "maxHeight": 1028,
+                    "height": "336px",
+                    "minWidth": 48,
+                    "maxWidth": 1028,
+                    "defaultWidth": 512,
+                    "widgetid": "6a5eaa4f8368e7d493a11e75"
+                  }
+                ],
+                "width": 50,
+                "stretchable": false,
+                "pxlWidth": 803.5,
+                "index": 0
+              },
+              {
+                "elements": [
+                  {
+                    "minHeight": 128,
+                    "maxHeight": 2048,
+                    "minWidth": 128,
+                    "maxWidth": 2048,
+                    "height": "336px",
+                    "defaultWidth": 512,
+                    "widgetid": "6a5eb11e26b6b091e33cfb1f",
+                    "autoHeight": "160px"
+                  }
+                ],
+                "width": 50,
+                "stretchable": false,
+                "pxlWidth": 803.5,
+                "index": 1
+              }
+            ]
+          }
+        ],
+        "pxlWidth": 0,
+        "index": 0
+      }
+    ]
+  },
+  "original": null,
+  "dataExploration": true,
+  "lastOpened": null,
+  "previewLayout": [],
+  "datasource": {
+    "title": "EMS",
+    "id": "live:EMS",
+    "fullname": "live:EMS",
+    "live": true
+  },
+  "filters": [
+    {
+      "jaql": {
+        "table": "Incident Response",
+        "column": "Dispatched",
+        "dim": "[Incident Response.Dispatched (Calendar)]",
+        "datatype": "datetime",
+        "merged": true,
+        "level": "days",
+        "title": "Days in Dispatched",
+        "collapsed": true,
+        "isDashboardFilter": true,
+        "columnTitle": "Days in Dispatched",
+        "tableTitle": "Incident Response",
+        "datasource": {
+          "fullname": "live:EMS",
+          "id": "live:EMS",
+          "live": true,
+          "title": "EMS"
+        },
+        "filter": {
+          "last": {
+            "count": 360,
+            "offset": 0
+          }
+        }
+      },
+      "isCascading": false,
+      "instanceid": "03B8E-216E-F3",
+      "disabled": false
+    },
+    {
+      "jaql": {
+        "table": "Incident Response",
+        "column": "Is Locked",
+        "dim": "[Incident Response.Is Locked]",
+        "datatype": "text",
+        "merged": true,
+        "collapsed": true,
+        "title": "Is Locked",
+        "datasource": {
+          "fullname": "live:EMS",
+          "id": "live:EMS",
+          "live": true,
+          "title": "EMS"
+        },
+        "filter": {
+          "explicit": true,
+          "multiSelection": true,
+          "members": [
+            "true"
+          ]
+        },
+        "isDashboardFilter": true
+      },
+      "isCascading": false,
+      "instanceid": "C7857-E6ED-CF"
+    },
+    {
+      "jaql": {
+        "table": "Incident Response",
+        "column": "Is Active",
+        "dim": "[Incident Response.Is Active]",
+        "datatype": "text",
+        "merged": true,
+        "collapsed": true,
+        "title": "Is Active",
+        "datasource": {
+          "fullname": "live:EMS",
+          "id": "live:EMS",
+          "live": true,
+          "title": "EMS"
+        },
+        "filter": {
+          "explicit": true,
+          "multiSelection": true,
+          "members": [
+            "true"
+          ]
+        },
+        "isDashboardFilter": true
+      },
+      "isCascading": false,
+      "instanceid": "4D48D-B979-F1"
+    },
+    {
+      "jaql": {
+        "table": "Narrative",
+        "column": "Primary Impression",
+        "dim": "[Narrative.Primary Impression]",
+        "datatype": "text",
+        "columnTitle": "Primary Impression",
+        "tableTitle": "Narrative",
+        "merged": true,
+        "isDashboardFilter": true,
+        "title": "Primary Impression",
+        "datasource": {
+          "title": "EMS",
+          "id": "live:EMS",
+          "fullname": "live:EMS",
+          "live": true
+        },
+        "filter": {
+          "explicit": true,
+          "multiSelection": true,
+          "members": [
+            "Chest Pain / Discomfort",
+            "ST elevation (STEMI) myocardial infarction of inferior wall"
+          ]
+        },
+        "collapsed": true
+      },
+      "instanceid": "FA91B-95B2-E3",
+      "isCascading": false
+    }
+  ],
+  "oid": "6a5ea67d26b6b091e33cfa45",
+  "settings": {
+    "autoUpdateOnFiltersChange": true
+  },
+  "filterRelations": [],
+  "filterToDatasourceMapping": {},
+  "allowChangeSubscription": false,
+  "subscription": {
+    "executionPerDay": 1,
+    "schedule": "0 0 0 * * *",
+    "isDataChange": false,
+    "type": "daily",
+    "reportType": {
+      "inline": true
+    },
+    "emailSettings": {
+      "isEmail": true,
+      "isPdf": false
+    },
+    "context": {
+      "dashboardid": "6a5ea67d26b6b091e33cfa45"
+    },
+    "startAt": "2026-07-20",
+    "tzName": "America/Los_Angeles",
+    "timezone": 420,
+    "active": false,
+    "subscribe": false
+  },
+  "isPublic": null,
+  "widgets": [
+    {
+      "title": "Overall",
+      "type": "indicator",
+      "subtype": "indicator/numeric",
+      "oid": "6a5eaa4f8368e7d493a11e75",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [],
+          "all": false
+        },
+        "panels": [
+          {
+            "name": "value",
+            "items": [
+              {
+                "jaql": {
+                  "type": "measure",
+                  "formula": "[D324C-D74]",
+                  "context": {
+                    "[D324C-D74]": {
+                      "table": "Incident Response",
+                      "column": "Scene Time",
+                      "dim": "[Incident Response.Scene Time]",
+                      "datatype": "numeric",
+                      "columnTitle": "Scene Time",
+                      "tableTitle": "Incident Response",
+                      "agg": "avg",
+                      "title": "Average Scene Time"
+                    }
+                  },
+                  "title": "Average Scene Time (mins)",
+                  "columnTitle": "[Average Scene Time]"
+                },
+                "instanceid": "48B3B-18D9-0E",
+                "format": {
+                  "mask": {
+                    "type": "number",
+                    "abbreviations": {
+                      "t": true,
+                      "b": true,
+                      "m": true,
+                      "k": false
+                    },
+                    "separated": true,
+                    "decimals": "auto",
+                    "abbreviateAll": false,
+                    "isdefault": true
+                  },
+                  "color": {
+                    "colorIndex": 0,
+                    "type": "color"
+                  }
+                },
+                "alternateFormatType": "MM:SS"
+              }
+            ]
+          },
+          {
+            "name": "secondary",
+            "items": []
+          },
+          {
+            "name": "min",
+            "items": []
+          },
+          {
+            "name": "max",
+            "items": []
+          },
+          {
+            "name": "filters",
+            "items": []
+          }
+        ],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "subtype": "simple",
+        "skin": "vertical",
+        "components": {
+          "title": {
+            "inactive": false,
+            "enabled": true
+          },
+          "icon": {
+            "inactive": true,
+            "enabled": true
+          },
+          "secondaryTitle": {
+            "inactive": true,
+            "enabled": true
+          }
+        },
+        "indicator/numeric": {
+          "subtype": "simple",
+          "skin": "vertical",
+          "components": {
+            "title": {
+              "inactive": false,
+              "enabled": true
+            },
+            "icon": {
+              "inactive": false,
+              "enabled": true
+            },
+            "secondaryTitle": {
+              "inactive": true,
+              "enabled": true
+            }
+          }
+        },
+        "indicator/gauge": {
+          "subtype": "round",
+          "skin": "1",
+          "components": {
+            "ticks": {
+              "inactive": false,
+              "enabled": true
+            },
+            "labels": {
+              "inactive": false,
+              "enabled": true
+            },
+            "title": {
+              "inactive": false,
+              "enabled": true
+            },
+            "secondaryTitle": {
+              "inactive": true,
+              "enabled": true
+            }
+          }
+        },
+        "narration": {
+          "display": "above",
+          "verbosity": "low",
+          "labels": []
+        }
+      },
+      "instanceid": "DB902-BD4F-D5",
+      "drillToDashboardConfig": {
+        "drilledDashboardPrefix": "_drill",
+        "drilledDashboardsFolderPrefix": "",
+        "displayFilterPane": true,
+        "displayDashboardsPane": true,
+        "displayToolbarRow": true,
+        "displayHeaderRow": true,
+        "volatile": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drillToDashboardNavigateType": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "excludeFilterDims": [],
+        "includeFilterDims": [],
+        "drilledDashboardDisplayType": 2,
+        "dashboardIds": [],
+        "modalWindowResize": false,
+        "showFolderNameOnMenuSelection": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "showJTDIcon": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "forceZeroInsteadNull": false,
+        "mergeTargetDashboardFilters": false,
+        "drillToDashboardByName": false
+      },
+      "realTimeRefreshing": false,
+      "options": {
+        "dashboardFiltersMode": "filter",
+        "selector": false,
+        "disallowSelector": true,
+        "triggersDomready": true,
+        "autoUpdateOnEveryChange": true,
+        "supportsHierarchies": false
+      },
+      "dashboardid": "6a5ea67d26b6b091e33cfa45",
+      "dataNotLoadedYet": false,
+      "viewState": {
+        "activeTab": "filters"
+      }
+    },
+    {
+      "title": "By Lead Provider",
+      "type": "pivot2",
+      "subtype": "pivot2",
+      "oid": "6a5eb11e26b6b091e33cfb1f",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [],
+          "all": false
+        },
+        "panels": [
+          {
+            "name": "rows",
+            "items": [
+              {
+                "jaql": {
+                  "type": "calculated_dimension",
+                  "formula": "CONCAT([96410-3B5], \" \", [ADD95-40A])",
+                  "context": {
+                    "[96410-3B5]": {
+                      "table": "Signatures",
+                      "column": "Lead Provider First Name",
+                      "dim": "[Signatures.Lead Provider First Name]",
+                      "datatype": "text",
+                      "columnTitle": "Lead Provider First Name",
+                      "tableTitle": "Signatures",
+                      "merged": true,
+                      "title": "Lead Provider First Name"
+                    },
+                    "[ADD95-40A]": {
+                      "table": "Signatures",
+                      "column": "Lead Provider Last Name",
+                      "dim": "[Signatures.Lead Provider Last Name]",
+                      "datatype": "text",
+                      "columnTitle": "Lead Provider Last Name",
+                      "tableTitle": "Signatures",
+                      "merged": true,
+                      "title": "Lead Provider Last Name"
+                    }
+                  },
+                  "title": "Lead Provider",
+                  "columnTitle": "Formula"
+                },
+                "instanceid": "46C20-E50B-D9",
+                "panel": "rows",
+                "field": {
+                  "id": "CONCAT([BA10C-B0B], [315E0-D96])",
+                  "index": 0
+                }
+              }
+            ]
+          },
+          {
+            "name": "values",
+            "items": [
+              {
+                "jaql": {
+                  "type": "measure",
+                  "formula": "round([577AA-6F2]/60, 1)",
+                  "context": {
+                    "[577AA-6F2]": {
+                      "table": "Incident Response",
+                      "column": "Scene Time",
+                      "dim": "[Incident Response.Scene Time]",
+                      "datatype": "numeric",
+                      "columnTitle": "Scene Time",
+                      "tableTitle": "Incident Response",
+                      "agg": "avg",
+                      "title": "Average Scene Time"
+                    }
+                  },
+                  "title": "Average Scene Time (mins)",
+                  "columnTitle": "round([Average Scene Time]/60, 1)",
+                  "datatype": "numeric"
+                },
+                "instanceid": "3F679-9668-F2",
+                "panel": "measures",
+                "field": {
+                  "id": "[Incident Response.Scene Time]",
+                  "index": 1
+                }
+              }
+            ]
+          },
+          {
+            "name": "columns",
+            "items": []
+          },
+          {
+            "name": "filters",
+            "items": []
+          }
+        ],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "scroll": false,
+        "pageSize": 25,
+        "automaticHeight": true,
+        "colors": {
+          "rows": true,
+          "columns": false,
+          "headers": false,
+          "members": false,
+          "totals": false
+        },
+        "narration": {
+          "display": "above",
+          "verbosity": "low",
+          "labels": []
+        }
+      },
+      "instanceid": "AE2BF-617A-83",
+      "drillToDashboardConfig": {
+        "drilledDashboardPrefix": "_drill",
+        "drilledDashboardsFolderPrefix": "",
+        "displayFilterPane": true,
+        "displayDashboardsPane": true,
+        "displayToolbarRow": true,
+        "displayHeaderRow": true,
+        "volatile": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drillToDashboardNavigateType": 2,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "excludeFilterDims": [],
+        "includeFilterDims": [],
+        "drilledDashboardDisplayType": 2,
+        "dashboardIds": [],
+        "modalWindowResize": false,
+        "showFolderNameOnMenuSelection": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "showJTDIcon": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "forceZeroInsteadNull": false,
+        "mergeTargetDashboardFilters": false,
+        "drillToDashboardByName": false
+      },
+      "realTimeRefreshing": false,
+      "options": {
+        "dashboardFiltersMode": "filter",
+        "selector": false,
+        "triggersDomready": true,
+        "drillToAnywhere": true,
+        "autoUpdateOnEveryChange": true
+      },
+      "dashboardid": "6a5ea67d26b6b091e33cfa45"
+    }
+  ],
+  "hierarchies": []
+}
