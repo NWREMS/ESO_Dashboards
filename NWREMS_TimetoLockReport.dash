@@ -46,7 +46,7 @@
                 ],
                 "width": 100,
                 "stretchable": false,
-                "pxlWidth": 1599,
+                "pxlWidth": 0,
                 "index": 0
               }
             ]
@@ -67,7 +67,7 @@
                 ],
                 "width": 100,
                 "stretchable": false,
-                "pxlWidth": 1609,
+                "pxlWidth": 0,
                 "index": 0
               }
             ]
@@ -88,7 +88,7 @@
                 ],
                 "width": 50,
                 "stretchable": false,
-                "pxlWidth": 804.5,
+                "pxlWidth": 0,
                 "index": 0
               },
               {
@@ -105,13 +105,30 @@
                 ],
                 "width": 50,
                 "stretchable": false,
-                "pxlWidth": 804.5,
+                "pxlWidth": 0,
                 "index": 1
+              }
+            ]
+          },
+          {
+            "subcells": [
+              {
+                "elements": [
+                  {
+                    "minHeight": 96,
+                    "maxHeight": 2048,
+                    "minWidth": 128,
+                    "maxWidth": 2048,
+                    "height": 384,
+                    "defaultWidth": 512,
+                    "widgetid": "6a6137fa26b6b091e33d5d65"
+                  }
+                ]
               }
             ]
           }
         ],
-        "pxlWidth": 1609,
+        "pxlWidth": 0,
         "index": 0
       }
     ]
@@ -219,6 +236,29 @@
   "filterRelations": [],
   "filterToDatasourceMapping": {},
   "parentFolder": null,
+  "allowChangeSubscription": false,
+  "subscription": {
+    "executionPerDay": 1,
+    "schedule": "0 0 0 * * *",
+    "isDataChange": false,
+    "type": "daily",
+    "reportType": {
+      "inline": true
+    },
+    "emailSettings": {
+      "isEmail": true,
+      "isPdf": false
+    },
+    "context": {
+      "dashboardid": "6a5fc05fddc9f3600d5a80a7"
+    },
+    "startAt": "2026-07-21",
+    "tzName": "America/Los_Angeles",
+    "timezone": 420,
+    "active": false,
+    "subscribe": false
+  },
+  "isPublic": null,
   "widgets": [
     {
       "title": "",
@@ -914,7 +954,7 @@
       },
       "style": {
         "content": {
-          "html": "<font color=\"#e6e6e6\"><b style=\"\"><font size=\"7\">Time to Lock Report</font><br><font size=\"5\">This report shows the time from call completed to first lock, in hours.</font><br><br></b></font>",
+          "html": "<font color=\"#e6e6e6\"><b style=\"\"><font size=\"7\">Time to Lock Report</font><br><font size=\"5\">This report shows the elapsed time, in hours, between call completed and first lock of the call record.</font><br><br></b></font>",
           "vAlign": "valign-middle",
           "bgColor": "#14789e",
           "textAlign": "center"
@@ -936,6 +976,245 @@
         "disallowWidgetTitle": true,
         "supportsHierarchies": false,
         "dashboardFiltersMode": "filter"
+      },
+      "dashboardid": "6a5fc05fddc9f3600d5a80a7"
+    },
+    {
+      "title": "",
+      "type": "chart/line",
+      "subtype": "line/basic",
+      "oid": "6a6137fa26b6b091e33d5d65",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [],
+          "all": false
+        },
+        "panels": [
+          {
+            "name": "x-axis",
+            "items": [
+              {
+                "jaql": {
+                  "table": "Incident Response",
+                  "column": "Incident Number",
+                  "dim": "[Incident Response.Incident Number]",
+                  "datatype": "text",
+                  "columnTitle": "Incident Number",
+                  "tableTitle": "Incident Response",
+                  "merged": true,
+                  "title": "Incident Number"
+                },
+                "instanceid": "CF1B1-4A62-84",
+                "panel": "rows"
+              }
+            ]
+          },
+          {
+            "name": "values",
+            "items": [
+              {
+                "jaql": {
+                  "type": "measure",
+                  "formula": "MAX(SDiff( [8A5CE-FDF],[E534D-ABA])/3600)",
+                  "context": {
+                    "[8A5CE-FDF]": {
+                      "table": "Incident Response",
+                      "column": "First Lock Date Time",
+                      "dim": "[Incident Response.First Lock Date Time (Calendar)]",
+                      "datatype": "datetime",
+                      "columnTitle": "First Lock Date Time",
+                      "tableTitle": "Incident Response",
+                      "merged": true,
+                      "title": "Time in First Lock Date Time",
+                      "dateTimeLevel": "seconds",
+                      "bucket": "0"
+                    },
+                    "[E534D-ABA]": {
+                      "table": "Incident Response",
+                      "column": "Call Closed",
+                      "dim": "[Incident Response.Call Closed (Calendar)]",
+                      "datatype": "datetime",
+                      "columnTitle": "Call Closed",
+                      "tableTitle": "Incident Response",
+                      "merged": true,
+                      "title": "Time in Call Closed",
+                      "dateTimeLevel": "seconds",
+                      "bucket": "0"
+                    }
+                  },
+                  "title": "Call Complete to First Lock (Hrs)",
+                  "columnTitle": "Formula"
+                },
+                "instanceid": "366C8-A980-A2",
+                "panel": "measures",
+                "format": {
+                  "mask": {
+                    "type": "number",
+                    "abbreviations": {
+                      "t": true,
+                      "b": true,
+                      "m": true,
+                      "k": true
+                    },
+                    "separated": true,
+                    "decimals": "auto",
+                    "abbreviateAll": false,
+                    "isdefault": true
+                  },
+                  "color": {
+                    "colorIndex": 0,
+                    "type": "color"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "break by",
+            "items": []
+          },
+          {
+            "name": "filters",
+            "items": []
+          }
+        ],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "lineWidth": {
+          "width": "bold"
+        },
+        "legend": {
+          "enabled": true,
+          "position": "bottom"
+        },
+        "seriesLabels": {
+          "enabled": false,
+          "rotation": 0
+        },
+        "markers": {
+          "enabled": false,
+          "fill": "filled",
+          "size": "small"
+        },
+        "xAxis": {
+          "enabled": true,
+          "ticks": true,
+          "labels": {
+            "enabled": true,
+            "rotation": 0
+          },
+          "title": {
+            "enabled": false
+          },
+          "x2Title": {
+            "enabled": false
+          },
+          "gridLines": true,
+          "isIntervalEnabled": false
+        },
+        "yAxis": {
+          "inactive": false,
+          "enabled": true,
+          "ticks": true,
+          "labels": {
+            "enabled": true,
+            "rotation": 0
+          },
+          "title": {
+            "enabled": false
+          },
+          "gridLines": true,
+          "logarithmic": false,
+          "isIntervalEnabled": true
+        },
+        "y2Axis": {
+          "inactive": true,
+          "enabled": true,
+          "ticks": true,
+          "labels": {
+            "enabled": true,
+            "rotation": 0
+          },
+          "title": {
+            "enabled": false
+          },
+          "gridLines": false,
+          "logarithmic": false,
+          "isIntervalEnabled": true
+        },
+        "navigator": {
+          "enabled": true
+        },
+        "dataLimits": {
+          "seriesCapacity": 50,
+          "categoriesCapacity": 100000
+        },
+        "narration": {
+          "display": "above",
+          "verbosity": "low",
+          "labels": [
+            {
+              "id": "incident_number",
+              "title": "Incident Number",
+              "singular": "Incident Number",
+              "plural": "Incident Number"
+            }
+          ]
+        }
+      },
+      "instanceid": "8F435-1C1B-E6",
+      "drillToDashboardConfig": {
+        "drilledDashboardPrefix": "_drill",
+        "drilledDashboardsFolderPrefix": "",
+        "displayFilterPane": true,
+        "displayDashboardsPane": true,
+        "displayToolbarRow": true,
+        "displayHeaderRow": true,
+        "volatile": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drillToDashboardNavigateType": 1,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "excludeFilterDims": [],
+        "includeFilterDims": [],
+        "drilledDashboardDisplayType": 2,
+        "dashboardIds": [],
+        "modalWindowResize": false,
+        "showFolderNameOnMenuSelection": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "showJTDIcon": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "forceZeroInsteadNull": false,
+        "mergeTargetDashboardFilters": false,
+        "drillToDashboardByName": false
+      },
+      "realTimeRefreshing": false,
+      "options": {
+        "dashboardFiltersMode": "select",
+        "selector": true,
+        "triggersDomready": true,
+        "autoUpdateOnEveryChange": true,
+        "drillToAnywhere": true,
+        "previousScrollerLocation": {
+          "min": null,
+          "max": null
+        }
       },
       "dashboardid": "6a5fc05fddc9f3600d5a80a7"
     }
