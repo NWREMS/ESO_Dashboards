@@ -954,7 +954,7 @@
       },
       "style": {
         "content": {
-          "html": "<font color=\"#e6e6e6\"><b style=\"\"><font size=\"7\">Time to Lock Report</font><br><font size=\"5\">This report shows the elapsed time, in hours, between call completed and first lock of the call record.</font><br><br></b></font>",
+          "html": "<font color=\"#e6e6e6\"><font style=\"\" size=\"7\">Time to Lock Report</font><br><font style=\"\" size=\"5\">This report shows the elapsed time, in hours, between call completed and first lock of the call record.</font><br><br></font>",
           "vAlign": "valign-middle",
           "bgColor": "#14789e",
           "textAlign": "center"
