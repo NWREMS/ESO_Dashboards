@@ -36,6 +36,27 @@
                 "elements": [
                   {
                     "minHeight": 64,
+                    "maxHeight": 2048,
+                    "minWidth": 64,
+                    "maxWidth": 2048,
+                    "height": 128,
+                    "defaultWidth": 128,
+                    "widgetid": "6a68f4ef8368e7d493a23b21"
+                  }
+                ],
+                "width": 100,
+                "stretchable": false,
+                "pxlWidth": 1607,
+                "index": 0
+              }
+            ]
+          },
+          {
+            "subcells": [
+              {
+                "elements": [
+                  {
+                    "minHeight": 64,
                     "maxHeight": 1028,
                     "height": "336px",
                     "minWidth": 48,
@@ -46,7 +67,7 @@
                 ],
                 "width": 50,
                 "stretchable": false,
-                "pxlWidth": 803.5,
+                "pxlWidth": 0,
                 "index": 0
               },
               {
@@ -64,7 +85,7 @@
                 ],
                 "width": 50,
                 "stretchable": false,
-                "pxlWidth": 803.5,
+                "pxlWidth": 0,
                 "index": 1
               }
             ]
@@ -586,6 +607,56 @@
         "triggersDomready": true,
         "drillToAnywhere": true,
         "autoUpdateOnEveryChange": true
+      },
+      "dashboardid": "6a5ea67d26b6b091e33cfa45"
+    },
+    {
+      "title": "RICHTEXT_MAIN.TITLE",
+      "type": "richtexteditor",
+      "subtype": "richtexteditor",
+      "oid": "6a68f4ef8368e7d493a23b21",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [],
+          "all": false
+        },
+        "panels": [],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "content": {
+          "html": "<font color=\"#e6e6e6\"><font size=\"7\">Chest Pain/STEMI Scene Time</font><br><font size=\"5\">This dashboard shows the average on-scene time for calls involving chest pain or STEMI</font></font>",
+          "vAlign": "valign-middle",
+          "bgColor": "#117899",
+          "textAlign": "center"
+        }
+      },
+      "instanceid": "6FD0F-9E46-76",
+      "realTimeRefreshing": false,
+      "options": {
+        "triggersDomready": true,
+        "hideFromWidgetList": true,
+        "disableExportToCSV": true,
+        "disableExportToImage": true,
+        "toolbarButton": {
+          "css": "add-rich-text",
+          "tooltip": "RICHTEXT_MAIN.TOOLBAR_BUTTON"
+        },
+        "selector": false,
+        "disallowSelector": true,
+        "disallowWidgetTitle": true,
+        "supportsHierarchies": false,
+        "dashboardFiltersMode": "filter"
       },
       "dashboardid": "6a5ea67d26b6b091e33cfa45"
     }

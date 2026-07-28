@@ -35,20 +35,59 @@
               {
                 "elements": [
                   {
+                    "minHeight": 64,
+                    "maxHeight": 2048,
+                    "minWidth": 64,
+                    "maxWidth": 2048,
+                    "height": 128,
+                    "defaultWidth": 128,
+                    "widgetid": "6a68f654ddc9f3600d5b7697"
+                  }
+                ],
+                "width": 100,
+                "stretchable": false,
+                "pxlWidth": 1599,
+                "index": 0
+              }
+            ]
+          },
+          {
+            "subcells": [
+              {
+                "elements": [
+                  {
                     "minHeight": 128,
                     "maxHeight": 2048,
                     "minWidth": 128,
                     "maxWidth": 2048,
-                    "height": "238px",
+                    "height": "706px",
                     "defaultWidth": 512,
                     "widgetid": "6a57e2f626b6b091e33c5006",
                     "autoHeight": "238px"
                   }
                 ],
-                "width": 100,
+                "width": 50,
                 "stretchable": false,
-                "pxlWidth": 0,
+                "pxlWidth": 804.5,
                 "index": 0
+              },
+              {
+                "elements": [
+                  {
+                    "minHeight": 128,
+                    "maxHeight": 2048,
+                    "minWidth": 128,
+                    "maxWidth": 2048,
+                    "defaultWidth": 512,
+                    "widgetid": "6a68f6188368e7d493a23b62",
+                    "height": "706px",
+                    "autoHeight": "706px"
+                  }
+                ],
+                "width": 50,
+                "stretchable": false,
+                "pxlWidth": 804.5,
+                "index": 1
               }
             ]
           }
@@ -368,6 +407,225 @@
         "triggersDomready": true,
         "drillToAnywhere": true,
         "autoUpdateOnEveryChange": true
+      },
+      "dashboardid": "6a57cec0ddc9f3600d59a4c0"
+    },
+    {
+      "title": "Pediatric Patient Contacts",
+      "type": "pivot2",
+      "subtype": "pivot2",
+      "oid": "6a68f6188368e7d493a23b62",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [],
+          "all": false
+        },
+        "panels": [
+          {
+            "name": "rows",
+            "items": [
+              {
+                "jaql": {
+                  "type": "calculated_dimension",
+                  "formula": "Concat([29AD4-159], \", \", [AEDD9-6B9])",
+                  "context": {
+                    "[AEDD9-6B9]": {
+                      "table": "Signatures",
+                      "column": "Lead Provider First Name",
+                      "dim": "[Signatures.Lead Provider First Name]",
+                      "datatype": "text",
+                      "columnTitle": "Lead Provider First Name",
+                      "tableTitle": "Signatures",
+                      "merged": true,
+                      "title": "Lead Provider First Name"
+                    },
+                    "[29AD4-159]": {
+                      "table": "Signatures",
+                      "column": "Lead Provider Last Name",
+                      "dim": "[Signatures.Lead Provider Last Name]",
+                      "datatype": "text",
+                      "columnTitle": "Lead Provider Last Name",
+                      "tableTitle": "Signatures",
+                      "merged": true,
+                      "title": "Lead Provider Last Name"
+                    }
+                  },
+                  "columnTitle": "Formula",
+                  "title": "Lead Provider"
+                },
+                "instanceid": "22AE9-1688-0B",
+                "panel": "rows",
+                "field": {
+                  "id": "Concat([29AD4-159], \", \", [AEDD9-6B9])",
+                  "index": 0
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Incident Response",
+                  "column": "Incident Number",
+                  "dim": "[Incident Response.Incident Number]",
+                  "datatype": "text",
+                  "columnTitle": "Incident Number",
+                  "tableTitle": "Incident Response",
+                  "merged": true,
+                  "title": "Incident Number",
+                  "sort": "desc",
+                  "sortDetails": {
+                    "field": 1,
+                    "dir": "desc",
+                    "sortingLastDimension": true,
+                    "initialized": true,
+                    "isLastApplied": true
+                  }
+                },
+                "instanceid": "38B42-A99C-35",
+                "panel": "rows",
+                "field": {
+                  "id": "[Incident Response.Incident Number]_count",
+                  "index": 1
+                }
+              }
+            ]
+          },
+          {
+            "name": "values",
+            "items": []
+          },
+          {
+            "name": "columns",
+            "items": []
+          },
+          {
+            "name": "filters",
+            "items": []
+          }
+        ],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "scroll": false,
+        "pageSize": 25,
+        "automaticHeight": true,
+        "colors": {
+          "rows": true,
+          "columns": false,
+          "headers": false,
+          "members": false,
+          "totals": false
+        },
+        "narration": {
+          "display": "above",
+          "verbosity": "low",
+          "labels": [
+            {
+              "id": "incident_number",
+              "title": "Incident Number",
+              "singular": "Incident Number",
+              "plural": "Incident Number"
+            }
+          ]
+        }
+      },
+      "instanceid": "B4681-DAB0-35",
+      "drillToDashboardConfig": {
+        "drilledDashboardPrefix": "_drill",
+        "drilledDashboardsFolderPrefix": "",
+        "displayFilterPane": true,
+        "displayDashboardsPane": true,
+        "displayToolbarRow": true,
+        "displayHeaderRow": true,
+        "volatile": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drillToDashboardNavigateType": 2,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "excludeFilterDims": [],
+        "includeFilterDims": [],
+        "drilledDashboardDisplayType": 2,
+        "dashboardIds": [],
+        "modalWindowResize": false,
+        "showFolderNameOnMenuSelection": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "showJTDIcon": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "forceZeroInsteadNull": false,
+        "mergeTargetDashboardFilters": false,
+        "drillToDashboardByName": false
+      },
+      "realTimeRefreshing": false,
+      "dataNotLoadedYet": false,
+      "options": {
+        "dashboardFiltersMode": "filter",
+        "selector": false,
+        "triggersDomready": true,
+        "drillToAnywhere": true,
+        "autoUpdateOnEveryChange": true
+      },
+      "dashboardid": "6a57cec0ddc9f3600d59a4c0"
+    },
+    {
+      "title": "RICHTEXT_MAIN.TITLE",
+      "type": "richtexteditor",
+      "subtype": "richtexteditor",
+      "oid": "6a68f654ddc9f3600d5b7697",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [],
+          "all": false
+        },
+        "panels": [],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "content": {
+          "html": "<font color=\"#e6e6e6\"><font size=\"7\">Pediatric Patient Contacts</font><br><font size=\"5\">This dashboard shows the count of pediatric patient contacts per person, and the incident numbers.</font></font>",
+          "vAlign": "valign-middle",
+          "bgColor": "#117899",
+          "textAlign": "center"
+        }
+      },
+      "instanceid": "7399E-0DC8-97",
+      "realTimeRefreshing": false,
+      "options": {
+        "triggersDomready": true,
+        "hideFromWidgetList": true,
+        "disableExportToCSV": true,
+        "disableExportToImage": true,
+        "toolbarButton": {
+          "css": "add-rich-text",
+          "tooltip": "RICHTEXT_MAIN.TOOLBAR_BUTTON"
+        },
+        "selector": false,
+        "disallowSelector": true,
+        "disallowWidgetTitle": true,
+        "supportsHierarchies": false,
+        "dashboardFiltersMode": "filter"
       },
       "dashboardid": "6a57cec0ddc9f3600d59a4c0"
     }
