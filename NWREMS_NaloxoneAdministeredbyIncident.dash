@@ -35,6 +35,27 @@
               {
                 "elements": [
                   {
+                    "minHeight": 64,
+                    "maxHeight": 2048,
+                    "minWidth": 64,
+                    "maxWidth": 2048,
+                    "height": 128,
+                    "defaultWidth": 128,
+                    "widgetid": "6a68f59e8368e7d493a23b4d"
+                  }
+                ],
+                "width": 100,
+                "stretchable": false,
+                "pxlWidth": 1607,
+                "index": 0
+              }
+            ]
+          },
+          {
+            "subcells": [
+              {
+                "elements": [
+                  {
                     "minHeight": 256,
                     "maxHeight": 2048,
                     "minWidth": 256,
@@ -60,7 +81,7 @@
                     "height": "244px",
                     "defaultWidth": 512,
                     "widgetid": "6a5e6b08ddc9f3600d5a493f",
-                    "autoHeight": "160px"
+                    "autoHeight": "212px"
                   }
                 ],
                 "width": 50,
@@ -613,6 +634,56 @@
         "triggersDomready": true,
         "drillToAnywhere": true,
         "autoUpdateOnEveryChange": true
+      },
+      "dashboardid": "6a5e670c26b6b091e33cebb5"
+    },
+    {
+      "title": "RICHTEXT_MAIN.TITLE",
+      "type": "richtexteditor",
+      "subtype": "richtexteditor",
+      "oid": "6a68f59e8368e7d493a23b4d",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [],
+          "all": false
+        },
+        "panels": [],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "content": {
+          "html": "<font color=\"#e6e6e6\"><font size=\"7\">Naloxone Administration</font><br><font size=\"5\">This dashboard shows the total number of times Naloxone was administered, and the incident numbers.</font></font>",
+          "vAlign": "valign-middle",
+          "bgColor": "#117899",
+          "textAlign": "center"
+        }
+      },
+      "instanceid": "F1C37-0197-D7",
+      "realTimeRefreshing": false,
+      "options": {
+        "triggersDomready": true,
+        "hideFromWidgetList": true,
+        "disableExportToCSV": true,
+        "disableExportToImage": true,
+        "toolbarButton": {
+          "css": "add-rich-text",
+          "tooltip": "RICHTEXT_MAIN.TOOLBAR_BUTTON"
+        },
+        "selector": false,
+        "disallowSelector": true,
+        "disallowWidgetTitle": true,
+        "supportsHierarchies": false,
+        "dashboardFiltersMode": "filter"
       },
       "dashboardid": "6a5e670c26b6b091e33cebb5"
     }

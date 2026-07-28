@@ -35,6 +35,27 @@
               {
                 "elements": [
                   {
+                    "minHeight": 64,
+                    "maxHeight": 2048,
+                    "minWidth": 64,
+                    "maxWidth": 2048,
+                    "height": 128,
+                    "defaultWidth": 128,
+                    "widgetid": "6a68f43f8368e7d493a23ae5"
+                  }
+                ],
+                "width": 100,
+                "stretchable": false,
+                "pxlWidth": 1607,
+                "index": 0
+              }
+            ]
+          },
+          {
+            "subcells": [
+              {
+                "elements": [
+                  {
                     "minHeight": 128,
                     "maxHeight": 2048,
                     "minWidth": 128,
@@ -47,7 +68,7 @@
                 ],
                 "width": 50,
                 "stretchable": false,
-                "pxlWidth": 804.5,
+                "pxlWidth": 0,
                 "index": 0
               },
               {
@@ -65,13 +86,13 @@
                 ],
                 "width": 50,
                 "stretchable": false,
-                "pxlWidth": 804.5,
+                "pxlWidth": 0,
                 "index": 1
               }
             ]
           }
         ],
-        "pxlWidth": 1369,
+        "pxlWidth": 0,
         "index": 0
       }
     ]
@@ -180,6 +201,7 @@
   "filterToDatasourceMapping": {},
   "allowChangeSubscription": false,
   "subscription": {
+    "subscribe": false,
     "executionPerDay": 1,
     "schedule": "0 0 0 * * *",
     "isDataChange": false,
@@ -197,8 +219,7 @@
     "startAt": "2026-07-20",
     "tzName": "America/Los_Angeles",
     "timezone": 420,
-    "active": false,
-    "subscribe": false
+    "active": false
   },
   "isPublic": null,
   "widgets": [
@@ -567,6 +588,56 @@
         "triggersDomready": true,
         "drillToAnywhere": true,
         "autoUpdateOnEveryChange": true
+      },
+      "dashboardid": "6a5e97c726b6b091e33cf8a8"
+    },
+    {
+      "title": "RICHTEXT_MAIN.TITLE",
+      "type": "richtexteditor",
+      "subtype": "richtexteditor",
+      "oid": "6a68f43f8368e7d493a23ae5",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [],
+          "all": false
+        },
+        "panels": [],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "content": {
+          "html": "<font color=\"#e6e6e6\"><font size=\"7\">Calls By Person</font><br><font size=\"5\">This dashboard shows people's participation in calls, as either lead or non-lead</font></font>",
+          "vAlign": "valign-middle",
+          "bgColor": "#117899",
+          "textAlign": "center"
+        }
+      },
+      "instanceid": "3F5BC-6AB5-2A",
+      "realTimeRefreshing": false,
+      "options": {
+        "triggersDomready": true,
+        "hideFromWidgetList": true,
+        "disableExportToCSV": true,
+        "disableExportToImage": true,
+        "toolbarButton": {
+          "css": "add-rich-text",
+          "tooltip": "RICHTEXT_MAIN.TOOLBAR_BUTTON"
+        },
+        "selector": false,
+        "disallowSelector": true,
+        "disallowWidgetTitle": true,
+        "supportsHierarchies": false,
+        "dashboardFiltersMode": "filter"
       },
       "dashboardid": "6a5e97c726b6b091e33cf8a8"
     }
