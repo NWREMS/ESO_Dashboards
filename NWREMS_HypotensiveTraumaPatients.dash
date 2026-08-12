@@ -1,0 +1,685 @@
+{
+  "title": "NWREMS: Hypotensive Trauma Patients",
+  "desc": "",
+  "source": null,
+  "type": "dashboard",
+  "style": {
+    "palette": {
+      "name": "Midnight Light",
+      "colors": [
+        "#117899",
+        "#60B8CC",
+        "#5CA793",
+        "#A2B86C",
+        "#EBC844",
+        "#ECAA38",
+        "#EF8B2C",
+        "#F16C20",
+        "#D94E1F",
+        "#C02E1D",
+        "#893B32",
+        "#0D3C55",
+        "#0F5B78"
+      ]
+    }
+  },
+  "layout": {
+    "instanceid": "EFE6E-E864-59",
+    "type": "columnar",
+    "columns": [
+      {
+        "width": 100,
+        "cells": [
+          {
+            "subcells": [
+              {
+                "elements": [
+                  {
+                    "minHeight": 64,
+                    "maxHeight": 2048,
+                    "minWidth": 64,
+                    "maxWidth": 2048,
+                    "height": 128,
+                    "defaultWidth": 128,
+                    "widgetid": "6a7ce5d31f8c45478bcda991"
+                  }
+                ],
+                "width": 100,
+                "stretchable": false,
+                "pxlWidth": 1609,
+                "index": 0
+              }
+            ]
+          },
+          {
+            "subcells": [
+              {
+                "elements": [
+                  {
+                    "minHeight": 64,
+                    "maxHeight": 1028,
+                    "height": "192px",
+                    "minWidth": 48,
+                    "maxWidth": 1028,
+                    "defaultWidth": 512,
+                    "widgetid": "6a7ce4d81f8c45478bcda957"
+                  }
+                ],
+                "width": 50,
+                "stretchable": false,
+                "pxlWidth": 803.5,
+                "index": 0
+              },
+              {
+                "elements": [
+                  {
+                    "minHeight": 128,
+                    "maxHeight": 2048,
+                    "minWidth": 128,
+                    "maxWidth": 2048,
+                    "height": "192px",
+                    "defaultWidth": 512,
+                    "widgetid": "6a7ce5911f8c45478bcda985",
+                    "autoHeight": "160px"
+                  }
+                ],
+                "width": 50,
+                "stretchable": false,
+                "pxlWidth": 803.5,
+                "index": 1
+              }
+            ]
+          }
+        ],
+        "pxlWidth": 1369,
+        "index": 0
+      }
+    ]
+  },
+  "original": null,
+  "dataExploration": true,
+  "lastOpened": null,
+  "previewLayout": [],
+  "datasource": {
+    "title": "EMS",
+    "id": "live:EMS",
+    "fullname": "live:EMS",
+    "live": true
+  },
+  "filters": [
+    {
+      "jaql": {
+        "table": "Incident Response",
+        "column": "Dispatched",
+        "dim": "[Incident Response.Dispatched (Calendar)]",
+        "datatype": "datetime",
+        "merged": true,
+        "level": "days",
+        "title": "Days in Dispatched",
+        "collapsed": true,
+        "isDashboardFilter": true,
+        "datasource": {
+          "fullname": "live:EMS",
+          "id": "live:EMS",
+          "live": true,
+          "title": "EMS"
+        },
+        "columnTitle": "Days in Dispatched",
+        "tableTitle": "Incident Response",
+        "filter": {
+          "last": {
+            "count": 360,
+            "offset": 0
+          }
+        }
+      },
+      "isCascading": false,
+      "instanceid": "6AA2E-E545-1A",
+      "disabled": false
+    },
+    {
+      "jaql": {
+        "table": "Incident Response",
+        "column": "Is Locked",
+        "dim": "[Incident Response.Is Locked]",
+        "datatype": "text",
+        "merged": true,
+        "collapsed": true,
+        "title": "Is Locked",
+        "datasource": {
+          "fullname": "live:EMS",
+          "id": "live:EMS",
+          "live": true,
+          "title": "EMS"
+        },
+        "filter": {
+          "explicit": true,
+          "multiSelection": true,
+          "members": [
+            "true"
+          ]
+        },
+        "isDashboardFilter": true
+      },
+      "isCascading": false,
+      "instanceid": "3DFAD-B20E-93"
+    },
+    {
+      "jaql": {
+        "table": "Incident Response",
+        "column": "Is Active",
+        "dim": "[Incident Response.Is Active]",
+        "datatype": "text",
+        "merged": true,
+        "collapsed": true,
+        "title": "Is Active",
+        "datasource": {
+          "fullname": "live:EMS",
+          "id": "live:EMS",
+          "live": true,
+          "title": "EMS"
+        },
+        "filter": {
+          "explicit": true,
+          "multiSelection": true,
+          "members": [
+            "true"
+          ]
+        },
+        "isDashboardFilter": true
+      },
+      "isCascading": false,
+      "instanceid": "1104E-05E9-B7"
+    },
+    {
+      "jaql": {
+        "table": "Vital Signs",
+        "column": "Blood Pressure Systolic",
+        "dim": "[Vital Signs.Blood Pressure Systolic]",
+        "datatype": "numeric",
+        "columnTitle": "Blood Pressure Systolic",
+        "tableTitle": "Vital Signs",
+        "isDashboardFilter": true,
+        "title": "Blood Pressure Systolic",
+        "datasource": {
+          "title": "EMS",
+          "id": "live:EMS",
+          "fullname": "live:EMS",
+          "live": true
+        },
+        "filter": {
+          "to": "90"
+        },
+        "collapsed": false
+      },
+      "instanceid": "5D7E8-05AD-76",
+      "isCascading": false
+    },
+    {
+      "jaql": {
+        "table": "Narrative",
+        "column": "Medical Trauma",
+        "dim": "[Narrative.Medical Trauma]",
+        "datatype": "text",
+        "columnTitle": "Medical Trauma",
+        "tableTitle": "Narrative",
+        "merged": true,
+        "isDashboardFilter": true,
+        "collapsed": true,
+        "title": "Medical Trauma",
+        "datasource": {
+          "title": "EMS",
+          "id": "live:EMS",
+          "fullname": "live:EMS",
+          "live": true
+        },
+        "filter": {
+          "explicit": true,
+          "multiSelection": true,
+          "members": [
+            "Medical & Trauma",
+            "Trauma"
+          ]
+        }
+      },
+      "instanceid": "B6397-A52E-46",
+      "isCascading": false,
+      "disabled": false
+    }
+  ],
+  "oid": "6a7ce33ffdc256800e22c79c",
+  "settings": {
+    "autoUpdateOnFiltersChange": true
+  },
+  "filterRelations": [],
+  "filterToDatasourceMapping": {},
+  "allowChangeSubscription": false,
+  "subscription": {
+    "executionPerDay": 1,
+    "schedule": "0 0 0 * * *",
+    "isDataChange": false,
+    "type": "daily",
+    "reportType": {
+      "inline": true
+    },
+    "emailSettings": {
+      "isEmail": true,
+      "isPdf": false
+    },
+    "context": {
+      "dashboardid": "6a7ce33ffdc256800e22c79c"
+    },
+    "startAt": "2026-08-12",
+    "tzName": "America/Los_Angeles",
+    "timezone": 420,
+    "active": false,
+    "subscribe": false
+  },
+  "isPublic": null,
+  "widgets": [
+    {
+      "title": "Count",
+      "type": "indicator",
+      "subtype": "indicator/numeric",
+      "oid": "6a7ce4d81f8c45478bcda957",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [],
+          "all": false
+        },
+        "panels": [
+          {
+            "name": "value",
+            "items": [
+              {
+                "jaql": {
+                  "table": "Incident Response",
+                  "column": "Incident Number",
+                  "dim": "[Incident Response.Incident Number]",
+                  "datatype": "text",
+                  "columnTitle": "Incident Number",
+                  "tableTitle": "Incident Response",
+                  "merged": true,
+                  "agg": "count",
+                  "title": "Number of Incidents"
+                },
+                "instanceid": "4984F-FB66-BD",
+                "format": {
+                  "mask": {
+                    "type": "number",
+                    "abbreviations": {
+                      "t": true,
+                      "b": true,
+                      "m": true,
+                      "k": false
+                    },
+                    "separated": true,
+                    "decimals": "auto",
+                    "abbreviateAll": false,
+                    "isdefault": true
+                  },
+                  "color": {
+                    "colorIndex": 0,
+                    "type": "color"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "secondary",
+            "items": []
+          },
+          {
+            "name": "min",
+            "items": []
+          },
+          {
+            "name": "max",
+            "items": []
+          },
+          {
+            "name": "filters",
+            "items": []
+          }
+        ],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "subtype": "simple",
+        "skin": "vertical",
+        "components": {
+          "title": {
+            "inactive": false,
+            "enabled": true
+          },
+          "icon": {
+            "inactive": true,
+            "enabled": true
+          },
+          "secondaryTitle": {
+            "inactive": true,
+            "enabled": true
+          }
+        },
+        "indicator/numeric": {
+          "subtype": "simple",
+          "skin": "vertical",
+          "components": {
+            "title": {
+              "inactive": false,
+              "enabled": true
+            },
+            "icon": {
+              "inactive": false,
+              "enabled": true
+            },
+            "secondaryTitle": {
+              "inactive": true,
+              "enabled": true
+            }
+          }
+        },
+        "indicator/gauge": {
+          "subtype": "round",
+          "skin": "1",
+          "components": {
+            "ticks": {
+              "inactive": false,
+              "enabled": true
+            },
+            "labels": {
+              "inactive": false,
+              "enabled": true
+            },
+            "title": {
+              "inactive": false,
+              "enabled": true
+            },
+            "secondaryTitle": {
+              "inactive": true,
+              "enabled": true
+            }
+          }
+        },
+        "narration": {
+          "display": "above",
+          "verbosity": "low",
+          "labels": []
+        }
+      },
+      "instanceid": "F7024-08F9-A9",
+      "drillToDashboardConfig": {
+        "drilledDashboardPrefix": "_drill",
+        "drilledDashboardsFolderPrefix": "",
+        "displayFilterPane": true,
+        "displayDashboardsPane": true,
+        "displayToolbarRow": true,
+        "displayHeaderRow": true,
+        "volatile": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drillToDashboardNavigateType": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "excludeFilterDims": [],
+        "includeFilterDims": [],
+        "drilledDashboardDisplayType": 2,
+        "dashboardIds": [],
+        "modalWindowResize": false,
+        "showFolderNameOnMenuSelection": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "showJTDIcon": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "forceZeroInsteadNull": false,
+        "mergeTargetDashboardFilters": false,
+        "drillToDashboardByName": false
+      },
+      "realTimeRefreshing": false,
+      "viewState": {
+        "activeTab": "filters"
+      },
+      "options": {
+        "dashboardFiltersMode": "filter",
+        "selector": false,
+        "disallowSelector": true,
+        "triggersDomready": true,
+        "autoUpdateOnEveryChange": true,
+        "supportsHierarchies": false
+      },
+      "dashboardid": "6a7ce33ffdc256800e22c79c",
+      "dataNotLoadedYet": false
+    },
+    {
+      "title": "Incidents",
+      "type": "pivot2",
+      "subtype": "pivot2",
+      "oid": "6a7ce5911f8c45478bcda985",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [],
+          "all": false
+        },
+        "panels": [
+          {
+            "name": "rows",
+            "items": [
+              {
+                "jaql": {
+                  "table": "Incident Response",
+                  "column": "Incident Number",
+                  "dim": "[Incident Response.Incident Number]",
+                  "datatype": "text",
+                  "columnTitle": "Incident Number",
+                  "tableTitle": "Incident Response",
+                  "merged": true,
+                  "title": "Incident Number"
+                },
+                "format": {},
+                "instanceid": "13CBA-EA74-82",
+                "panel": "rows",
+                "field": {
+                  "id": "[Incident Response.Incident Number]",
+                  "index": 0
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Incident Response",
+                  "column": "Dispatched",
+                  "dim": "[Incident Response.Dispatched (Calendar)]",
+                  "datatype": "datetime",
+                  "columnTitle": "Dispatched",
+                  "tableTitle": "Incident Response",
+                  "merged": true,
+                  "title": "Date/Time",
+                  "dateTimeLevel": "minutes",
+                  "bucket": "1"
+                },
+                "instanceid": "ABE60-5F85-BD",
+                "panel": "rows",
+                "field": {
+                  "id": "[Incident Response.Dispatched (Calendar)]_years",
+                  "index": 1
+                },
+                "hierarchies": [],
+                "format": {
+                  "mask": {
+                    "years": "yyyy",
+                    "quarters": "yyyy Q",
+                    "months": "MM/yyyy",
+                    "weeks": "ww yyyy",
+                    "days": "shortDate",
+                    "minutes": "HH:mm",
+                    "seconds": "MM/dd/yyyy HH:mm:ss",
+                    "dateAndTime": "MM/dd/yyyy HH:mm",
+                    "isdefault": true
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "values",
+            "items": []
+          },
+          {
+            "name": "columns",
+            "items": []
+          },
+          {
+            "name": "filters",
+            "items": []
+          }
+        ],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "scroll": false,
+        "pageSize": 25,
+        "automaticHeight": true,
+        "colors": {
+          "rows": true,
+          "columns": false,
+          "headers": false,
+          "members": false,
+          "totals": false
+        },
+        "narration": {
+          "display": "above",
+          "verbosity": "low",
+          "labels": [
+            {
+              "id": "incident_number",
+              "title": "Incident Number",
+              "singular": "Incident Number",
+              "plural": "Incident Number"
+            },
+            {
+              "id": "years_in_dispatched",
+              "title": "Years in Dispatched",
+              "singular": "Years in Dispatched",
+              "plural": "Years in Dispatched"
+            }
+          ]
+        }
+      },
+      "instanceid": "8B3EB-4996-BB",
+      "realTimeRefreshing": false,
+      "drillToDashboardConfig": {
+        "drilledDashboardPrefix": "_drill",
+        "drilledDashboardsFolderPrefix": "",
+        "displayFilterPane": true,
+        "displayDashboardsPane": true,
+        "displayToolbarRow": true,
+        "displayHeaderRow": true,
+        "volatile": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drillToDashboardNavigateType": 2,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "excludeFilterDims": [],
+        "includeFilterDims": [],
+        "drilledDashboardDisplayType": 2,
+        "dashboardIds": [],
+        "modalWindowResize": false,
+        "showFolderNameOnMenuSelection": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "showJTDIcon": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "forceZeroInsteadNull": false,
+        "mergeTargetDashboardFilters": false,
+        "drillToDashboardByName": false
+      },
+      "options": {
+        "dashboardFiltersMode": "filter",
+        "selector": false,
+        "triggersDomready": true,
+        "drillToAnywhere": true,
+        "autoUpdateOnEveryChange": true,
+        "imageColumns": []
+      },
+      "dashboardid": "6a7ce33ffdc256800e22c79c"
+    },
+    {
+      "title": "RICHTEXT_MAIN.TITLE",
+      "type": "richtexteditor",
+      "subtype": "richtexteditor",
+      "oid": "6a7ce5d31f8c45478bcda991",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [],
+          "all": false
+        },
+        "panels": [],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "content": {
+          "html": "<font color=\"#e6e6e6\"><font size=\"7\">Hypotensive Trauma Patients</font><br><font size=\"5\">This dashboard shows incidents where trauma was indicated and systolic blood pressure was 90 or below.</font></font>",
+          "vAlign": "valign-middle",
+          "bgColor": "#117899",
+          "textAlign": "center"
+        }
+      },
+      "instanceid": "74DE8-2DBA-73",
+      "realTimeRefreshing": false,
+      "options": {
+        "triggersDomready": true,
+        "hideFromWidgetList": true,
+        "disableExportToCSV": true,
+        "disableExportToImage": true,
+        "toolbarButton": {
+          "css": "add-rich-text",
+          "tooltip": "RICHTEXT_MAIN.TOOLBAR_BUTTON"
+        },
+        "selector": false,
+        "disallowSelector": true,
+        "disallowWidgetTitle": true,
+        "supportsHierarchies": false,
+        "dashboardFiltersMode": "filter"
+      },
+      "dashboardid": "6a7ce33ffdc256800e22c79c"
+    }
+  ],
+  "hierarchies": []
+}
