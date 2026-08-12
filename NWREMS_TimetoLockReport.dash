@@ -56,39 +56,18 @@
               {
                 "elements": [
                   {
-                    "minHeight": 96,
-                    "maxHeight": 2048,
-                    "minWidth": 128,
-                    "maxWidth": 2048,
-                    "height": "216px",
-                    "defaultWidth": 512,
-                    "widgetid": "6a5fc05fddc9f3600d5a80a9"
-                  }
-                ],
-                "width": 100,
-                "stretchable": false,
-                "pxlWidth": 0,
-                "index": 0
-              }
-            ]
-          },
-          {
-            "subcells": [
-              {
-                "elements": [
-                  {
                     "minHeight": 64,
                     "maxHeight": 1028,
                     "minWidth": 48,
                     "maxWidth": 1028,
                     "defaultWidth": 512,
                     "widgetid": "6a5fc1248368e7d493a14238",
-                    "height": 192
+                    "height": "168px"
                   }
                 ],
-                "width": 50,
+                "width": 26.351771286513365,
                 "stretchable": false,
-                "pxlWidth": 0,
+                "pxlWidth": 424,
                 "index": 0
               },
               {
@@ -100,13 +79,30 @@
                     "maxWidth": 1028,
                     "defaultWidth": 512,
                     "widgetid": "6a5fc0b126b6b091e33d2079",
-                    "height": 192
+                    "height": "168px"
                   }
                 ],
-                "width": 50,
+                "width": 25,
                 "stretchable": false,
-                "pxlWidth": 0,
+                "pxlWidth": 401.75,
                 "index": 1
+              },
+              {
+                "elements": [
+                  {
+                    "minHeight": 96,
+                    "maxHeight": 2048,
+                    "minWidth": 128,
+                    "maxWidth": 2048,
+                    "height": "168px",
+                    "defaultWidth": 512,
+                    "widgetid": "6a5fc05fddc9f3600d5a80a9"
+                  }
+                ],
+                "width": 48.64822871348662,
+                "stretchable": false,
+                "pxlWidth": 780.812,
+                "index": 2
               }
             ]
           },
@@ -123,7 +119,11 @@
                     "defaultWidth": 512,
                     "widgetid": "6a6137fa26b6b091e33d5d65"
                   }
-                ]
+                ],
+                "width": 100,
+                "stretchable": false,
+                "pxlWidth": 0,
+                "index": 0
               }
             ]
           }
@@ -261,7 +261,7 @@
   "isPublic": null,
   "widgets": [
     {
-      "title": "",
+      "title": "Mean/StDev",
       "type": "indicator",
       "subtype": "indicator/numeric",
       "oid": "6a5fc05fddc9f3600d5a80a9",
@@ -522,7 +522,7 @@
       "dataNotLoadedYet": false
     },
     {
-      "title": "",
+      "title": "Maximum",
       "type": "indicator",
       "subtype": "indicator/numeric",
       "oid": "6a5fc0b126b6b091e33d2079",
@@ -723,10 +723,11 @@
         "autoUpdateOnEveryChange": true,
         "supportsHierarchies": false
       },
-      "dashboardid": "6a5fc05fddc9f3600d5a80a7"
+      "dashboardid": "6a5fc05fddc9f3600d5a80a7",
+      "dataNotLoadedYet": false
     },
     {
-      "title": "",
+      "title": "Minimum",
       "type": "indicator",
       "subtype": "indicator/numeric",
       "oid": "6a5fc1248368e7d493a14238",
@@ -927,7 +928,8 @@
         "autoUpdateOnEveryChange": true,
         "supportsHierarchies": false
       },
-      "dashboardid": "6a5fc05fddc9f3600d5a80a7"
+      "dashboardid": "6a5fc05fddc9f3600d5a80a7",
+      "dataNotLoadedYet": false
     },
     {
       "title": "RICHTEXT_MAIN.TITLE",
@@ -980,9 +982,9 @@
       "dashboardid": "6a5fc05fddc9f3600d5a80a7"
     },
     {
-      "title": "",
-      "type": "chart/line",
-      "subtype": "line/basic",
+      "title": "Incidents",
+      "type": "chart/column",
+      "subtype": "column/classic",
       "oid": "6a6137fa26b6b091e33d5d65",
       "desc": null,
       "source": null,
@@ -1001,7 +1003,7 @@
         },
         "panels": [
           {
-            "name": "x-axis",
+            "name": "categories",
             "items": [
               {
                 "jaql": {
@@ -1091,21 +1093,22 @@
         "usedFormulasMapping": {}
       },
       "style": {
-        "lineWidth": {
-          "width": "bold"
-        },
         "legend": {
-          "enabled": true,
+          "enabled": false,
           "position": "bottom"
         },
         "seriesLabels": {
           "enabled": false,
-          "rotation": 0
-        },
-        "markers": {
-          "enabled": false,
-          "fill": "filled",
-          "size": "small"
+          "rotation": 0,
+          "labels": {
+            "enabled": false,
+            "stacked": false,
+            "stackedPercentage": false,
+            "types": {
+              "count": false,
+              "relative": false
+            }
+          }
         },
         "xAxis": {
           "enabled": true,
@@ -1132,11 +1135,14 @@
             "rotation": 0
           },
           "title": {
-            "enabled": false
+            "enabled": true,
+            "text": "Time to Lock Report (Hrs)"
           },
           "gridLines": true,
           "logarithmic": false,
-          "isIntervalEnabled": true
+          "isIntervalEnabled": true,
+          "min": "0",
+          "hideMinMax": false
         },
         "y2Axis": {
           "inactive": true,
@@ -1151,7 +1157,8 @@
           },
           "gridLines": false,
           "logarithmic": false,
-          "isIntervalEnabled": true
+          "isIntervalEnabled": true,
+          "hideMinMax": false
         },
         "navigator": {
           "enabled": true
@@ -1159,6 +1166,14 @@
         "dataLimits": {
           "seriesCapacity": 50,
           "categoriesCapacity": 100000
+        },
+        "lineWidth": {
+          "width": "bold"
+        },
+        "markers": {
+          "enabled": false,
+          "fill": "filled",
+          "size": "small"
         },
         "narration": {
           "display": "above",
@@ -1173,7 +1188,7 @@
           ]
         }
       },
-      "instanceid": "8F435-1C1B-E6",
+      "instanceid": "4693C-A9DB-5E",
       "drillToDashboardConfig": {
         "drilledDashboardPrefix": "_drill",
         "drilledDashboardsFolderPrefix": "",
@@ -1212,11 +1227,15 @@
         "autoUpdateOnEveryChange": true,
         "drillToAnywhere": true,
         "previousScrollerLocation": {
-          "min": null,
-          "max": null
+          "min": 0,
+          "max": 328
         }
       },
-      "dashboardid": "6a5fc05fddc9f3600d5a80a7"
+      "dashboardid": "6a5fc05fddc9f3600d5a80a7",
+      "dataNotLoadedYet": false,
+      "viewState": {
+        "activeTab": "design"
+      }
     }
   ],
   "hierarchies": []
