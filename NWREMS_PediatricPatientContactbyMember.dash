@@ -46,7 +46,7 @@
                 ],
                 "width": 100,
                 "stretchable": false,
-                "pxlWidth": 1599,
+                "pxlWidth": 0,
                 "index": 0
               }
             ]
@@ -60,7 +60,7 @@
                     "maxHeight": 2048,
                     "minWidth": 128,
                     "maxWidth": 2048,
-                    "height": "706px",
+                    "height": "756px",
                     "defaultWidth": 512,
                     "widgetid": "6a57e2f626b6b091e33c5006",
                     "autoHeight": "238px"
@@ -68,7 +68,7 @@
                 ],
                 "width": 50,
                 "stretchable": false,
-                "pxlWidth": 804.5,
+                "pxlWidth": 0,
                 "index": 0
               },
               {
@@ -80,13 +80,13 @@
                     "maxWidth": 2048,
                     "defaultWidth": 512,
                     "widgetid": "6a68f6188368e7d493a23b62",
-                    "height": "706px",
-                    "autoHeight": "706px"
+                    "height": "756px",
+                    "autoHeight": "756px"
                   }
                 ],
                 "width": 50,
                 "stretchable": false,
-                "pxlWidth": 804.5,
+                "pxlWidth": 0,
                 "index": 1
               }
             ]
@@ -248,7 +248,7 @@
   "isPublic": null,
   "widgets": [
     {
-      "title": "Pediatric Patient Contacts",
+      "title": "Count",
       "type": "pivot2",
       "subtype": "pivot2",
       "oid": "6a57e2f626b6b091e33c5006",
@@ -408,10 +408,11 @@
         "drillToAnywhere": true,
         "autoUpdateOnEveryChange": true
       },
-      "dashboardid": "6a57cec0ddc9f3600d59a4c0"
+      "dashboardid": "6a57cec0ddc9f3600d59a4c0",
+      "dataNotLoadedYet": false
     },
     {
-      "title": "Pediatric Patient Contacts",
+      "title": "Incidents",
       "type": "pivot2",
       "subtype": "pivot2",
       "oid": "6a68f6188368e7d493a23b62",
@@ -461,7 +462,15 @@
                     }
                   },
                   "columnTitle": "Formula",
-                  "title": "Lead Provider"
+                  "title": "Lead Provider",
+                  "sort": "asc",
+                  "sortDetails": {
+                    "field": 0,
+                    "dir": "asc",
+                    "sortingLastDimension": true,
+                    "initialized": true,
+                    "isLastApplied": true
+                  }
                 },
                 "instanceid": "22AE9-1688-0B",
                 "panel": "rows",
@@ -480,13 +489,12 @@
                   "tableTitle": "Incident Response",
                   "merged": true,
                   "title": "Incident Number",
-                  "sort": "desc",
+                  "sort": "asc",
                   "sortDetails": {
                     "field": 1,
-                    "dir": "desc",
-                    "sortingLastDimension": true,
-                    "initialized": true,
-                    "isLastApplied": true
+                    "dir": "asc",
+                    "sortingLastDimension": false,
+                    "initialized": true
                   }
                 },
                 "instanceid": "38B42-A99C-35",
@@ -495,6 +503,27 @@
                   "id": "[Incident Response.Incident Number]_count",
                   "index": 1
                 }
+              },
+              {
+                "jaql": {
+                  "table": "Incident Response",
+                  "column": "Dispatched",
+                  "dim": "[Incident Response.Dispatched (Calendar)]",
+                  "datatype": "datetime",
+                  "columnTitle": "Dispatched",
+                  "tableTitle": "Incident Response",
+                  "merged": true,
+                  "title": "Date/Time",
+                  "dateTimeLevel": "minutes",
+                  "bucket": "1"
+                },
+                "instanceid": "A1393-9750-18",
+                "panel": "rows",
+                "field": {
+                  "id": "[Incident Response.Dispatched (Calendar)]_years",
+                  "index": 2
+                },
+                "hierarchies": []
               }
             ]
           },
@@ -533,6 +562,12 @@
               "title": "Incident Number",
               "singular": "Incident Number",
               "plural": "Incident Number"
+            },
+            {
+              "id": "years_in_dispatched",
+              "title": "Years in Dispatched",
+              "singular": "Years in Dispatched",
+              "plural": "Years in Dispatched"
             }
           ]
         }

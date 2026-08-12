@@ -1,5 +1,5 @@
 {
-  "title": "NWREMS:  Narcotic/Controlled Substance Administration",
+  "title": "NWREMS: Diversions",
   "desc": "",
   "source": null,
   "type": "dashboard",
@@ -24,7 +24,7 @@
     }
   },
   "layout": {
-    "instanceid": "160DD-8693-1D",
+    "instanceid": "14D0E-8D43-BA",
     "type": "columnar",
     "columns": [
       {
@@ -41,12 +41,12 @@
                     "maxWidth": 2048,
                     "height": 128,
                     "defaultWidth": 128,
-                    "widgetid": "6a67ec598368e7d493a21a6c"
+                    "widgetid": "6a7cff2efdc256800e22cb68"
                   }
                 ],
                 "width": 100,
                 "stretchable": false,
-                "pxlWidth": 1607,
+                "pxlWidth": 1437,
                 "index": 0
               }
             ]
@@ -56,19 +56,18 @@
               {
                 "elements": [
                   {
-                    "minHeight": 256,
-                    "maxHeight": 2048,
-                    "minWidth": 256,
-                    "maxWidth": 2048,
-                    "height": "756px",
+                    "minHeight": 64,
+                    "maxHeight": 1028,
+                    "height": "192px",
+                    "minWidth": 48,
+                    "maxWidth": 1028,
                     "defaultWidth": 512,
-                    "widgetid": "6a5fcc15ddc9f3600d5a84ae",
-                    "autoHeight": "186px"
+                    "widgetid": "6a7cff1f1f8c45478bcdac4e"
                   }
                 ],
                 "width": 50,
                 "stretchable": false,
-                "pxlWidth": 804.5,
+                "pxlWidth": 719.5,
                 "index": 0
               },
               {
@@ -78,21 +77,21 @@
                     "maxHeight": 2048,
                     "minWidth": 128,
                     "maxWidth": 2048,
+                    "height": "192px",
                     "defaultWidth": 512,
-                    "widgetid": "6a67ec888368e7d493a21a73",
-                    "height": "756px",
-                    "autoHeight": "756px"
+                    "widgetid": "6a7cff1f1f8c45478bcdac4f",
+                    "autoHeight": "29px"
                   }
                 ],
                 "width": 50,
                 "stretchable": false,
-                "pxlWidth": 804.5,
+                "pxlWidth": 719.5,
                 "index": 1
               }
             ]
           }
         ],
-        "pxlWidth": 0,
+        "pxlWidth": 1439,
         "index": 0
       }
     ]
@@ -119,14 +118,14 @@
         "title": "Days in Dispatched",
         "collapsed": true,
         "isDashboardFilter": true,
+        "columnTitle": "Days in Dispatched",
+        "tableTitle": "Incident Response",
         "datasource": {
           "fullname": "live:EMS",
           "id": "live:EMS",
           "live": true,
           "title": "EMS"
         },
-        "columnTitle": "Days in Dispatched",
-        "tableTitle": "Incident Response",
         "filter": {
           "last": {
             "count": 360,
@@ -135,7 +134,7 @@
         }
       },
       "isCascading": false,
-      "instanceid": "0E0E4-4601-52",
+      "instanceid": "146DF-C53B-70",
       "disabled": false
     },
     {
@@ -163,7 +162,7 @@
         "isDashboardFilter": true
       },
       "isCascading": false,
-      "instanceid": "85CD7-54AA-23"
+      "instanceid": "154C1-B9EF-0C"
     },
     {
       "jaql": {
@@ -190,44 +189,245 @@
         "isDashboardFilter": true
       },
       "isCascading": false,
-      "instanceid": "DF7B5-137B-2F"
+      "instanceid": "F2BDD-B393-C0"
+    },
+    {
+      "jaql": {
+        "table": "Incident Transport Due To",
+        "column": "Transport Due To",
+        "dim": "[Incident Transport Due To.Transport Due To]",
+        "datatype": "text",
+        "columnTitle": "Transport Due To",
+        "tableTitle": "Incident Transport Due To",
+        "merged": true,
+        "isDashboardFilter": true,
+        "collapsed": true,
+        "title": "Transport Due To",
+        "datasource": {
+          "title": "EMS",
+          "id": "live:EMS",
+          "fullname": "live:EMS",
+          "live": true
+        },
+        "filter": {
+          "explicit": true,
+          "multiSelection": true,
+          "members": [
+            "Diversion"
+          ]
+        }
+      },
+      "instanceid": "FAC0D-1DF3-14",
+      "isCascading": false,
+      "disabled": false
     }
   ],
-  "oid": "6a5fb247ddc9f3600d5a7b63",
+  "oid": "6a7cff1f1f8c45478bcdac4d",
   "settings": {
     "autoUpdateOnFiltersChange": true
   },
   "filterRelations": [],
   "filterToDatasourceMapping": {},
-  "allowChangeSubscription": false,
-  "subscription": {
-    "executionPerDay": 1,
-    "schedule": "0 0 0 * * *",
-    "isDataChange": false,
-    "type": "daily",
-    "reportType": {
-      "inline": true
-    },
-    "emailSettings": {
-      "isEmail": true,
-      "isPdf": false
-    },
-    "context": {
-      "dashboardid": "6a5fb247ddc9f3600d5a7b63"
-    },
-    "startAt": "2026-07-21",
-    "tzName": "America/Los_Angeles",
-    "timezone": 420,
-    "active": false,
-    "subscribe": false
-  },
-  "isPublic": null,
+  "parentFolder": null,
   "widgets": [
     {
       "title": "Count",
+      "type": "indicator",
+      "subtype": "indicator/numeric",
+      "oid": "6a7cff1f1f8c45478bcdac4e",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [],
+          "all": false
+        },
+        "panels": [
+          {
+            "name": "value",
+            "items": [
+              {
+                "jaql": {
+                  "type": "measure",
+                  "formula": "Count([D8BCC-494])",
+                  "context": {
+                    "[D8BCC-494]": {
+                      "table": "Incident Response",
+                      "column": "Incident Number",
+                      "dim": "[Incident Response.Incident Number]",
+                      "datatype": "text",
+                      "columnTitle": "Incident Number",
+                      "tableTitle": "Incident Response",
+                      "merged": true,
+                      "title": "Incident Number"
+                    }
+                  },
+                  "columnTitle": "Count([Incident Number])",
+                  "title": "Diverted"
+                },
+                "instanceid": "DC4F3-794B-E8",
+                "format": {
+                  "mask": {
+                    "type": "number",
+                    "abbreviations": {
+                      "t": true,
+                      "b": true,
+                      "m": true,
+                      "k": false
+                    },
+                    "separated": true,
+                    "decimals": "auto",
+                    "abbreviateAll": false,
+                    "isdefault": true
+                  },
+                  "color": {
+                    "colorIndex": 0,
+                    "type": "color"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "secondary",
+            "items": []
+          },
+          {
+            "name": "min",
+            "items": []
+          },
+          {
+            "name": "max",
+            "items": []
+          },
+          {
+            "name": "filters",
+            "items": []
+          }
+        ],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "subtype": "simple",
+        "skin": "vertical",
+        "components": {
+          "title": {
+            "inactive": false,
+            "enabled": true
+          },
+          "icon": {
+            "inactive": true,
+            "enabled": true
+          },
+          "secondaryTitle": {
+            "inactive": true,
+            "enabled": true
+          }
+        },
+        "indicator/numeric": {
+          "subtype": "simple",
+          "skin": "vertical",
+          "components": {
+            "title": {
+              "inactive": false,
+              "enabled": true
+            },
+            "icon": {
+              "inactive": false,
+              "enabled": true
+            },
+            "secondaryTitle": {
+              "inactive": true,
+              "enabled": true
+            }
+          }
+        },
+        "indicator/gauge": {
+          "subtype": "round",
+          "skin": "1",
+          "components": {
+            "ticks": {
+              "inactive": false,
+              "enabled": true
+            },
+            "labels": {
+              "inactive": false,
+              "enabled": true
+            },
+            "title": {
+              "inactive": false,
+              "enabled": true
+            },
+            "secondaryTitle": {
+              "inactive": true,
+              "enabled": true
+            }
+          }
+        },
+        "narration": {
+          "display": "above",
+          "verbosity": "low",
+          "labels": []
+        }
+      },
+      "instanceid": "9BA4B-82D0-8C",
+      "drillToDashboardConfig": {
+        "drilledDashboardPrefix": "_drill",
+        "drilledDashboardsFolderPrefix": "",
+        "displayFilterPane": true,
+        "displayDashboardsPane": true,
+        "displayToolbarRow": true,
+        "displayHeaderRow": true,
+        "volatile": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drillToDashboardNavigateType": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "excludeFilterDims": [],
+        "includeFilterDims": [],
+        "drilledDashboardDisplayType": 2,
+        "dashboardIds": [],
+        "modalWindowResize": false,
+        "showFolderNameOnMenuSelection": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "showJTDIcon": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "forceZeroInsteadNull": false,
+        "mergeTargetDashboardFilters": false,
+        "drillToDashboardByName": false
+      },
+      "realTimeRefreshing": false,
+      "viewState": {
+        "activeTab": "filters"
+      },
+      "options": {
+        "dashboardFiltersMode": "filter",
+        "selector": false,
+        "disallowSelector": true,
+        "triggersDomready": true,
+        "autoUpdateOnEveryChange": true,
+        "supportsHierarchies": false
+      },
+      "dashboardid": "6a7cff1f1f8c45478bcdac4d"
+    },
+    {
+      "title": "Incidents",
       "type": "pivot2",
       "subtype": "pivot2",
-      "oid": "6a5fcc15ddc9f3600d5a84ae",
+      "oid": "6a7cff1f1f8c45478bcdac4f",
       "desc": null,
       "source": null,
       "datasource": {
@@ -249,28 +449,22 @@
             "items": [
               {
                 "jaql": {
-                  "table": "Flow Chart Treatment",
-                  "column": "Treatment Name",
-                  "dim": "[Flow Chart Treatment.Treatment Name]",
+                  "table": "Incident Disposition",
+                  "column": "Diverted From",
+                  "dim": "[Incident Disposition.Diverted From]",
                   "datatype": "text",
-                  "columnTitle": "Treatment Name",
-                  "tableTitle": "Flow Chart Treatment",
+                  "columnTitle": "Diverted From",
+                  "tableTitle": "Incident Disposition",
                   "merged": true,
-                  "title": "Treatment Name"
+                  "title": "Diverted From"
                 },
-                "instanceid": "9FCFE-7256-97",
-                "format": {},
+                "instanceid": "5E64B-9338-DB",
                 "panel": "rows",
                 "field": {
-                  "id": "[Flow Chart Treatment.Treatment Name]",
+                  "id": "[Incident Disposition.Diverted From]",
                   "index": 0
                 }
-              }
-            ]
-          },
-          {
-            "name": "values",
-            "items": [
+              },
               {
                 "jaql": {
                   "table": "Incident Response",
@@ -280,17 +474,55 @@
                   "columnTitle": "Incident Number",
                   "tableTitle": "Incident Response",
                   "merged": true,
-                  "title": "Count",
-                  "agg": "count"
+                  "title": "Incident Number"
                 },
-                "instanceid": "A6DF7-9A80-DB",
-                "panel": "measures",
+                "format": {},
+                "instanceid": "07535-2C7B-AD",
                 "field": {
-                  "id": "[Incident Response.Incident Number]_count",
+                  "id": "[Incident Response.Incident Number]",
                   "index": 1
-                }
+                },
+                "panel": "rows"
+              },
+              {
+                "jaql": {
+                  "table": "Incident Response",
+                  "column": "Dispatched",
+                  "dim": "[Incident Response.Dispatched (Calendar)]",
+                  "datatype": "datetime",
+                  "columnTitle": "Dispatched",
+                  "tableTitle": "Incident Response",
+                  "merged": true,
+                  "title": "Date/Time",
+                  "dateTimeLevel": "minutes",
+                  "bucket": "1"
+                },
+                "format": {
+                  "mask": {
+                    "years": "yyyy",
+                    "quarters": "yyyy Q",
+                    "months": "MM/yyyy",
+                    "weeks": "ww yyyy",
+                    "days": "shortDate",
+                    "minutes": "HH:mm",
+                    "seconds": "MM/dd/yyyy HH:mm:ss",
+                    "dateAndTime": "MM/dd/yyyy HH:mm",
+                    "isdefault": true
+                  }
+                },
+                "instanceid": "8AD59-6822-4D",
+                "panel": "rows",
+                "field": {
+                  "id": "[Incident Response.Dispatched (Calendar)]_years",
+                  "index": 2
+                },
+                "hierarchies": []
               }
             ]
+          },
+          {
+            "name": "values",
+            "items": []
           },
           {
             "name": "columns",
@@ -298,40 +530,7 @@
           },
           {
             "name": "filters",
-            "items": [
-              {
-                "jaql": {
-                  "table": "Flow Chart Treatment",
-                  "column": "Treatment Name",
-                  "dim": "[Flow Chart Treatment.Treatment Name]",
-                  "datatype": "text",
-                  "columnTitle": "Treatment Name",
-                  "tableTitle": "Flow Chart Treatment",
-                  "merged": true,
-                  "title": "Treatment Name",
-                  "collapsed": true,
-                  "datasource": {
-                    "title": "EMS",
-                    "id": "live:EMS",
-                    "fullname": "live:EMS",
-                    "live": true
-                  },
-                  "filter": {
-                    "explicit": true,
-                    "multiSelection": true,
-                    "members": [
-                      "Ketamine",
-                      "Morphine",
-                      "Naloxone",
-                      "Valium",
-                      "Fentanyl"
-                    ]
-                  }
-                },
-                "instanceid": "C36AE-E41E-9D",
-                "panel": "scope"
-              }
-            ]
+            "items": []
           }
         ],
         "usedFormulasMapping": {}
@@ -352,28 +551,27 @@
           "verbosity": "low",
           "labels": [
             {
-              "id": "treatment_name",
-              "title": "Treatment Name",
-              "singular": "Treatment Name",
-              "plural": "Treatment Name"
+              "id": "diverted_from",
+              "title": "Diverted From",
+              "singular": "Diverted From",
+              "plural": "Diverted From"
+            },
+            {
+              "id": "incident_number",
+              "title": "Incident Number",
+              "singular": "Incident Number",
+              "plural": "Incident Number"
+            },
+            {
+              "id": "date/time",
+              "title": "Date/Time",
+              "singular": "Date/Time",
+              "plural": "Date/Time"
             }
           ]
         }
       },
-      "instanceid": "D9C3C-A7EA-AA",
-      "currentPage": 0,
-      "viewState": {
-        "activeTab": "filters"
-      },
-      "realTimeRefreshing": false,
-      "options": {
-        "dashboardFiltersMode": "filter",
-        "selector": false,
-        "triggersDomready": true,
-        "drillToAnywhere": true,
-        "autoUpdateOnEveryChange": true
-      },
-      "dashboardid": "6a5fb247ddc9f3600d5a7b63",
+      "instanceid": "224AB-BA1C-09",
       "drillToDashboardConfig": {
         "drilledDashboardPrefix": "_drill",
         "drilledDashboardsFolderPrefix": "",
@@ -404,13 +602,24 @@
         "mergeTargetDashboardFilters": false,
         "drillToDashboardByName": false
       },
-      "dataNotLoadedYet": false
+      "realTimeRefreshing": false,
+      "options": {
+        "dashboardFiltersMode": "filter",
+        "selector": false,
+        "triggersDomready": true,
+        "drillToAnywhere": true,
+        "autoUpdateOnEveryChange": true
+      },
+      "dashboardid": "6a7cff1f1f8c45478bcdac4d",
+      "viewState": {
+        "activeTab": "filters"
+      }
     },
     {
       "title": "RICHTEXT_MAIN.TITLE",
       "type": "richtexteditor",
       "subtype": "richtexteditor",
-      "oid": "6a67ec598368e7d493a21a6c",
+      "oid": "6a7cff2efdc256800e22cb68",
       "desc": null,
       "source": null,
       "datasource": {
@@ -431,13 +640,13 @@
       },
       "style": {
         "content": {
-          "html": "<font color=\"#e6e6e6\"><font size=\"7\">Narcotic/Controlled Substance Administration</font><br><font size=\"5\">This dashboard shows the number of times narcotic/controlled substances were administered, and the associated incidents.</font></font>",
+          "html": "<font color=\"#e6e6e6\"><font size=\"7\">Diversions</font><br><font size=\"5\">This dashboard shows incidents in which transport was diverted, and the facility diverted from.</font></font>",
           "vAlign": "valign-middle",
           "bgColor": "#117899",
           "textAlign": "center"
         }
       },
-      "instanceid": "CD0E4-9306-C3",
+      "instanceid": "2A033-F694-88",
       "realTimeRefreshing": false,
       "options": {
         "triggersDomready": true,
@@ -454,221 +663,7 @@
         "supportsHierarchies": false,
         "dashboardFiltersMode": "filter"
       },
-      "dashboardid": "6a5fb247ddc9f3600d5a7b63"
-    },
-    {
-      "title": "Incidents",
-      "type": "pivot2",
-      "subtype": "pivot2",
-      "oid": "6a67ec888368e7d493a21a73",
-      "desc": null,
-      "source": null,
-      "datasource": {
-        "title": "EMS",
-        "id": "live:EMS",
-        "fullname": "live:EMS",
-        "live": true
-      },
-      "selection": null,
-      "metadata": {
-        "ignore": {
-          "dimensions": [],
-          "ids": [],
-          "all": false
-        },
-        "panels": [
-          {
-            "name": "rows",
-            "items": [
-              {
-                "jaql": {
-                  "table": "Flow Chart Treatment",
-                  "column": "Treatment Name",
-                  "dim": "[Flow Chart Treatment.Treatment Name]",
-                  "datatype": "text",
-                  "columnTitle": "Treatment Name",
-                  "tableTitle": "Flow Chart Treatment",
-                  "merged": true,
-                  "title": "Treatment Name"
-                },
-                "instanceid": "9FCFE-7256-97",
-                "format": {},
-                "panel": "rows",
-                "field": {
-                  "id": "[Flow Chart Treatment.Treatment Name]",
-                  "index": 0
-                }
-              },
-              {
-                "jaql": {
-                  "table": "Incident Response",
-                  "column": "Incident Number",
-                  "dim": "[Incident Response.Incident Number]",
-                  "datatype": "text",
-                  "columnTitle": "Incident Number",
-                  "tableTitle": "Incident Response",
-                  "merged": true,
-                  "title": "Incident Number"
-                },
-                "instanceid": "A6DF7-9A80-DB",
-                "panel": "rows",
-                "field": {
-                  "id": "[Incident Response.Incident Number]_count",
-                  "index": 1
-                }
-              },
-              {
-                "jaql": {
-                  "table": "Incident Response",
-                  "column": "Dispatched",
-                  "dim": "[Incident Response.Dispatched (Calendar)]",
-                  "datatype": "datetime",
-                  "columnTitle": "Dispatched",
-                  "tableTitle": "Incident Response",
-                  "merged": true,
-                  "title": "Date/Time",
-                  "dateTimeLevel": "minutes",
-                  "bucket": "1"
-                },
-                "instanceid": "595EC-54A9-B3",
-                "panel": "rows",
-                "field": {
-                  "id": "[Incident Response.Dispatched (Calendar)]_years",
-                  "index": 2
-                },
-                "hierarchies": []
-              }
-            ]
-          },
-          {
-            "name": "values",
-            "items": []
-          },
-          {
-            "name": "columns",
-            "items": []
-          },
-          {
-            "name": "filters",
-            "items": [
-              {
-                "jaql": {
-                  "table": "Flow Chart Treatment",
-                  "column": "Treatment Name",
-                  "dim": "[Flow Chart Treatment.Treatment Name]",
-                  "datatype": "text",
-                  "columnTitle": "Treatment Name",
-                  "tableTitle": "Flow Chart Treatment",
-                  "merged": true,
-                  "title": "Treatment Name",
-                  "collapsed": true,
-                  "datasource": {
-                    "title": "EMS",
-                    "id": "live:EMS",
-                    "fullname": "live:EMS",
-                    "live": true
-                  },
-                  "filter": {
-                    "explicit": true,
-                    "multiSelection": true,
-                    "members": [
-                      "Ketamine",
-                      "Morphine",
-                      "Naloxone",
-                      "Valium",
-                      "Fentanyl"
-                    ]
-                  }
-                },
-                "instanceid": "C36AE-E41E-9D",
-                "panel": "scope"
-              }
-            ]
-          }
-        ],
-        "usedFormulasMapping": {}
-      },
-      "style": {
-        "scroll": false,
-        "pageSize": 25,
-        "automaticHeight": true,
-        "colors": {
-          "rows": true,
-          "columns": false,
-          "headers": false,
-          "members": false,
-          "totals": false
-        },
-        "narration": {
-          "display": "above",
-          "verbosity": "low",
-          "labels": [
-            {
-              "id": "treatment_name",
-              "title": "Treatment Name",
-              "singular": "Treatment Name",
-              "plural": "Treatment Name"
-            },
-            {
-              "id": "incident_number",
-              "title": "Incident Number",
-              "singular": "Incident Number",
-              "plural": "Incident Number"
-            },
-            {
-              "id": "years_in_dispatched",
-              "title": "Years in Dispatched",
-              "singular": "Years in Dispatched",
-              "plural": "Years in Dispatched"
-            }
-          ]
-        }
-      },
-      "instanceid": "D9C3C-A7EA-AA",
-      "currentPage": 0,
-      "viewState": {
-        "activeTab": "filters"
-      },
-      "realTimeRefreshing": false,
-      "drillToDashboardConfig": {
-        "drilledDashboardPrefix": "_drill",
-        "drilledDashboardsFolderPrefix": "",
-        "displayFilterPane": true,
-        "displayDashboardsPane": true,
-        "displayToolbarRow": true,
-        "displayHeaderRow": true,
-        "volatile": false,
-        "hideDrilledDashboards": true,
-        "hideSharedDashboardsForNonOwner": true,
-        "drillToDashboardMenuCaption": "Jump to dashboard",
-        "drillToDashboardRightMenuCaption": "Jump to ",
-        "drillToDashboardNavigateType": 2,
-        "drillToDashboardNavigateTypePivot": 2,
-        "drillToDashboardNavigateTypeCharts": 1,
-        "drillToDashboardNavigateTypeOthers": 3,
-        "excludeFilterDims": [],
-        "includeFilterDims": [],
-        "drilledDashboardDisplayType": 2,
-        "dashboardIds": [],
-        "modalWindowResize": false,
-        "showFolderNameOnMenuSelection": false,
-        "resetDashFiltersAfterJTD": false,
-        "sameCubeRestriction": true,
-        "showJTDIcon": true,
-        "sendPieChartMeasureFiltersOnClick": true,
-        "forceZeroInsteadNull": false,
-        "mergeTargetDashboardFilters": false,
-        "drillToDashboardByName": false
-      },
-      "dataNotLoadedYet": false,
-      "options": {
-        "dashboardFiltersMode": "filter",
-        "selector": false,
-        "triggersDomready": true,
-        "drillToAnywhere": true,
-        "autoUpdateOnEveryChange": true
-      },
-      "dashboardid": "6a5fb247ddc9f3600d5a7b63"
+      "dashboardid": "6a7cff1f1f8c45478bcdac4d"
     }
   ],
   "hierarchies": []
