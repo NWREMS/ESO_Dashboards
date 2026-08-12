@@ -46,7 +46,7 @@
                 ],
                 "width": 100,
                 "stretchable": false,
-                "pxlWidth": 1607,
+                "pxlWidth": 0,
                 "index": 0
               }
             ]
@@ -60,7 +60,7 @@
                     "maxHeight": 2048,
                     "minWidth": 128,
                     "maxWidth": 2048,
-                    "height": "446px",
+                    "height": "420px",
                     "defaultWidth": 512,
                     "widgetid": "6a5e9d2dddc9f3600d5a5698",
                     "autoHeight": "290px"
@@ -80,8 +80,8 @@
                     "maxWidth": 2048,
                     "defaultWidth": 512,
                     "widgetid": "6a5e9d39ddc9f3600d5a569c",
-                    "height": "446px",
-                    "autoHeight": "446px"
+                    "height": "420px",
+                    "autoHeight": "420px"
                   }
                 ],
                 "width": 50,
