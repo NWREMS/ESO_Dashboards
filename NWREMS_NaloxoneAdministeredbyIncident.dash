@@ -191,6 +191,35 @@
       },
       "isCascading": false,
       "instanceid": "0800B-D623-27"
+    },
+    {
+      "jaql": {
+        "table": "Flow Chart Treatment",
+        "column": "Treatment Name",
+        "dim": "[Flow Chart Treatment.Treatment Name]",
+        "datatype": "text",
+        "columnTitle": "Treatment Name",
+        "tableTitle": "Flow Chart Treatment",
+        "merged": true,
+        "isDashboardFilter": true,
+        "title": "Treatment Name",
+        "datasource": {
+          "title": "EMS",
+          "id": "live:EMS",
+          "fullname": "live:EMS",
+          "live": true
+        },
+        "filter": {
+          "explicit": true,
+          "multiSelection": true,
+          "members": [
+            "Naloxone"
+          ]
+        },
+        "collapsed": true
+      },
+      "instanceid": "06A42-C45F-68",
+      "isCascading": false
     }
   ],
   "oid": "6a5e670c26b6b091e33cebb5",
@@ -296,37 +325,7 @@
           },
           {
             "name": "filters",
-            "items": [
-              {
-                "jaql": {
-                  "table": "Flow Chart Treatment",
-                  "column": "Treatment Name",
-                  "dim": "[Flow Chart Treatment.Treatment Name]",
-                  "datatype": "text",
-                  "columnTitle": "Treatment Name",
-                  "tableTitle": "Flow Chart Treatment",
-                  "merged": true,
-                  "isPrimary": false,
-                  "isDashboardFilter": false,
-                  "title": "Treatment Name",
-                  "collapsed": true,
-                  "datasource": {
-                    "title": "EMS",
-                    "id": "live:EMS",
-                    "fullname": "live:EMS",
-                    "live": true
-                  },
-                  "filter": {
-                    "explicit": true,
-                    "multiSelection": true,
-                    "members": [
-                      "Naloxone"
-                    ]
-                  }
-                },
-                "instanceid": "9C9DB-2538-0A"
-              }
-            ]
+            "items": []
           }
         ],
         "usedFormulasMapping": {}
@@ -351,14 +350,7 @@
         "narration": {
           "display": "above",
           "verbosity": "low",
-          "labels": [
-            {
-              "id": "treatment_name",
-              "title": "Treatment Name",
-              "singular": "Treatment Name",
-              "plural": "Treatment Name"
-            }
-          ]
+          "labels": []
         },
         "indicator/numeric": {
           "subtype": "simple",
@@ -445,7 +437,8 @@
         "forceZeroInsteadNull": false,
         "mergeTargetDashboardFilters": false,
         "drillToDashboardByName": false
-      }
+      },
+      "dataNotLoadedYet": false
     },
     {
       "title": "Incidents",
@@ -488,6 +481,40 @@
                   "id": "[Incident Response.Incident Number]_count",
                   "index": 0
                 }
+              },
+              {
+                "jaql": {
+                  "table": "Incident Response",
+                  "column": "Dispatched",
+                  "dim": "[Incident Response.Dispatched (Calendar)]",
+                  "datatype": "datetime",
+                  "columnTitle": "Dispatched",
+                  "tableTitle": "Incident Response",
+                  "merged": true,
+                  "title": "Date/Time",
+                  "dateTimeLevel": "minutes",
+                  "bucket": "1"
+                },
+                "instanceid": "7D116-413F-AB",
+                "panel": "rows",
+                "field": {
+                  "id": "[Incident Response.Dispatched (Calendar)]_years",
+                  "index": 1
+                },
+                "hierarchies": [],
+                "format": {
+                  "mask": {
+                    "years": "yyyy",
+                    "quarters": "yyyy Q",
+                    "months": "MM/yyyy",
+                    "weeks": "ww yyyy",
+                    "days": "shortDate",
+                    "minutes": "HH:mm",
+                    "seconds": "MM/dd/yyyy HH:mm:ss",
+                    "dateAndTime": "MM/dd/yyyy HH:mm",
+                    "isdefault": true
+                  }
+                }
               }
             ]
           },
@@ -501,64 +528,7 @@
           },
           {
             "name": "filters",
-            "items": [
-              {
-                "jaql": {
-                  "table": "Flow Chart Treatment",
-                  "column": "Treatment Name",
-                  "dim": "[Flow Chart Treatment.Treatment Name]",
-                  "datatype": "text",
-                  "columnTitle": "Treatment Name",
-                  "tableTitle": "Flow Chart Treatment",
-                  "merged": true,
-                  "title": "Treatment Name",
-                  "datasource": {
-                    "fullname": "live:EMS",
-                    "id": "live:EMS",
-                    "live": true,
-                    "title": "EMS"
-                  },
-                  "collapsed": true,
-                  "filter": {
-                    "explicit": true,
-                    "multiSelection": true,
-                    "members": [
-                      "Naloxone"
-                    ]
-                  }
-                },
-                "instanceid": "699EC-9551-30",
-                "panel": "scope"
-              },
-              {
-                "jaql": {
-                  "table": "Incident Response",
-                  "column": "Incident Number",
-                  "dim": "[Incident Response.Incident Number]",
-                  "datatype": "text",
-                  "columnTitle": "Incident Number",
-                  "tableTitle": "Incident Response",
-                  "merged": true,
-                  "title": "Incident Number",
-                  "datasource": {
-                    "fullname": "live:EMS",
-                    "id": "live:EMS",
-                    "live": true,
-                    "title": "EMS"
-                  },
-                  "collapsed": true,
-                  "filter": {
-                    "explicit": false,
-                    "multiSelection": true,
-                    "all": true,
-                    "rankingMessage": "",
-                    "custom": true
-                  }
-                },
-                "instanceid": "83327-17F7-2A",
-                "panel": "scope"
-              }
-            ]
+            "items": []
           }
         ],
         "usedFormulasMapping": {}
@@ -585,10 +555,10 @@
               "plural": "Incident Number"
             },
             {
-              "id": "treatment_name",
-              "title": "Treatment Name",
-              "singular": "Treatment Name",
-              "plural": "Treatment Name"
+              "id": "date/time",
+              "title": "Date/Time",
+              "singular": "Date/Time",
+              "plural": "Date/Time"
             }
           ]
         }
@@ -635,7 +605,8 @@
         "drillToAnywhere": true,
         "autoUpdateOnEveryChange": true
       },
-      "dashboardid": "6a5e670c26b6b091e33cebb5"
+      "dashboardid": "6a5e670c26b6b091e33cebb5",
+      "dataNotLoadedYet": false
     },
     {
       "title": "RICHTEXT_MAIN.TITLE",
