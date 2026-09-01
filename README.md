@@ -21,3 +21,19 @@ First, download the dashboard of interest to your local computer.  Then do the f
 To use a dashboard, browse to ESO Insights (https://www.esosuite.net/insights/home) and log in.  Then double-click on the dashboard of interest.
 
 Note: All of the dashboards here include "NWREMS:" at the start of their names.  This makes it easier to find them once they've been installed in ESO Insights.
+
+## Manifest
+
+| Dashboard | Description |
+|-----------|-------------|
+| NWREMS_CallsperMemberLead&Non-Lead.dash | Shows people's participation in calls, as either lead or non-lead. |
+| NWREMS_ControlledSubstanceAdministration.dash | Shows the number of times narcotic/controlled substances were administered, and the associated incidents. |
+| NWREMS_Diversions.dash | Shows incidents in which transport was diverted, and the facility diverted from. |
+| NWREMS_HemorrhagicShock.dash | Shows incidents in which the patient underwent hemorrhagic shock. |
+| NWREMS_HypotensiveTraumaPatients.dash | Shows incidents where trauma was indicated and systolic blood pressure was 90 or below. |
+| NWREMS_NaloxoneAdministeredbyIncident.dash | Shows the total number of times Naloxone was administered, and the incident numbers. |
+| NWREMS_NaloxoneLeave-BehindKits.dash | Shows the number of times Naloxone leave-behind kits were issued, and the incidents. |
+| NWREMS_PediatricPatientContactbyMember.dash | Shows the count of pediatric patient contacts per person, and the incident numbers. |
+| NWREMS_STEMISceneTime.dash | Shows the average on-scene time for calls involving chest pain or STEMI. |
+| NWREMS_TIASceneTime.dash | Shows the average on-scene time in total and by person, for calls involving stroke/TIA. |
+| NWREMS_TimetoLockReport.dash | Shows the elapsed time, in hourse, between call completed and first lock of the call record. |
