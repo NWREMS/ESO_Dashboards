@@ -1,0 +1,2378 @@
+{
+  "title": "NWREMS: Hemorrhagic Shock",
+  "desc": "",
+  "source": null,
+  "type": "dashboard",
+  "style": {
+    "palette": {
+      "name": "Midnight Light",
+      "colors": [
+        "#117899",
+        "#60B8CC",
+        "#5CA793",
+        "#A2B86C",
+        "#EBC844",
+        "#ECAA38",
+        "#EF8B2C",
+        "#F16C20",
+        "#D94E1F",
+        "#C02E1D",
+        "#893B32",
+        "#0D3C55",
+        "#0F5B78"
+      ]
+    }
+  },
+  "layout": {
+    "instanceid": "4B847-9ED3-B9",
+    "type": "columnar",
+    "columns": [
+      {
+        "width": 100,
+        "cells": [
+          {
+            "subcells": [
+              {
+                "elements": [
+                  {
+                    "minHeight": 64,
+                    "maxHeight": 2048,
+                    "minWidth": 64,
+                    "maxWidth": 2048,
+                    "height": 128,
+                    "defaultWidth": 128,
+                    "widgetid": "6a920079685aed98af499d12"
+                  }
+                ],
+                "width": 100,
+                "stretchable": false,
+                "pxlWidth": 0,
+                "index": 0
+              }
+            ]
+          },
+          {
+            "subcells": [
+              {
+                "elements": [
+                  {
+                    "minHeight": 64,
+                    "maxHeight": 2048,
+                    "minWidth": 64,
+                    "maxWidth": 2048,
+                    "height": "284px",
+                    "defaultWidth": 128,
+                    "widgetid": "6a920079685aed98af499d15"
+                  }
+                ],
+                "width": 33.333333333333336,
+                "stretchable": false,
+                "pxlWidth": 0,
+                "index": 0
+              },
+              {
+                "elements": [
+                  {
+                    "minHeight": 64,
+                    "maxHeight": 2048,
+                    "minWidth": 64,
+                    "maxWidth": 2048,
+                    "height": "284px",
+                    "defaultWidth": 128,
+                    "widgetid": "6a920079685aed98af499d16"
+                  }
+                ],
+                "width": 33.333333333333336,
+                "stretchable": false,
+                "pxlWidth": 0,
+                "index": 1
+              },
+              {
+                "elements": [
+                  {
+                    "minHeight": 64,
+                    "maxHeight": 2048,
+                    "minWidth": 64,
+                    "maxWidth": 2048,
+                    "height": "284px",
+                    "defaultWidth": 128,
+                    "widgetid": "6a920079685aed98af499d17"
+                  }
+                ],
+                "width": 33.333333333333336,
+                "stretchable": false,
+                "pxlWidth": 0,
+                "index": 2
+              }
+            ]
+          },
+          {
+            "subcells": [
+              {
+                "elements": [
+                  {
+                    "minHeight": 256,
+                    "maxHeight": 2048,
+                    "minWidth": 256,
+                    "maxWidth": 2048,
+                    "height": "200px",
+                    "defaultWidth": 512,
+                    "widgetid": "6a920079685aed98af499d11",
+                    "autoHeight": "29px"
+                  }
+                ],
+                "width": 100,
+                "stretchable": false,
+                "pxlWidth": 0,
+                "index": 0
+              }
+            ]
+          },
+          {
+            "subcells": [
+              {
+                "elements": [
+                  {
+                    "minHeight": 128,
+                    "maxHeight": 2048,
+                    "minWidth": 128,
+                    "maxWidth": 2048,
+                    "defaultWidth": 512,
+                    "widgetid": "6a920079685aed98af499d14",
+                    "height": "82px",
+                    "autoHeight": "82px"
+                  }
+                ],
+                "width": 100,
+                "stretchable": false,
+                "pxlWidth": 0,
+                "index": 0
+              }
+            ]
+          },
+          {
+            "subcells": [
+              {
+                "elements": [
+                  {
+                    "minHeight": 128,
+                    "maxHeight": 2048,
+                    "minWidth": 128,
+                    "maxWidth": 2048,
+                    "defaultWidth": 512,
+                    "widgetid": "6a920079685aed98af499d13",
+                    "height": "200px",
+                    "autoHeight": "29px"
+                  }
+                ],
+                "width": 100,
+                "stretchable": false,
+                "pxlWidth": 0,
+                "index": 0
+              }
+            ]
+          }
+        ],
+        "pxlWidth": 0,
+        "index": 0
+      }
+    ]
+  },
+  "original": null,
+  "dataExploration": true,
+  "lastOpened": null,
+  "previewLayout": [],
+  "datasource": {
+    "title": "EMS",
+    "id": "live:EMS",
+    "fullname": "live:EMS",
+    "live": true
+  },
+  "filters": [
+    {
+      "jaql": {
+        "table": "Incident Response",
+        "column": "Dispatched",
+        "dim": "[Incident Response.Dispatched (Calendar)]",
+        "datatype": "datetime",
+        "merged": true,
+        "level": "days",
+        "title": "Days in Dispatched",
+        "collapsed": true,
+        "isDashboardFilter": true,
+        "columnTitle": "Days in Dispatched",
+        "tableTitle": "Incident Response",
+        "datasource": {
+          "fullname": "live:EMS",
+          "id": "live:EMS",
+          "live": true,
+          "title": "EMS"
+        },
+        "filter": {
+          "last": {
+            "count": 360,
+            "offset": 0
+          }
+        }
+      },
+      "isCascading": false,
+      "instanceid": "539E9-2CC4-75",
+      "disabled": false
+    },
+    {
+      "jaql": {
+        "table": "Incident Response",
+        "column": "Is Locked",
+        "dim": "[Incident Response.Is Locked]",
+        "datatype": "text",
+        "merged": true,
+        "collapsed": true,
+        "title": "Is Locked",
+        "datasource": {
+          "fullname": "live:EMS",
+          "id": "live:EMS",
+          "live": true,
+          "title": "EMS"
+        },
+        "filter": {
+          "explicit": true,
+          "multiSelection": true,
+          "members": [
+            "true"
+          ]
+        },
+        "isDashboardFilter": true
+      },
+      "isCascading": false,
+      "instanceid": "30717-289A-22"
+    },
+    {
+      "jaql": {
+        "table": "Incident Response",
+        "column": "Is Active",
+        "dim": "[Incident Response.Is Active]",
+        "datatype": "text",
+        "merged": true,
+        "collapsed": true,
+        "title": "Is Active",
+        "datasource": {
+          "fullname": "live:EMS",
+          "id": "live:EMS",
+          "live": true,
+          "title": "EMS"
+        },
+        "filter": {
+          "explicit": true,
+          "multiSelection": true,
+          "members": [
+            "true"
+          ]
+        },
+        "isDashboardFilter": true
+      },
+      "isCascading": false,
+      "instanceid": "7395C-E1E2-EE"
+    },
+    {
+      "jaql": {
+        "table": "Narrative",
+        "column": "Medical Trauma",
+        "dim": "[Narrative.Medical Trauma]",
+        "datatype": "text",
+        "columnTitle": "Medical Trauma",
+        "tableTitle": "Narrative",
+        "merged": true,
+        "isDashboardFilter": true,
+        "collapsed": true,
+        "title": "Medical Trauma",
+        "datasource": {
+          "title": "EMS",
+          "id": "live:EMS",
+          "fullname": "live:EMS",
+          "live": true
+        },
+        "filter": {
+          "explicit": true,
+          "multiSelection": true,
+          "members": [
+            "Medical & Trauma",
+            "Trauma"
+          ]
+        }
+      },
+      "instanceid": "13850-371E-7A",
+      "isCascading": false
+    },
+    {
+      "jaql": {
+        "table": "Narrative",
+        "column": "Primary Impression",
+        "dim": "[Narrative.Primary Impression]",
+        "datatype": "text",
+        "columnTitle": "Primary Impression",
+        "tableTitle": "Narrative",
+        "merged": true,
+        "isDashboardFilter": true,
+        "title": "Primary Impression",
+        "datasource": {
+          "title": "EMS",
+          "id": "live:EMS",
+          "fullname": "live:EMS",
+          "live": true
+        },
+        "filter": {
+          "explicit": true,
+          "multiSelection": true,
+          "members": [
+            "Amputation of limb",
+            "Amputation of other parts of head (face, ears,etc.)",
+            "Gastrointestinal hemorrhage",
+            "Gastrostomy hemorrhage",
+            "Hemorrhage",
+            "Hemorrhagic Shock",
+            "Immediate postpartum hemorrhage",
+            "Labor and delivery complications",
+            "Laceration/Abrasion/Hematoma (minor surface trauma)",
+            "Postpartum hemorrhage",
+            "Tracheostomy Hemorrhage",
+            "Vaginal Hemorrhage"
+          ],
+          "custom": true,
+          "rankingMessage": ""
+        },
+        "collapsed": true
+      },
+      "instanceid": "475AA-B690-85",
+      "isCascading": false
+    },
+    {
+      "jaql": {
+        "table": "Narrative",
+        "column": "Secondary Impression",
+        "dim": "[Narrative.Secondary Impression]",
+        "datatype": "text",
+        "columnTitle": "Secondary Impression",
+        "tableTitle": "Narrative",
+        "merged": true,
+        "isDashboardFilter": true,
+        "title": "Secondary Impression",
+        "datasource": {
+          "title": "EMS",
+          "id": "live:EMS",
+          "fullname": "live:EMS",
+          "live": true
+        },
+        "filter": {
+          "explicit": true,
+          "multiSelection": true,
+          "members": [
+            "Amputation of limb",
+            "Amputation of other parts of head (face, ears,etc.)",
+            "Gastrointestinal hemorrhage",
+            "Gastrostomy hemorrhage",
+            "Hemorrhage",
+            "Hemorrhagic Shock",
+            "Immediate postpartum hemorrhage",
+            "Labor and delivery complications",
+            "Laceration/Abrasion/Hematoma (minor surface trauma)",
+            "Postpartum hemorrhage",
+            "Tracheostomy Hemorrhage",
+            "Vaginal Hemorrhage"
+          ],
+          "custom": true,
+          "rankingMessage": ""
+        },
+        "collapsed": true
+      },
+      "instanceid": "ECC71-66AA-21",
+      "isCascading": false
+    }
+  ],
+  "oid": "6a920079685aed98af499d10",
+  "settings": {
+    "autoUpdateOnFiltersChange": true,
+    "embedWithCSDKEnabled": false
+  },
+  "filterRelations": [
+    {
+      "datasource": "EMS",
+      "filterRelations": {
+        "type": "LogicalExpression",
+        "operator": "AND",
+        "left": {
+          "type": "LogicalExpression",
+          "operator": "AND",
+          "left": {
+            "type": "LogicalExpression",
+            "operator": "AND",
+            "left": {
+              "type": "LogicalExpression",
+              "operator": "AND",
+              "left": {
+                "type": "Identifier",
+                "instanceId": "539E9-2CC4-75"
+              },
+              "right": {
+                "type": "Identifier",
+                "instanceId": "30717-289A-22"
+              }
+            },
+            "right": {
+              "type": "Identifier",
+              "instanceId": "7395C-E1E2-EE"
+            }
+          },
+          "right": {
+            "type": "Identifier",
+            "instanceId": "13850-371E-7A"
+          }
+        },
+        "right": {
+          "type": "ParenthesizedLogicalExpression",
+          "value": {
+            "type": "LogicalExpression",
+            "operator": "OR",
+            "left": {
+              "type": "Identifier",
+              "instanceId": "475AA-B690-85"
+            },
+            "right": {
+              "type": "Identifier",
+              "instanceId": "ECC71-66AA-21"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "filterToDatasourceMapping": {},
+  "widgetFilterIndication": true,
+  "allowChangeSubscription": false,
+  "subscription": {
+    "executionPerDay": 1,
+    "schedule": "0 0 0 * * *",
+    "isDataChange": false,
+    "type": "daily",
+    "reportType": {
+      "inline": true
+    },
+    "emailSettings": {
+      "isEmail": true,
+      "isPdf": false
+    },
+    "context": {
+      "dashboardid": "6a920079685aed98af499d10"
+    },
+    "startAt": "2026-08-27",
+    "tzName": "America/Los_Angeles",
+    "timezone": 420,
+    "active": false,
+    "subscribe": false
+  },
+  "isPublic": null,
+  "parentFolder": null,
+  "widgets": [
+    {
+      "title": "0-9 Years Old",
+      "type": "pivot2",
+      "subtype": "pivot2",
+      "oid": "6a920079685aed98af499d11",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [
+            "B3B32-82B9-15"
+          ],
+          "all": false
+        },
+        "panels": [
+          {
+            "name": "rows",
+            "items": [
+              {
+                "jaql": {
+                  "table": "Incident Response",
+                  "column": "Incident Number",
+                  "dim": "[Incident Response.Incident Number]",
+                  "datatype": "text",
+                  "columnTitle": "Incident Number",
+                  "tableTitle": "Incident Response",
+                  "merged": true,
+                  "title": "Incident Number"
+                },
+                "instanceid": "D5E28-45A6-E8",
+                "field": {
+                  "id": "[Incident Response.Incident Number]",
+                  "index": 0
+                },
+                "panel": "rows",
+                "format": {
+                  "mask": {
+                    "type": "number",
+                    "abbreviations": {
+                      "t": true,
+                      "b": true,
+                      "m": true,
+                      "k": true
+                    },
+                    "separated": true,
+                    "decimals": "auto",
+                    "abbreviateAll": false,
+                    "isdefault": true
+                  }
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Incident Response",
+                  "column": "Dispatched",
+                  "dim": "[Incident Response.Dispatched (Calendar)]",
+                  "datatype": "datetime",
+                  "columnTitle": "Dispatched",
+                  "tableTitle": "Incident Response",
+                  "merged": true,
+                  "title": "Incident Date",
+                  "dateTimeLevel": "minutes",
+                  "bucket": "1"
+                },
+                "instanceid": "B688C-2857-DE",
+                "format": {
+                  "mask": {
+                    "years": "yyyy",
+                    "quarters": "yyyy Q",
+                    "months": "MM/yyyy",
+                    "weeks": "ww yyyy",
+                    "days": "shortDate",
+                    "minutes": "HH:mm",
+                    "seconds": "MM/dd/yyyy HH:mm:ss",
+                    "dateAndTime": "MM/dd/yyyy HH:mm",
+                    "isdefault": true
+                  }
+                },
+                "hierarchies": [],
+                "panel": "rows",
+                "field": {
+                  "id": "[Incident Response.Dispatched (Calendar)]",
+                  "index": 1
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Patient",
+                  "column": "Patient Age In Years",
+                  "dim": "[Patient.Patient Age In Years]",
+                  "datatype": "numeric",
+                  "columnTitle": "Patient Age In Years",
+                  "tableTitle": "Patient",
+                  "title": "Patient Age"
+                },
+                "instanceid": "99194-C679-3D",
+                "format": {},
+                "panel": "rows",
+                "field": {
+                  "id": "[Patient.Patient Age In Years]",
+                  "index": 2
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Narrative",
+                  "column": "Medical Trauma",
+                  "dim": "[Narrative.Medical Trauma]",
+                  "datatype": "text",
+                  "columnTitle": "Medical Trauma",
+                  "tableTitle": "Narrative",
+                  "merged": true,
+                  "title": "Medical/Trauma"
+                },
+                "instanceid": "CCE27-2245-3B",
+                "format": {},
+                "panel": "rows",
+                "field": {
+                  "id": "[Narrative.Medical Trauma]",
+                  "index": 3
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Narrative",
+                  "column": "Primary Impression",
+                  "dim": "[Narrative.Primary Impression]",
+                  "datatype": "text",
+                  "columnTitle": "Primary Impression",
+                  "tableTitle": "Narrative",
+                  "merged": true,
+                  "title": "Primary Impression"
+                },
+                "format": {},
+                "instanceid": "89FD4-091B-5D",
+                "field": {
+                  "id": "[Narrative.Primary Impression]",
+                  "index": 4
+                },
+                "panel": "rows"
+              },
+              {
+                "jaql": {
+                  "table": "Narrative",
+                  "column": "Secondary Impression",
+                  "dim": "[Narrative.Secondary Impression]",
+                  "datatype": "text",
+                  "columnTitle": "Secondary Impression",
+                  "tableTitle": "Narrative",
+                  "merged": true,
+                  "title": "Secondary Impression"
+                },
+                "instanceid": "E8BE7-7F4C-4D",
+                "panel": "rows",
+                "field": {
+                  "id": "[Narrative.Secondary Impression]",
+                  "index": 5
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Incident Destination",
+                  "column": "Destination Location Name",
+                  "dim": "[Incident Destination.Destination Location Name]",
+                  "datatype": "text",
+                  "columnTitle": "Destination Location Name",
+                  "tableTitle": "Incident Destination",
+                  "merged": true,
+                  "title": "Destination Name"
+                },
+                "instanceid": "03279-C5CD-58",
+                "format": {},
+                "panel": "rows",
+                "field": {
+                  "id": "[Incident Destination.Destination Location Name]",
+                  "index": 6
+                }
+              },
+              {
+                "jaql": {
+                  "table": "EMS Measures Vitals",
+                  "column": "Vital Sign Collection Count",
+                  "dim": "[EMS Measures Vitals.Vital Sign Collection Count]",
+                  "datatype": "numeric",
+                  "columnTitle": "Vital Sign Collection Count",
+                  "tableTitle": "EMS Measures Vitals",
+                  "title": "Vital Sign Count"
+                },
+                "instanceid": "CDAA6-77B3-45",
+                "format": {},
+                "panel": "rows",
+                "field": {
+                  "id": "[EMS Measures Vitals.Vital Sign Collection Count]",
+                  "index": 7
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Vital Signs",
+                  "column": "Vital Sign Date Time",
+                  "dim": "[Vital Signs.Vital Sign Date Time (Calendar)]",
+                  "datatype": "datetime",
+                  "columnTitle": "Vital Sign Date Time",
+                  "tableTitle": "Vital Signs",
+                  "merged": true,
+                  "title": "Vital Sign Date Time",
+                  "dateTimeLevel": "minutes",
+                  "bucket": "1"
+                },
+                "instanceid": "59D9A-C6C3-6B",
+                "format": {
+                  "mask": {
+                    "years": "yyyy",
+                    "quarters": "yyyy Q",
+                    "months": "MM/yyyy",
+                    "weeks": "ww yyyy",
+                    "days": "shortDate",
+                    "minutes": "HH:mm",
+                    "seconds": "MM/dd/yyyy HH:mm:ss",
+                    "dateAndTime": "MM/dd/yyyy HH:mm",
+                    "isdefault": true
+                  }
+                },
+                "hierarchies": [],
+                "panel": "rows",
+                "field": {
+                  "id": "[Vital Signs.Vital Sign Date Time (Calendar)]",
+                  "index": 8
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Vital Signs",
+                  "column": "Blood Pressure Systolic",
+                  "dim": "[Vital Signs.Blood Pressure Systolic]",
+                  "datatype": "numeric",
+                  "columnTitle": "Blood Pressure Systolic",
+                  "tableTitle": "Vital Signs",
+                  "title": "Blood Pressure Systolic"
+                },
+                "instanceid": "88D67-9D50-C3",
+                "format": {},
+                "panel": "rows",
+                "field": {
+                  "id": "[Vital Signs.Blood Pressure Systolic]",
+                  "index": 9
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Vital Signs",
+                  "column": "Pulse Rate",
+                  "dim": "[Vital Signs.Pulse Rate]",
+                  "datatype": "numeric",
+                  "columnTitle": "Pulse Rate",
+                  "tableTitle": "Vital Signs",
+                  "title": "Pulse Rate"
+                },
+                "instanceid": "7CD6C-6F83-11",
+                "format": {},
+                "panel": "rows",
+                "field": {
+                  "id": "[Vital Signs.Pulse Rate]",
+                  "index": 10
+                }
+              }
+            ]
+          },
+          {
+            "name": "values",
+            "items": [
+              {
+                "jaql": {
+                  "type": "measure",
+                  "formula": "CASE\nWHEN[4AE6E-DFA] < (70 + 2 * [B1963-28A]) THEN 1\nELSE 0\nEND",
+                  "context": {
+                    "[4AE6E-DFA]": {
+                      "table": "Vital Signs",
+                      "column": "Blood Pressure Systolic",
+                      "dim": "[Vital Signs.Blood Pressure Systolic]",
+                      "datatype": "numeric",
+                      "columnTitle": "Blood Pressure Systolic",
+                      "tableTitle": "Vital Signs",
+                      "title": "Median of Blood Pressure Systolic",
+                      "agg": "median"
+                    },
+                    "[B1963-28A]": {
+                      "table": "Patient",
+                      "column": "Patient Age In Years",
+                      "dim": "[Patient.Patient Age In Years]",
+                      "datatype": "numeric",
+                      "columnTitle": "Patient Age In Years",
+                      "tableTitle": "Patient",
+                      "agg": "median",
+                      "title": "Median of Patient Age In Years"
+                    }
+                  },
+                  "columnTitle": "Formula",
+                  "datatype": "numeric",
+                  "title": "In Shock"
+                },
+                "instanceid": "D979C-75D0-07",
+                "format": {
+                  "mask": {
+                    "type": "number",
+                    "abbreviations": {
+                      "t": false,
+                      "b": false,
+                      "m": false,
+                      "k": false
+                    },
+                    "abbreviateAll": false,
+                    "separated": true,
+                    "decimals": "auto",
+                    "isdefault": true
+                  },
+                  "color": {
+                    "type": "color"
+                  }
+                },
+                "panel": "measures",
+                "field": {
+                  "id": "CASE\nWHEN(MIN([7D9B8-840]) < 90) THEN 1\nWHEN (MIN([7D9B8-840]) < MIN([DB4BF-4F2])) THEN 1\nELSE 0\nEND",
+                  "index": 11
+                },
+                "disabled": true
+              }
+            ]
+          },
+          {
+            "name": "columns",
+            "items": []
+          },
+          {
+            "name": "filters",
+            "items": [
+              {
+                "jaql": {
+                  "table": "Patient",
+                  "column": "Patient Age In Years",
+                  "dim": "[Patient.Patient Age In Years]",
+                  "datatype": "numeric",
+                  "columnTitle": "Patient Age In Years",
+                  "tableTitle": "Patient",
+                  "isPrimary": false,
+                  "isDashboardFilter": false,
+                  "title": "Patient Age In Years",
+                  "collapsed": false,
+                  "datasource": {
+                    "title": "EMS",
+                    "id": "live:EMS",
+                    "fullname": "live:EMS",
+                    "live": true
+                  },
+                  "filter": {
+                    "to": "9"
+                  }
+                },
+                "instanceid": "533E3-960E-72",
+                "panel": "scope"
+              },
+              {
+                "jaql": {
+                  "type": "measure",
+                  "formula": "CASE\nWHEN(MIN([7D9B8-840]) < 90) THEN 1\nWHEN (MIN([7D9B8-840]) < MIN([DB4BF-4F2])) THEN 1\nELSE 0\nEND",
+                  "context": {
+                    "[7D9B8-840]": {
+                      "table": "Vital Signs",
+                      "column": "Blood Pressure Systolic",
+                      "dim": "[Vital Signs.Blood Pressure Systolic]",
+                      "datatype": "numeric",
+                      "columnTitle": "Blood Pressure Systolic",
+                      "tableTitle": "Vital Signs",
+                      "title": "Blood Pressure Systolic"
+                    },
+                    "[DB4BF-4F2]": {
+                      "table": "Vital Signs",
+                      "column": "Pulse Rate",
+                      "dim": "[Vital Signs.Pulse Rate]",
+                      "datatype": "numeric",
+                      "columnTitle": "Pulse Rate",
+                      "tableTitle": "Vital Signs",
+                      "title": "Pulse Rate"
+                    }
+                  },
+                  "title": "In Shock",
+                  "columnTitle": "Formula",
+                  "datatype": "numeric",
+                  "datasource": {
+                    "title": "EMS",
+                    "id": "live:EMS",
+                    "fullname": "live:EMS",
+                    "live": true
+                  },
+                  "collapsed": false,
+                  "filter": {
+                    "equals": 1
+                  }
+                },
+                "instanceid": "56584-E5A3-8D",
+                "format": {
+                  "mask": {
+                    "type": "number",
+                    "abbreviations": {
+                      "t": false,
+                      "b": false,
+                      "m": false,
+                      "k": false
+                    },
+                    "separated": true,
+                    "decimals": "auto",
+                    "abbreviateAll": false,
+                    "isdefault": true
+                  }
+                },
+                "panel": "scope"
+              }
+            ]
+          }
+        ],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "scroll": false,
+        "pageSize": 25,
+        "automaticHeight": true,
+        "colors": {
+          "rows": true,
+          "columns": false,
+          "headers": false,
+          "members": false,
+          "totals": false
+        },
+        "narration": {
+          "display": "above",
+          "verbosity": "low",
+          "labels": [
+            {
+              "id": "incident_number",
+              "title": "Incident Number",
+              "singular": "Incident Number",
+              "plural": "Incident Number"
+            },
+            {
+              "id": "incident_date",
+              "title": "Incident Date",
+              "singular": "Incident Date",
+              "plural": "Incident Date"
+            },
+            {
+              "id": "patient_age",
+              "title": "Patient Age",
+              "singular": "Patient Age",
+              "plural": "Patient Age"
+            },
+            {
+              "id": "medical/trauma",
+              "title": "Medical/Trauma",
+              "singular": "Medical/Trauma",
+              "plural": "Medical/Trauma"
+            },
+            {
+              "id": "primary_impression",
+              "title": "Primary Impression",
+              "singular": "Primary Impression",
+              "plural": "Primary Impression"
+            },
+            {
+              "id": "secondary_impression",
+              "title": "Secondary Impression",
+              "singular": "Secondary Impression",
+              "plural": "Secondary Impression"
+            },
+            {
+              "id": "destination_name",
+              "title": "Destination Name",
+              "singular": "Destination Name",
+              "plural": "Destination Name"
+            },
+            {
+              "id": "vital_sign_count",
+              "title": "Vital Sign Count",
+              "singular": "Vital Sign Count",
+              "plural": "Vital Sign Count"
+            },
+            {
+              "id": "vital_sign_date_time",
+              "title": "Vital Sign Date Time",
+              "singular": "Vital Sign Date Time",
+              "plural": "Vital Sign Date Time"
+            },
+            {
+              "id": "blood_pressure_systolic",
+              "title": "Blood Pressure Systolic",
+              "singular": "Blood Pressure Systolic",
+              "plural": "Blood Pressure Systolic"
+            },
+            {
+              "id": "pulse_rate",
+              "title": "Pulse Rate",
+              "singular": "Pulse Rate",
+              "plural": "Pulse Rate"
+            },
+            {
+              "id": "patient_age_in_years",
+              "title": "Patient Age In Years",
+              "singular": "Patient Age In Years",
+              "plural": "Patient Age In Years"
+            }
+          ]
+        }
+      },
+      "instanceid": "78088-CF29-3F",
+      "currentPage": 0,
+      "viewState": {
+        "activeTab": "filters"
+      },
+      "realTimeRefreshing": false,
+      "options": {
+        "dashboardFiltersMode": "filter",
+        "selector": false,
+        "triggersDomready": true,
+        "drillToAnywhere": true,
+        "autoUpdateOnEveryChange": true,
+        "selectorLocked": false
+      },
+      "dashboardid": "6a920079685aed98af499d10",
+      "dataNotLoadedYet": false,
+      "drillToDashboardConfig": {
+        "drilledDashboardPrefix": "_drill",
+        "drilledDashboardsFolderPrefix": "",
+        "displayFilterPane": true,
+        "displayDashboardsPane": true,
+        "displayToolbarRow": true,
+        "displayHeaderRow": true,
+        "volatile": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drillToDashboardNavigateType": 2,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "excludeFilterDims": [],
+        "includeFilterDims": [],
+        "drilledDashboardDisplayType": 2,
+        "dashboardIds": [],
+        "modalWindowResize": false,
+        "showFolderNameOnMenuSelection": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "showJTDIcon": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "forceZeroInsteadNull": false,
+        "mergeTargetDashboardFilters": false,
+        "drillToDashboardByName": false
+      }
+    },
+    {
+      "title": "RICHTEXT_MAIN.TITLE",
+      "type": "richtexteditor",
+      "subtype": "richtexteditor",
+      "oid": "6a920079685aed98af499d12",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [],
+          "all": false
+        },
+        "panels": [],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "content": {
+          "html": "<font color=\"#e6e6e6\"><font size=\"7\">Hemorrhagic Shock</font><br><span style=\"font-size: x-large;\">This dashboard shows incidents in which the patient underwent hemorrhagic shock as defined below.</span></font>",
+          "vAlign": "valign-middle",
+          "bgColor": "#117899",
+          "textAlign": "center"
+        }
+      },
+      "instanceid": "04327-1829-0F",
+      "realTimeRefreshing": false,
+      "options": {
+        "triggersDomready": true,
+        "hideFromWidgetList": true,
+        "disableExportToCSV": true,
+        "disableExportToImage": true,
+        "toolbarButton": {
+          "css": "add-rich-text",
+          "tooltip": "RICHTEXT_MAIN.TOOLBAR_BUTTON"
+        },
+        "selector": false,
+        "disallowSelector": true,
+        "disallowWidgetTitle": true,
+        "supportsHierarchies": false,
+        "dashboardFiltersMode": "filter"
+      },
+      "dashboardid": "6a920079685aed98af499d10"
+    },
+    {
+      "title": "65+ Years Old",
+      "type": "pivot2",
+      "subtype": "pivot2",
+      "oid": "6a920079685aed98af499d13",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [
+            "B3B32-82B9-15"
+          ],
+          "all": false
+        },
+        "panels": [
+          {
+            "name": "rows",
+            "items": [
+              {
+                "jaql": {
+                  "table": "Incident Response",
+                  "column": "Incident Number",
+                  "dim": "[Incident Response.Incident Number]",
+                  "datatype": "text",
+                  "columnTitle": "Incident Number",
+                  "tableTitle": "Incident Response",
+                  "merged": true,
+                  "title": "Incident Number"
+                },
+                "instanceid": "D5E28-45A6-E8",
+                "field": {
+                  "id": "[Incident Response.Incident Number]",
+                  "index": 0
+                },
+                "panel": "rows",
+                "format": {
+                  "mask": {
+                    "type": "number",
+                    "abbreviations": {
+                      "t": true,
+                      "b": true,
+                      "m": true,
+                      "k": true
+                    },
+                    "separated": true,
+                    "decimals": "auto",
+                    "abbreviateAll": false,
+                    "isdefault": true
+                  }
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Incident Response",
+                  "column": "Dispatched",
+                  "dim": "[Incident Response.Dispatched (Calendar)]",
+                  "datatype": "datetime",
+                  "columnTitle": "Dispatched",
+                  "tableTitle": "Incident Response",
+                  "merged": true,
+                  "title": "Incident Date",
+                  "dateTimeLevel": "minutes",
+                  "bucket": "1"
+                },
+                "instanceid": "B688C-2857-DE",
+                "format": {
+                  "mask": {
+                    "years": "yyyy",
+                    "quarters": "yyyy Q",
+                    "months": "MM/yyyy",
+                    "weeks": "ww yyyy",
+                    "days": "shortDate",
+                    "minutes": "HH:mm",
+                    "seconds": "MM/dd/yyyy HH:mm:ss",
+                    "dateAndTime": "MM/dd/yyyy HH:mm",
+                    "isdefault": true
+                  }
+                },
+                "hierarchies": [],
+                "panel": "rows",
+                "field": {
+                  "id": "[Incident Response.Dispatched (Calendar)]",
+                  "index": 1
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Patient",
+                  "column": "Patient Age In Years",
+                  "dim": "[Patient.Patient Age In Years]",
+                  "datatype": "numeric",
+                  "columnTitle": "Patient Age In Years",
+                  "tableTitle": "Patient",
+                  "title": "Patient Age"
+                },
+                "instanceid": "99194-C679-3D",
+                "format": {},
+                "panel": "rows",
+                "field": {
+                  "id": "[Patient.Patient Age In Years]",
+                  "index": 2
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Narrative",
+                  "column": "Medical Trauma",
+                  "dim": "[Narrative.Medical Trauma]",
+                  "datatype": "text",
+                  "columnTitle": "Medical Trauma",
+                  "tableTitle": "Narrative",
+                  "merged": true,
+                  "title": "Medical/Trauma"
+                },
+                "instanceid": "CCE27-2245-3B",
+                "format": {},
+                "panel": "rows",
+                "field": {
+                  "id": "[Narrative.Medical Trauma]",
+                  "index": 3
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Narrative",
+                  "column": "Primary Impression",
+                  "dim": "[Narrative.Primary Impression]",
+                  "datatype": "text",
+                  "columnTitle": "Primary Impression",
+                  "tableTitle": "Narrative",
+                  "merged": true,
+                  "title": "Primary Impression"
+                },
+                "format": {},
+                "instanceid": "89FD4-091B-5D",
+                "field": {
+                  "id": "[Narrative.Primary Impression]",
+                  "index": 4
+                },
+                "panel": "rows"
+              },
+              {
+                "jaql": {
+                  "table": "Narrative",
+                  "column": "Secondary Impression",
+                  "dim": "[Narrative.Secondary Impression]",
+                  "datatype": "text",
+                  "columnTitle": "Secondary Impression",
+                  "tableTitle": "Narrative",
+                  "merged": true,
+                  "title": "Secondary Impression"
+                },
+                "instanceid": "8FE6A-861B-34",
+                "panel": "rows",
+                "field": {
+                  "id": "[Narrative.Secondary Impression]",
+                  "index": 5
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Incident Destination",
+                  "column": "Destination Location Name",
+                  "dim": "[Incident Destination.Destination Location Name]",
+                  "datatype": "text",
+                  "columnTitle": "Destination Location Name",
+                  "tableTitle": "Incident Destination",
+                  "merged": true,
+                  "title": "Destination Name"
+                },
+                "instanceid": "03279-C5CD-58",
+                "format": {},
+                "panel": "rows",
+                "field": {
+                  "id": "[Incident Destination.Destination Location Name]",
+                  "index": 6
+                }
+              },
+              {
+                "jaql": {
+                  "table": "EMS Measures Vitals",
+                  "column": "Vital Sign Collection Count",
+                  "dim": "[EMS Measures Vitals.Vital Sign Collection Count]",
+                  "datatype": "numeric",
+                  "columnTitle": "Vital Sign Collection Count",
+                  "tableTitle": "EMS Measures Vitals",
+                  "title": "Vital Sign Count"
+                },
+                "instanceid": "CDAA6-77B3-45",
+                "format": {},
+                "panel": "rows",
+                "field": {
+                  "id": "[EMS Measures Vitals.Vital Sign Collection Count]",
+                  "index": 7
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Vital Signs",
+                  "column": "Vital Sign Date Time",
+                  "dim": "[Vital Signs.Vital Sign Date Time (Calendar)]",
+                  "datatype": "datetime",
+                  "columnTitle": "Vital Sign Date Time",
+                  "tableTitle": "Vital Signs",
+                  "merged": true,
+                  "title": "Vital Sign Date Time",
+                  "dateTimeLevel": "minutes",
+                  "bucket": "1"
+                },
+                "instanceid": "59D9A-C6C3-6B",
+                "format": {
+                  "mask": {
+                    "years": "yyyy",
+                    "quarters": "yyyy Q",
+                    "months": "MM/yyyy",
+                    "weeks": "ww yyyy",
+                    "days": "shortDate",
+                    "minutes": "HH:mm",
+                    "seconds": "MM/dd/yyyy HH:mm:ss",
+                    "dateAndTime": "MM/dd/yyyy HH:mm",
+                    "isdefault": true
+                  }
+                },
+                "hierarchies": [],
+                "panel": "rows",
+                "field": {
+                  "id": "[Vital Signs.Vital Sign Date Time (Calendar)]",
+                  "index": 8
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Vital Signs",
+                  "column": "Blood Pressure Systolic",
+                  "dim": "[Vital Signs.Blood Pressure Systolic]",
+                  "datatype": "numeric",
+                  "columnTitle": "Blood Pressure Systolic",
+                  "tableTitle": "Vital Signs",
+                  "title": "Blood Pressure Systolic"
+                },
+                "instanceid": "88D67-9D50-C3",
+                "format": {},
+                "panel": "rows",
+                "field": {
+                  "id": "[Vital Signs.Blood Pressure Systolic]",
+                  "index": 9
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Vital Signs",
+                  "column": "Pulse Rate",
+                  "dim": "[Vital Signs.Pulse Rate]",
+                  "datatype": "numeric",
+                  "columnTitle": "Pulse Rate",
+                  "tableTitle": "Vital Signs",
+                  "title": "Pulse Rate"
+                },
+                "instanceid": "7CD6C-6F83-11",
+                "format": {},
+                "panel": "rows",
+                "field": {
+                  "id": "[Vital Signs.Pulse Rate]",
+                  "index": 10
+                }
+              }
+            ]
+          },
+          {
+            "name": "values",
+            "items": [
+              {
+                "jaql": {
+                  "type": "measure",
+                  "formula": "CASE\nWHEN[AC4C9-0CB] < 110 THEN 1\nWHEN [AC4C9-0CB] < [7CE46-01F] THEN 1\nELSE 0\nEND",
+                  "context": {
+                    "[AC4C9-0CB]": {
+                      "table": "Vital Signs",
+                      "column": "Blood Pressure Systolic",
+                      "dim": "[Vital Signs.Blood Pressure Systolic]",
+                      "datatype": "numeric",
+                      "columnTitle": "Blood Pressure Systolic",
+                      "tableTitle": "Vital Signs",
+                      "title": "Median of Blood Pressure Systolic",
+                      "agg": "median"
+                    },
+                    "[7CE46-01F]": {
+                      "table": "Vital Signs",
+                      "column": "Pulse Rate",
+                      "dim": "[Vital Signs.Pulse Rate]",
+                      "datatype": "numeric",
+                      "columnTitle": "Pulse Rate",
+                      "tableTitle": "Vital Signs",
+                      "title": "Median of Pulse Rate",
+                      "agg": "median"
+                    }
+                  },
+                  "title": "In Shock",
+                  "columnTitle": "Formula",
+                  "datatype": "numeric"
+                },
+                "instanceid": "D979C-75D0-07",
+                "format": {
+                  "mask": {
+                    "type": "number",
+                    "abbreviations": {
+                      "t": false,
+                      "b": false,
+                      "m": false,
+                      "k": false
+                    },
+                    "abbreviateAll": false,
+                    "separated": true,
+                    "decimals": "auto",
+                    "isdefault": true
+                  },
+                  "color": {
+                    "type": "color"
+                  }
+                },
+                "panel": "measures",
+                "field": {
+                  "id": "CASE\nWHEN(MIN([7D9B8-840]) < 90) THEN 1\nWHEN (MIN([7D9B8-840]) < MIN([DB4BF-4F2])) THEN 1\nELSE 0\nEND",
+                  "index": 11
+                },
+                "disabled": true
+              }
+            ]
+          },
+          {
+            "name": "columns",
+            "items": []
+          },
+          {
+            "name": "filters",
+            "items": [
+              {
+                "jaql": {
+                  "table": "Patient",
+                  "column": "Patient Age In Years",
+                  "dim": "[Patient.Patient Age In Years]",
+                  "datatype": "numeric",
+                  "columnTitle": "Patient Age In Years",
+                  "tableTitle": "Patient",
+                  "isPrimary": false,
+                  "isDashboardFilter": false,
+                  "title": "Patient Age In Years",
+                  "collapsed": false,
+                  "datasource": {
+                    "title": "EMS",
+                    "id": "live:EMS",
+                    "fullname": "live:EMS",
+                    "live": true
+                  },
+                  "filter": {
+                    "from": "65"
+                  }
+                },
+                "instanceid": "533E3-960E-72",
+                "panel": "scope"
+              },
+              {
+                "jaql": {
+                  "type": "measure",
+                  "formula": "CASE\nWHEN(MIN([7D9B8-840]) < 90) THEN 1\nWHEN (MIN([7D9B8-840]) < MIN([DB4BF-4F2])) THEN 1\nELSE 0\nEND",
+                  "context": {
+                    "[7D9B8-840]": {
+                      "table": "Vital Signs",
+                      "column": "Blood Pressure Systolic",
+                      "dim": "[Vital Signs.Blood Pressure Systolic]",
+                      "datatype": "numeric",
+                      "columnTitle": "Blood Pressure Systolic",
+                      "tableTitle": "Vital Signs",
+                      "title": "Blood Pressure Systolic"
+                    },
+                    "[DB4BF-4F2]": {
+                      "table": "Vital Signs",
+                      "column": "Pulse Rate",
+                      "dim": "[Vital Signs.Pulse Rate]",
+                      "datatype": "numeric",
+                      "columnTitle": "Pulse Rate",
+                      "tableTitle": "Vital Signs",
+                      "title": "Pulse Rate"
+                    }
+                  },
+                  "title": "In Shock",
+                  "columnTitle": "Formula",
+                  "datatype": "numeric",
+                  "datasource": {
+                    "title": "EMS",
+                    "id": "live:EMS",
+                    "fullname": "live:EMS",
+                    "live": true
+                  },
+                  "collapsed": false,
+                  "filter": {
+                    "equals": 1
+                  }
+                },
+                "instanceid": "56584-E5A3-8D",
+                "format": {
+                  "mask": {
+                    "type": "number",
+                    "abbreviations": {
+                      "t": false,
+                      "b": false,
+                      "m": false,
+                      "k": false
+                    },
+                    "separated": true,
+                    "decimals": "auto",
+                    "abbreviateAll": false,
+                    "isdefault": true
+                  }
+                },
+                "panel": "scope",
+                "disabled": false
+              }
+            ]
+          }
+        ],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "scroll": false,
+        "pageSize": 25,
+        "automaticHeight": true,
+        "colors": {
+          "rows": true,
+          "columns": false,
+          "headers": false,
+          "members": false,
+          "totals": false
+        },
+        "narration": {
+          "display": "above",
+          "verbosity": "low",
+          "labels": [
+            {
+              "id": "incident_number",
+              "title": "Incident Number",
+              "singular": "Incident Number",
+              "plural": "Incident Number"
+            },
+            {
+              "id": "incident_date",
+              "title": "Incident Date",
+              "singular": "Incident Date",
+              "plural": "Incident Date"
+            },
+            {
+              "id": "patient_age",
+              "title": "Patient Age",
+              "singular": "Patient Age",
+              "plural": "Patient Age"
+            },
+            {
+              "id": "medical/trauma",
+              "title": "Medical/Trauma",
+              "singular": "Medical/Trauma",
+              "plural": "Medical/Trauma"
+            },
+            {
+              "id": "primary_impression",
+              "title": "Primary Impression",
+              "singular": "Primary Impression",
+              "plural": "Primary Impression"
+            },
+            {
+              "id": "secondary_impression",
+              "title": "Secondary Impression",
+              "singular": "Secondary Impression",
+              "plural": "Secondary Impression"
+            },
+            {
+              "id": "destination_name",
+              "title": "Destination Name",
+              "singular": "Destination Name",
+              "plural": "Destination Name"
+            },
+            {
+              "id": "vital_sign_count",
+              "title": "Vital Sign Count",
+              "singular": "Vital Sign Count",
+              "plural": "Vital Sign Count"
+            },
+            {
+              "id": "vital_sign_date_time",
+              "title": "Vital Sign Date Time",
+              "singular": "Vital Sign Date Time",
+              "plural": "Vital Sign Date Time"
+            },
+            {
+              "id": "blood_pressure_systolic",
+              "title": "Blood Pressure Systolic",
+              "singular": "Blood Pressure Systolic",
+              "plural": "Blood Pressure Systolic"
+            },
+            {
+              "id": "pulse_rate",
+              "title": "Pulse Rate",
+              "singular": "Pulse Rate",
+              "plural": "Pulse Rate"
+            },
+            {
+              "id": "patient_age_in_years",
+              "title": "Patient Age In Years",
+              "singular": "Patient Age In Years",
+              "plural": "Patient Age In Years"
+            }
+          ]
+        }
+      },
+      "instanceid": "78088-CF29-3F",
+      "drillToDashboardConfig": {
+        "drilledDashboardPrefix": "_drill",
+        "drilledDashboardsFolderPrefix": "",
+        "displayFilterPane": true,
+        "displayDashboardsPane": true,
+        "displayToolbarRow": true,
+        "displayHeaderRow": true,
+        "volatile": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drillToDashboardNavigateType": 2,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "excludeFilterDims": [],
+        "includeFilterDims": [],
+        "drilledDashboardDisplayType": 2,
+        "dashboardIds": [],
+        "modalWindowResize": false,
+        "showFolderNameOnMenuSelection": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "showJTDIcon": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "forceZeroInsteadNull": false,
+        "mergeTargetDashboardFilters": false,
+        "drillToDashboardByName": false
+      },
+      "viewState": {
+        "activeTab": "filters"
+      },
+      "realTimeRefreshing": false,
+      "options": {
+        "dashboardFiltersMode": "filter",
+        "selector": false,
+        "triggersDomready": true,
+        "drillToAnywhere": true,
+        "autoUpdateOnEveryChange": true,
+        "selectorLocked": false
+      },
+      "dashboardid": "6a920079685aed98af499d10",
+      "dataNotLoadedYet": false
+    },
+    {
+      "title": "10-64 Years Old",
+      "type": "pivot2",
+      "subtype": "pivot2",
+      "oid": "6a920079685aed98af499d14",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [
+            "B3B32-82B9-15"
+          ],
+          "all": false
+        },
+        "panels": [
+          {
+            "name": "rows",
+            "items": [
+              {
+                "jaql": {
+                  "table": "Incident Response",
+                  "column": "Incident Number",
+                  "dim": "[Incident Response.Incident Number]",
+                  "datatype": "text",
+                  "columnTitle": "Incident Number",
+                  "tableTitle": "Incident Response",
+                  "merged": true,
+                  "title": "Incident Number"
+                },
+                "instanceid": "D5E28-45A6-E8",
+                "field": {
+                  "id": "[Incident Response.Incident Number]",
+                  "index": 0
+                },
+                "panel": "rows",
+                "format": {
+                  "mask": {
+                    "type": "number",
+                    "abbreviations": {
+                      "t": true,
+                      "b": true,
+                      "m": true,
+                      "k": true
+                    },
+                    "separated": true,
+                    "decimals": "auto",
+                    "abbreviateAll": false,
+                    "isdefault": true
+                  }
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Incident Response",
+                  "column": "Dispatched",
+                  "dim": "[Incident Response.Dispatched (Calendar)]",
+                  "datatype": "datetime",
+                  "columnTitle": "Dispatched",
+                  "tableTitle": "Incident Response",
+                  "merged": true,
+                  "title": "Incident Date",
+                  "dateTimeLevel": "minutes",
+                  "bucket": "1"
+                },
+                "instanceid": "B688C-2857-DE",
+                "format": {
+                  "mask": {
+                    "years": "yyyy",
+                    "quarters": "yyyy Q",
+                    "months": "MM/yyyy",
+                    "weeks": "ww yyyy",
+                    "days": "shortDate",
+                    "minutes": "HH:mm",
+                    "seconds": "MM/dd/yyyy HH:mm:ss",
+                    "dateAndTime": "MM/dd/yyyy HH:mm",
+                    "isdefault": true
+                  }
+                },
+                "hierarchies": [],
+                "panel": "rows",
+                "field": {
+                  "id": "[Incident Response.Dispatched (Calendar)]",
+                  "index": 1
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Patient",
+                  "column": "Patient Age In Years",
+                  "dim": "[Patient.Patient Age In Years]",
+                  "datatype": "numeric",
+                  "columnTitle": "Patient Age In Years",
+                  "tableTitle": "Patient",
+                  "title": "Patient Age"
+                },
+                "instanceid": "99194-C679-3D",
+                "format": {},
+                "panel": "rows",
+                "field": {
+                  "id": "[Patient.Patient Age In Years]",
+                  "index": 2
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Narrative",
+                  "column": "Medical Trauma",
+                  "dim": "[Narrative.Medical Trauma]",
+                  "datatype": "text",
+                  "columnTitle": "Medical Trauma",
+                  "tableTitle": "Narrative",
+                  "merged": true,
+                  "title": "Medical/Trauma"
+                },
+                "instanceid": "CCE27-2245-3B",
+                "format": {},
+                "panel": "rows",
+                "field": {
+                  "id": "[Narrative.Medical Trauma]",
+                  "index": 3
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Narrative",
+                  "column": "Primary Impression",
+                  "dim": "[Narrative.Primary Impression]",
+                  "datatype": "text",
+                  "columnTitle": "Primary Impression",
+                  "tableTitle": "Narrative",
+                  "merged": true,
+                  "title": "Primary Impression"
+                },
+                "format": {},
+                "instanceid": "89FD4-091B-5D",
+                "field": {
+                  "id": "[Narrative.Primary Impression]",
+                  "index": 4
+                },
+                "panel": "rows"
+              },
+              {
+                "jaql": {
+                  "table": "Narrative",
+                  "column": "Secondary Impression",
+                  "dim": "[Narrative.Secondary Impression]",
+                  "datatype": "text",
+                  "columnTitle": "Secondary Impression",
+                  "tableTitle": "Narrative",
+                  "merged": true,
+                  "title": "Secondary Impression"
+                },
+                "instanceid": "1C7FA-1BB7-52",
+                "panel": "rows",
+                "field": {
+                  "id": "[Narrative.Secondary Impression]",
+                  "index": 5
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Incident Destination",
+                  "column": "Destination Location Name",
+                  "dim": "[Incident Destination.Destination Location Name]",
+                  "datatype": "text",
+                  "columnTitle": "Destination Location Name",
+                  "tableTitle": "Incident Destination",
+                  "merged": true,
+                  "title": "Destination Name"
+                },
+                "instanceid": "03279-C5CD-58",
+                "format": {},
+                "panel": "rows",
+                "field": {
+                  "id": "[Incident Destination.Destination Location Name]",
+                  "index": 6
+                }
+              },
+              {
+                "jaql": {
+                  "table": "EMS Measures Vitals",
+                  "column": "Vital Sign Collection Count",
+                  "dim": "[EMS Measures Vitals.Vital Sign Collection Count]",
+                  "datatype": "numeric",
+                  "columnTitle": "Vital Sign Collection Count",
+                  "tableTitle": "EMS Measures Vitals",
+                  "title": "Vital Sign Count"
+                },
+                "instanceid": "CDAA6-77B3-45",
+                "format": {},
+                "panel": "rows",
+                "field": {
+                  "id": "[EMS Measures Vitals.Vital Sign Collection Count]",
+                  "index": 7
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Vital Signs",
+                  "column": "Vital Sign Date Time",
+                  "dim": "[Vital Signs.Vital Sign Date Time (Calendar)]",
+                  "datatype": "datetime",
+                  "columnTitle": "Vital Sign Date Time",
+                  "tableTitle": "Vital Signs",
+                  "merged": true,
+                  "title": "Vital Sign Date Time",
+                  "dateTimeLevel": "minutes",
+                  "bucket": "1"
+                },
+                "instanceid": "59D9A-C6C3-6B",
+                "format": {
+                  "mask": {
+                    "years": "yyyy",
+                    "quarters": "yyyy Q",
+                    "months": "MM/yyyy",
+                    "weeks": "ww yyyy",
+                    "days": "shortDate",
+                    "minutes": "HH:mm",
+                    "seconds": "MM/dd/yyyy HH:mm:ss",
+                    "dateAndTime": "MM/dd/yyyy HH:mm",
+                    "isdefault": true
+                  }
+                },
+                "hierarchies": [],
+                "panel": "rows",
+                "field": {
+                  "id": "[Vital Signs.Vital Sign Date Time (Calendar)]",
+                  "index": 8
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Vital Signs",
+                  "column": "Blood Pressure Systolic",
+                  "dim": "[Vital Signs.Blood Pressure Systolic]",
+                  "datatype": "numeric",
+                  "columnTitle": "Blood Pressure Systolic",
+                  "tableTitle": "Vital Signs",
+                  "title": "Blood Pressure Systolic"
+                },
+                "instanceid": "88D67-9D50-C3",
+                "format": {},
+                "panel": "rows",
+                "field": {
+                  "id": "[Vital Signs.Blood Pressure Systolic]",
+                  "index": 9
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Vital Signs",
+                  "column": "Pulse Rate",
+                  "dim": "[Vital Signs.Pulse Rate]",
+                  "datatype": "numeric",
+                  "columnTitle": "Pulse Rate",
+                  "tableTitle": "Vital Signs",
+                  "title": "Pulse Rate"
+                },
+                "instanceid": "7CD6C-6F83-11",
+                "format": {},
+                "panel": "rows",
+                "field": {
+                  "id": "[Vital Signs.Pulse Rate]",
+                  "index": 10
+                }
+              }
+            ]
+          },
+          {
+            "name": "values",
+            "items": [
+              {
+                "jaql": {
+                  "type": "measure",
+                  "formula": "CASE\nWHEN([D0BA9-9A5] < 90) THEN 1\nWHEN ([D0BA9-9A5] < [E6F79-DF9]) THEN 1\nELSE 0\nEND",
+                  "context": {
+                    "[D0BA9-9A5]": {
+                      "table": "Vital Signs",
+                      "column": "Blood Pressure Systolic",
+                      "dim": "[Vital Signs.Blood Pressure Systolic]",
+                      "datatype": "numeric",
+                      "columnTitle": "Blood Pressure Systolic",
+                      "tableTitle": "Vital Signs",
+                      "title": "Median of Blood Pressure Systolic",
+                      "agg": "median"
+                    },
+                    "[E6F79-DF9]": {
+                      "table": "Vital Signs",
+                      "column": "Pulse Rate",
+                      "dim": "[Vital Signs.Pulse Rate]",
+                      "datatype": "numeric",
+                      "columnTitle": "Pulse Rate",
+                      "tableTitle": "Vital Signs",
+                      "title": "Median of Pulse Rate",
+                      "agg": "median"
+                    }
+                  },
+                  "title": "In Shock",
+                  "columnTitle": "Formula",
+                  "datatype": "numeric"
+                },
+                "instanceid": "D979C-75D0-07",
+                "format": {
+                  "mask": {
+                    "type": "number",
+                    "abbreviations": {
+                      "t": false,
+                      "b": false,
+                      "m": false,
+                      "k": false
+                    },
+                    "abbreviateAll": false,
+                    "separated": true,
+                    "decimals": "auto",
+                    "isdefault": true
+                  },
+                  "color": {
+                    "type": "color"
+                  }
+                },
+                "panel": "measures",
+                "field": {
+                  "id": "CASE\nWHEN(MIN([7D9B8-840]) < 90) THEN 1\nWHEN (MIN([7D9B8-840]) < MIN([DB4BF-4F2])) THEN 1\nELSE 0\nEND",
+                  "index": 11
+                },
+                "disabled": true
+              }
+            ]
+          },
+          {
+            "name": "columns",
+            "items": []
+          },
+          {
+            "name": "filters",
+            "items": [
+              {
+                "jaql": {
+                  "table": "Patient",
+                  "column": "Patient Age In Years",
+                  "dim": "[Patient.Patient Age In Years]",
+                  "datatype": "numeric",
+                  "columnTitle": "Patient Age In Years",
+                  "tableTitle": "Patient",
+                  "isPrimary": false,
+                  "isDashboardFilter": false,
+                  "title": "Patient Age In Years",
+                  "collapsed": false,
+                  "datasource": {
+                    "title": "EMS",
+                    "id": "live:EMS",
+                    "fullname": "live:EMS",
+                    "live": true
+                  },
+                  "filter": {
+                    "from": "10",
+                    "to": "64"
+                  }
+                },
+                "instanceid": "533E3-960E-72",
+                "panel": "scope"
+              },
+              {
+                "jaql": {
+                  "type": "measure",
+                  "formula": "CASE\nWHEN(MIN([7D9B8-840]) < 90) THEN 1\nWHEN (MIN([7D9B8-840]) < MIN([DB4BF-4F2])) THEN 1\nELSE 0\nEND",
+                  "context": {
+                    "[7D9B8-840]": {
+                      "table": "Vital Signs",
+                      "column": "Blood Pressure Systolic",
+                      "dim": "[Vital Signs.Blood Pressure Systolic]",
+                      "datatype": "numeric",
+                      "columnTitle": "Blood Pressure Systolic",
+                      "tableTitle": "Vital Signs",
+                      "title": "Blood Pressure Systolic"
+                    },
+                    "[DB4BF-4F2]": {
+                      "table": "Vital Signs",
+                      "column": "Pulse Rate",
+                      "dim": "[Vital Signs.Pulse Rate]",
+                      "datatype": "numeric",
+                      "columnTitle": "Pulse Rate",
+                      "tableTitle": "Vital Signs",
+                      "title": "Pulse Rate"
+                    }
+                  },
+                  "title": "In Shock",
+                  "columnTitle": "Formula",
+                  "datatype": "numeric",
+                  "datasource": {
+                    "title": "EMS",
+                    "id": "live:EMS",
+                    "fullname": "live:EMS",
+                    "live": true
+                  },
+                  "collapsed": false,
+                  "filter": {
+                    "equals": 1
+                  }
+                },
+                "instanceid": "56584-E5A3-8D",
+                "format": {
+                  "mask": {
+                    "type": "number",
+                    "abbreviations": {
+                      "t": false,
+                      "b": false,
+                      "m": false,
+                      "k": false
+                    },
+                    "separated": true,
+                    "decimals": "auto",
+                    "abbreviateAll": false,
+                    "isdefault": true
+                  }
+                },
+                "panel": "scope"
+              }
+            ]
+          }
+        ],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "scroll": false,
+        "pageSize": 25,
+        "automaticHeight": true,
+        "colors": {
+          "rows": true,
+          "columns": false,
+          "headers": false,
+          "members": false,
+          "totals": false
+        },
+        "narration": {
+          "display": "above",
+          "verbosity": "low",
+          "labels": [
+            {
+              "id": "incident_number",
+              "title": "Incident Number",
+              "singular": "Incident Number",
+              "plural": "Incident Number"
+            },
+            {
+              "id": "incident_date",
+              "title": "Incident Date",
+              "singular": "Incident Date",
+              "plural": "Incident Date"
+            },
+            {
+              "id": "patient_age",
+              "title": "Patient Age",
+              "singular": "Patient Age",
+              "plural": "Patient Age"
+            },
+            {
+              "id": "medical/trauma",
+              "title": "Medical/Trauma",
+              "singular": "Medical/Trauma",
+              "plural": "Medical/Trauma"
+            },
+            {
+              "id": "primary_impression",
+              "title": "Primary Impression",
+              "singular": "Primary Impression",
+              "plural": "Primary Impression"
+            },
+            {
+              "id": "secondary_impression",
+              "title": "Secondary Impression",
+              "singular": "Secondary Impression",
+              "plural": "Secondary Impression"
+            },
+            {
+              "id": "destination_name",
+              "title": "Destination Name",
+              "singular": "Destination Name",
+              "plural": "Destination Name"
+            },
+            {
+              "id": "vital_sign_count",
+              "title": "Vital Sign Count",
+              "singular": "Vital Sign Count",
+              "plural": "Vital Sign Count"
+            },
+            {
+              "id": "vital_sign_date_time",
+              "title": "Vital Sign Date Time",
+              "singular": "Vital Sign Date Time",
+              "plural": "Vital Sign Date Time"
+            },
+            {
+              "id": "blood_pressure_systolic",
+              "title": "Blood Pressure Systolic",
+              "singular": "Blood Pressure Systolic",
+              "plural": "Blood Pressure Systolic"
+            },
+            {
+              "id": "pulse_rate",
+              "title": "Pulse Rate",
+              "singular": "Pulse Rate",
+              "plural": "Pulse Rate"
+            },
+            {
+              "id": "patient_age_in_years",
+              "title": "Patient Age In Years",
+              "singular": "Patient Age In Years",
+              "plural": "Patient Age In Years"
+            }
+          ]
+        }
+      },
+      "instanceid": "78088-CF29-3F",
+      "drillToDashboardConfig": {
+        "drilledDashboardPrefix": "_drill",
+        "drilledDashboardsFolderPrefix": "",
+        "displayFilterPane": true,
+        "displayDashboardsPane": true,
+        "displayToolbarRow": true,
+        "displayHeaderRow": true,
+        "volatile": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drillToDashboardNavigateType": 2,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "excludeFilterDims": [],
+        "includeFilterDims": [],
+        "drilledDashboardDisplayType": 2,
+        "dashboardIds": [],
+        "modalWindowResize": false,
+        "showFolderNameOnMenuSelection": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "showJTDIcon": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "forceZeroInsteadNull": false,
+        "mergeTargetDashboardFilters": false,
+        "drillToDashboardByName": false
+      },
+      "viewState": {
+        "activeTab": "filters"
+      },
+      "realTimeRefreshing": false,
+      "options": {
+        "dashboardFiltersMode": "filter",
+        "selector": false,
+        "triggersDomready": true,
+        "drillToAnywhere": true,
+        "autoUpdateOnEveryChange": true,
+        "selectorLocked": false
+      },
+      "dashboardid": "6a920079685aed98af499d10",
+      "dataNotLoadedYet": false
+    },
+    {
+      "title": "RICHTEXT_MAIN.TITLE",
+      "type": "richtexteditor",
+      "subtype": "richtexteditor",
+      "oid": "6a920079685aed98af499d15",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [],
+          "all": false
+        },
+        "panels": [],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "content": {
+          "html": "<span style=\"font-size: 24px;\">Medical/Trauma Field Criteria</span><br><div style=\"text-align: left;\"><span style=\"text-align: -webkit-match-parent;\">Any of:</span><br><ul><li><span style=\"font-size: 12.5px;\">Trauma</span></li><li><span style=\"font-size: 12.5px;\">Medical &amp; Trauma</span></li></ul><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div>",
+          "vAlign": "valign-middle",
+          "bgColor": "#FFFFFF",
+          "textAlign": "center"
+        }
+      },
+      "instanceid": "33BAA-D7DF-37",
+      "realTimeRefreshing": false,
+      "options": {
+        "triggersDomready": true,
+        "hideFromWidgetList": true,
+        "disableExportToCSV": true,
+        "disableExportToImage": true,
+        "toolbarButton": {
+          "css": "add-rich-text",
+          "tooltip": "RICHTEXT_MAIN.TOOLBAR_BUTTON"
+        },
+        "selector": false,
+        "disallowSelector": true,
+        "disallowWidgetTitle": true,
+        "supportsHierarchies": false,
+        "dashboardFiltersMode": "filter"
+      },
+      "dashboardid": "6a920079685aed98af499d10"
+    },
+    {
+      "title": "RICHTEXT_MAIN.TITLE",
+      "type": "richtexteditor",
+      "subtype": "richtexteditor",
+      "oid": "6a920079685aed98af499d16",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [],
+          "all": false
+        },
+        "panels": [],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "content": {
+          "html": "<font size=\"5\">Primary Impression Criteria</font><br><div style=\"text-align: left;\">Any of:</div><ul style=\"\"><ul><li style=\"text-align: left;\"><span>Amputation of limb</span></li><li style=\"text-align: left;\"><font size=\"2\">Amputation of other parts of head (face, ears,etc.)</font></li><li style=\"text-align: left;\"><font size=\"2\">Gastrointestinal hemorrhage</font></li><li style=\"text-align: left;\"><font size=\"2\">Gastrostomy hemorrhage</font></li><li style=\"text-align: left;\"><font size=\"2\">Hemorrhage</font></li><li style=\"text-align: left;\"><font size=\"2\">Hemorrhagic Shock</font></li><li style=\"text-align: left;\"><font size=\"2\">Immediate postpartum hemorrhage</font></li><li style=\"text-align: left;\"><font size=\"2\">Labor and delivery complications</font></li><li style=\"text-align: left;\"><font size=\"2\">Laceration/Abrasion/Hematoma (minor surface trauma)</font></li><li style=\"text-align: left;\"><font size=\"2\">Postpartum hemorrhage</font></li><li style=\"text-align: left;\"><font size=\"2\">Tracheostomy Hemorrhage</font></li><li style=\"text-align: left;\"><font size=\"2\">Vaginal Hemorrhage</font></li></ul></ul>",
+          "vAlign": "valign-middle",
+          "bgColor": "#FFFFFF",
+          "textAlign": "center"
+        }
+      },
+      "instanceid": "5EF11-34F1-3A",
+      "realTimeRefreshing": false,
+      "options": {
+        "triggersDomready": true,
+        "hideFromWidgetList": true,
+        "disableExportToCSV": true,
+        "disableExportToImage": true,
+        "toolbarButton": {
+          "css": "add-rich-text",
+          "tooltip": "RICHTEXT_MAIN.TOOLBAR_BUTTON"
+        },
+        "selector": false,
+        "disallowSelector": true,
+        "disallowWidgetTitle": true,
+        "supportsHierarchies": false,
+        "dashboardFiltersMode": "filter"
+      },
+      "dashboardid": "6a920079685aed98af499d10"
+    },
+    {
+      "title": "RICHTEXT_MAIN.TITLE",
+      "type": "richtexteditor",
+      "subtype": "richtexteditor",
+      "oid": "6a920079685aed98af499d17",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [],
+          "all": false
+        },
+        "panels": [],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "content": {
+          "html": "<span style=\"font-size: x-large;\">Shock Criteria</span><br><div style=\"text-align: left;\"><span style=\"font-size: small;\">Age 0-9: Systolic blood pressure &lt; 70 + 2 * Age in years</span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\">Age 10-64: Systolic blood pressure &lt; 90 or Systolic blood pressure &lt; Pulse rate</span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\">Age 65+: Systolic blood pressure &lt; 110 or Systolic blood pressure &lt; Pulse rate</span><span style=\"font-size: small;\"></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div>",
+          "vAlign": "valign-middle",
+          "bgColor": "#FFFFFF",
+          "textAlign": "center"
+        }
+      },
+      "instanceid": "6C60B-E036-F8",
+      "realTimeRefreshing": false,
+      "options": {
+        "triggersDomready": true,
+        "hideFromWidgetList": true,
+        "disableExportToCSV": true,
+        "disableExportToImage": true,
+        "toolbarButton": {
+          "css": "add-rich-text",
+          "tooltip": "RICHTEXT_MAIN.TOOLBAR_BUTTON"
+        },
+        "selector": false,
+        "disallowSelector": true,
+        "disallowWidgetTitle": true,
+        "supportsHierarchies": false,
+        "dashboardFiltersMode": "filter"
+      },
+      "dashboardid": "6a920079685aed98af499d10"
+    }
+  ],
+  "hierarchies": []
+}
