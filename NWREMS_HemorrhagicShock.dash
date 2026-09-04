@@ -60,12 +60,67 @@
                     "maxHeight": 2048,
                     "minWidth": 64,
                     "maxWidth": 2048,
-                    "height": "284px",
+                    "height": "36px",
+                    "defaultWidth": 128,
+                    "widgetid": "6a9b40461f8c45478bd0e958"
+                  }
+                ],
+                "width": 25.357364822871347,
+                "stretchable": false,
+                "pxlWidth": 408,
+                "index": 0
+              },
+              {
+                "elements": [
+                  {
+                    "minHeight": 64,
+                    "maxHeight": 2048,
+                    "minWidth": 64,
+                    "maxWidth": 2048,
+                    "height": "36px",
+                    "defaultWidth": 128,
+                    "widgetid": "6a9b40c0fdc256800e260394"
+                  }
+                ],
+                "width": 43.7538844002486,
+                "stretchable": false,
+                "pxlWidth": 704,
+                "index": 1
+              },
+              {
+                "elements": [
+                  {
+                    "minHeight": 64,
+                    "maxHeight": 2048,
+                    "minWidth": 64,
+                    "maxWidth": 2048,
+                    "height": "36px",
+                    "defaultWidth": 128,
+                    "widgetid": "6a9b40de685aed98af4abd5d"
+                  }
+                ],
+                "width": 30.88875077688005,
+                "stretchable": false,
+                "pxlWidth": 497,
+                "index": 2
+              }
+            ]
+          },
+          {
+            "subcells": [
+              {
+                "elements": [
+                  {
+                    "minHeight": 64,
+                    "maxHeight": 2048,
+                    "minWidth": 64,
+                    "maxWidth": 2048,
+                    "height": "328px",
                     "defaultWidth": 128,
                     "widgetid": "6a920079685aed98af499d15"
                   }
                 ],
-                "width": 33.333333333333336,
+                "width": 25.357364822871347,
                 "stretchable": false,
                 "pxlWidth": 0,
                 "index": 0
@@ -77,12 +132,12 @@
                     "maxHeight": 2048,
                     "minWidth": 64,
                     "maxWidth": 2048,
-                    "height": "284px",
+                    "height": "328px",
                     "defaultWidth": 128,
                     "widgetid": "6a920079685aed98af499d16"
                   }
                 ],
-                "width": 33.333333333333336,
+                "width": 21.8769422001243,
                 "stretchable": false,
                 "pxlWidth": 0,
                 "index": 1
@@ -94,15 +149,32 @@
                     "maxHeight": 2048,
                     "minWidth": 64,
                     "maxWidth": 2048,
-                    "height": "284px",
+                    "height": "328px",
+                    "defaultWidth": 128,
+                    "widgetid": "6a9b402f1f8c45478bd0e953"
+                  }
+                ],
+                "width": 21.8769422001243,
+                "stretchable": false,
+                "pxlWidth": 0,
+                "index": 2
+              },
+              {
+                "elements": [
+                  {
+                    "minHeight": 64,
+                    "maxHeight": 2048,
+                    "minWidth": 64,
+                    "maxWidth": 2048,
+                    "height": "328px",
                     "defaultWidth": 128,
                     "widgetid": "6a920079685aed98af499d17"
                   }
                 ],
-                "width": 33.333333333333336,
+                "width": 30.888750776880073,
                 "stretchable": false,
                 "pxlWidth": 0,
-                "index": 2
+                "index": 3
               }
             ]
           },
@@ -115,10 +187,10 @@
                     "maxHeight": 2048,
                     "minWidth": 256,
                     "maxWidth": 2048,
-                    "height": "200px",
+                    "height": "108px",
                     "defaultWidth": 512,
                     "widgetid": "6a920079685aed98af499d11",
-                    "autoHeight": "29px"
+                    "autoHeight": "108px"
                   }
                 ],
                 "width": 100,
@@ -139,8 +211,8 @@
                     "maxWidth": 2048,
                     "defaultWidth": 512,
                     "widgetid": "6a920079685aed98af499d14",
-                    "height": "82px",
-                    "autoHeight": "82px"
+                    "height": "108px",
+                    "autoHeight": "108px"
                   }
                 ],
                 "width": 100,
@@ -161,8 +233,8 @@
                     "maxWidth": 2048,
                     "defaultWidth": 512,
                     "widgetid": "6a920079685aed98af499d13",
-                    "height": "200px",
-                    "autoHeight": "29px"
+                    "height": "186px",
+                    "autoHeight": "186px"
                   }
                 ],
                 "width": 100,
@@ -301,7 +373,8 @@
         }
       },
       "instanceid": "13850-371E-7A",
-      "isCascading": false
+      "isCascading": false,
+      "disabled": false
     },
     {
       "jaql": {
@@ -314,6 +387,7 @@
         "merged": true,
         "isDashboardFilter": true,
         "title": "Primary Impression",
+        "collapsed": true,
         "datasource": {
           "title": "EMS",
           "id": "live:EMS",
@@ -326,24 +400,47 @@
           "members": [
             "Amputation of limb",
             "Amputation of other parts of head (face, ears,etc.)",
+            "Brain Injury",
+            "Early Complications of Trauma",
             "Gastrointestinal hemorrhage",
             "Gastrostomy hemorrhage",
             "Hemorrhage",
             "Hemorrhagic Shock",
             "Immediate postpartum hemorrhage",
+            "Injury",
+            "Injury of Abdomen",
+            "Injury of Ankle",
+            "Injury of Ear",
+            "Injury of Elbow",
+            "Injury of External Genitals",
+            "Injury of Face",
+            "Injury of Foot",
+            "Injury of Forearm",
+            "Injury of Head",
+            "Injury of Hip",
+            "Injury of Lower Back",
+            "Injury of Lower Leg",
+            "Injury of Neck",
+            "Injury of Nose",
+            "Injury of Pelvis",
+            "Injury of Shoulder or Upper Arm",
+            "Injury of Thigh (Upper Leg)",
+            "Injury of Thorax (Upper Chest)",
+            "Injury of Wrist, Hand, or Fingers",
             "Labor and delivery complications",
             "Laceration/Abrasion/Hematoma (minor surface trauma)",
             "Postpartum hemorrhage",
+            "Spontaneous abortion (Miscarriage)",
             "Tracheostomy Hemorrhage",
             "Vaginal Hemorrhage"
           ],
           "custom": true,
           "rankingMessage": ""
-        },
-        "collapsed": true
+        }
       },
       "instanceid": "475AA-B690-85",
-      "isCascading": false
+      "isCascading": false,
+      "disabled": false
     },
     {
       "jaql": {
@@ -356,6 +453,7 @@
         "merged": true,
         "isDashboardFilter": true,
         "title": "Secondary Impression",
+        "collapsed": true,
         "datasource": {
           "title": "EMS",
           "id": "live:EMS",
@@ -368,24 +466,47 @@
           "members": [
             "Amputation of limb",
             "Amputation of other parts of head (face, ears,etc.)",
+            "Brain Injury",
+            "Early Complications of Trauma",
             "Gastrointestinal hemorrhage",
             "Gastrostomy hemorrhage",
             "Hemorrhage",
             "Hemorrhagic Shock",
             "Immediate postpartum hemorrhage",
+            "Injury",
+            "Injury of Abdomen",
+            "Injury of Ankle",
+            "Injury of Ear",
+            "Injury of Elbow",
+            "Injury of External Genitals",
+            "Injury of Face",
+            "Injury of Foot",
+            "Injury of Forearm",
+            "Injury of Head",
+            "Injury of Hip",
+            "Injury of Lower Back",
+            "Injury of Lower Leg",
+            "Injury of Neck",
+            "Injury of Nose",
+            "Injury of Pelvis",
+            "Injury of Shoulder or Upper Arm",
+            "Injury of Thigh (Upper Leg)",
+            "Injury of Thorax (Upper Chest)",
+            "Injury of Wrist, Hand, or Fingers",
             "Labor and delivery complications",
             "Laceration/Abrasion/Hematoma (minor surface trauma)",
             "Postpartum hemorrhage",
+            "Spontaneous abortion (Miscarriage)",
             "Tracheostomy Hemorrhage",
             "Vaginal Hemorrhage"
           ],
           "custom": true,
           "rankingMessage": ""
-        },
-        "collapsed": true
+        }
       },
       "instanceid": "ECC71-66AA-21",
-      "isCascading": false
+      "isCascading": false,
+      "disabled": false
     }
   ],
   "oid": "6a920079685aed98af499d10",
@@ -2248,7 +2369,7 @@
       },
       "style": {
         "content": {
-          "html": "<span style=\"font-size: 24px;\">Medical/Trauma Field Criteria</span><br><div style=\"text-align: left;\"><span style=\"text-align: -webkit-match-parent;\">Any of:</span><br><ul><li><span style=\"font-size: 12.5px;\">Trauma</span></li><li><span style=\"font-size: 12.5px;\">Medical &amp; Trauma</span></li></ul><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div>",
+          "html": "<div style=\"text-align: left;\"><br><ul><li><span style=\"font-size: 12.5px;\">Trauma</span></li><li><span style=\"font-size: 12.5px;\">Medical &amp; Trauma</span></li></ul><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div>",
           "vAlign": "valign-middle",
           "bgColor": "#FFFFFF",
           "textAlign": "center"
@@ -2298,7 +2419,7 @@
       },
       "style": {
         "content": {
-          "html": "<font size=\"5\">Primary Impression Criteria</font><br><div style=\"text-align: left;\">Any of:</div><ul style=\"\"><ul><li style=\"text-align: left;\"><span>Amputation of limb</span></li><li style=\"text-align: left;\"><font size=\"2\">Amputation of other parts of head (face, ears,etc.)</font></li><li style=\"text-align: left;\"><font size=\"2\">Gastrointestinal hemorrhage</font></li><li style=\"text-align: left;\"><font size=\"2\">Gastrostomy hemorrhage</font></li><li style=\"text-align: left;\"><font size=\"2\">Hemorrhage</font></li><li style=\"text-align: left;\"><font size=\"2\">Hemorrhagic Shock</font></li><li style=\"text-align: left;\"><font size=\"2\">Immediate postpartum hemorrhage</font></li><li style=\"text-align: left;\"><font size=\"2\">Labor and delivery complications</font></li><li style=\"text-align: left;\"><font size=\"2\">Laceration/Abrasion/Hematoma (minor surface trauma)</font></li><li style=\"text-align: left;\"><font size=\"2\">Postpartum hemorrhage</font></li><li style=\"text-align: left;\"><font size=\"2\">Tracheostomy Hemorrhage</font></li><li style=\"text-align: left;\"><font size=\"2\">Vaginal Hemorrhage</font></li></ul></ul>",
+          "html": "<div style=\"text-align: left;\">Amputation of limb</div><div style=\"text-align: left;\">Amputation of other parts of head (face, ears,etc.)</div><div style=\"text-align: left;\">Brain Injury</div><div style=\"text-align: left;\">Early Complications of Trauma</div><div style=\"text-align: left;\">Gastrointestinal hemorrhage</div><div style=\"text-align: left;\">Gastrostomy hemorrhage</div><div style=\"text-align: left;\">Hemorrhage</div><div style=\"text-align: left;\">Hemorrhagic Shock</div><div style=\"text-align: left;\">Immediate postpartum hemorrhage</div><div style=\"text-align: left;\">Injury</div><div style=\"text-align: left;\">Injury of Abdomen</div><div style=\"text-align: left;\">Injury of Ankle</div><div style=\"text-align: left;\">Injury of Ear</div><div style=\"text-align: left;\">Injury of Elbow</div><div style=\"text-align: left;\">Injury of External Genitals</div><div style=\"text-align: left;\">Injury of Face</div><div style=\"text-align: left;\">Injury of Foot</div>",
           "vAlign": "valign-middle",
           "bgColor": "#FFFFFF",
           "textAlign": "center"
@@ -2348,13 +2469,213 @@
       },
       "style": {
         "content": {
-          "html": "<span style=\"font-size: x-large;\">Shock Criteria</span><br><div style=\"text-align: left;\"><span style=\"font-size: small;\">Age 0-9: Systolic blood pressure &lt; 70 + 2 * Age in years</span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\">Age 10-64: Systolic blood pressure &lt; 90 or Systolic blood pressure &lt; Pulse rate</span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\">Age 65+: Systolic blood pressure &lt; 110 or Systolic blood pressure &lt; Pulse rate</span><span style=\"font-size: small;\"></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div>",
+          "html": "<br><div style=\"text-align: left;\"><span style=\"font-size: small;\">Age 0-9: Systolic blood pressure &lt; 70 + 2 * Age in years</span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\">Age 10-64: Systolic blood pressure &lt; 90 or Systolic blood pressure &lt; Pulse rate</span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\">Age 65+: Systolic blood pressure &lt; 110 or Systolic blood pressure &lt; Pulse rate</span><span style=\"font-size: small;\"></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: small;\"><br></span></div>",
           "vAlign": "valign-middle",
           "bgColor": "#FFFFFF",
           "textAlign": "center"
         }
       },
       "instanceid": "6C60B-E036-F8",
+      "realTimeRefreshing": false,
+      "options": {
+        "triggersDomready": true,
+        "hideFromWidgetList": true,
+        "disableExportToCSV": true,
+        "disableExportToImage": true,
+        "toolbarButton": {
+          "css": "add-rich-text",
+          "tooltip": "RICHTEXT_MAIN.TOOLBAR_BUTTON"
+        },
+        "selector": false,
+        "disallowSelector": true,
+        "disallowWidgetTitle": true,
+        "supportsHierarchies": false,
+        "dashboardFiltersMode": "filter"
+      },
+      "dashboardid": "6a920079685aed98af499d10"
+    },
+    {
+      "title": "RICHTEXT_MAIN.TITLE",
+      "type": "richtexteditor",
+      "subtype": "richtexteditor",
+      "oid": "6a9b402f1f8c45478bd0e953",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [],
+          "all": false
+        },
+        "panels": [],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "content": {
+          "html": "<div style=\"text-align: left;\">Injury of Forearm</div><div style=\"text-align: left;\">Injury of Head</div><div style=\"text-align: left;\">Injury of Hip</div><div style=\"text-align: left;\">Injury of Lower Back</div><div style=\"text-align: left;\">Injury of Lower Leg</div><div style=\"text-align: left;\">Injury of Neck</div><div style=\"text-align: left;\">Injury of Nose</div><div style=\"text-align: left;\">Injury of Pelvis</div><div style=\"text-align: left;\">Injury of Shoulder or Upper Arm</div><div style=\"text-align: left;\">Injury of Thigh (Upper Leg)</div><div style=\"text-align: left;\">Injury of Thorax (Upper Chest)</div><div style=\"text-align: left;\">Injury of Wrist, Hand, or Fingers</div><div style=\"text-align: left;\">Labor and delivery complications</div><div style=\"text-align: left;\">Laceration/Abrasion/Hematoma (minor surface trauma)</div><div style=\"text-align: left;\">Postpartum hemorrhage</div><div style=\"text-align: left;\">Spontaneous abortion (Miscarriage)</div><div style=\"text-align: left;\">Tracheostomy Hemorrhage</div><div style=\"text-align: left;\">Vaginal Hemorrhage</div>",
+          "vAlign": "valign-middle",
+          "bgColor": "#FFFFFF",
+          "textAlign": "center"
+        }
+      },
+      "instanceid": "EE438-9F1D-01",
+      "realTimeRefreshing": false,
+      "options": {
+        "triggersDomready": true,
+        "hideFromWidgetList": true,
+        "disableExportToCSV": true,
+        "disableExportToImage": true,
+        "toolbarButton": {
+          "css": "add-rich-text",
+          "tooltip": "RICHTEXT_MAIN.TOOLBAR_BUTTON"
+        },
+        "selector": false,
+        "disallowSelector": true,
+        "disallowWidgetTitle": true,
+        "supportsHierarchies": false,
+        "dashboardFiltersMode": "filter"
+      },
+      "dashboardid": "6a920079685aed98af499d10"
+    },
+    {
+      "title": "RICHTEXT_MAIN.TITLE",
+      "type": "richtexteditor",
+      "subtype": "richtexteditor",
+      "oid": "6a9b40461f8c45478bd0e958",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [],
+          "all": false
+        },
+        "panels": [],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "content": {
+          "html": "<span style=\"font-size: x-large;\">Medical/Trauma Field Criteria</span>",
+          "vAlign": "valign-middle",
+          "bgColor": "#FFFFFF",
+          "textAlign": "center"
+        }
+      },
+      "instanceid": "376D9-40D7-BB",
+      "realTimeRefreshing": false,
+      "options": {
+        "triggersDomready": true,
+        "hideFromWidgetList": true,
+        "disableExportToCSV": true,
+        "disableExportToImage": true,
+        "toolbarButton": {
+          "css": "add-rich-text",
+          "tooltip": "RICHTEXT_MAIN.TOOLBAR_BUTTON"
+        },
+        "selector": false,
+        "disallowSelector": true,
+        "disallowWidgetTitle": true,
+        "supportsHierarchies": false,
+        "dashboardFiltersMode": "filter"
+      },
+      "dashboardid": "6a920079685aed98af499d10"
+    },
+    {
+      "title": "RICHTEXT_MAIN.TITLE",
+      "type": "richtexteditor",
+      "subtype": "richtexteditor",
+      "oid": "6a9b40c0fdc256800e260394",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [],
+          "all": false
+        },
+        "panels": [],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "content": {
+          "html": "<span style=\"font-size: x-large;\">Primary/Secondary Impression Criteria</span>",
+          "vAlign": "valign-middle",
+          "bgColor": "#FFFFFF",
+          "textAlign": "center"
+        }
+      },
+      "instanceid": "545D4-4BAC-22",
+      "realTimeRefreshing": false,
+      "options": {
+        "triggersDomready": true,
+        "hideFromWidgetList": true,
+        "disableExportToCSV": true,
+        "disableExportToImage": true,
+        "toolbarButton": {
+          "css": "add-rich-text",
+          "tooltip": "RICHTEXT_MAIN.TOOLBAR_BUTTON"
+        },
+        "selector": false,
+        "disallowSelector": true,
+        "disallowWidgetTitle": true,
+        "supportsHierarchies": false,
+        "dashboardFiltersMode": "filter"
+      },
+      "dashboardid": "6a920079685aed98af499d10"
+    },
+    {
+      "title": "RICHTEXT_MAIN.TITLE",
+      "type": "richtexteditor",
+      "subtype": "richtexteditor",
+      "oid": "6a9b40de685aed98af4abd5d",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [],
+          "all": false
+        },
+        "panels": [],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "content": {
+          "html": "<font size=\"5\">Shock Criteria</font>",
+          "vAlign": "valign-middle",
+          "bgColor": "#FFFFFF",
+          "textAlign": "center"
+        }
+      },
+      "instanceid": "2F6ED-AF50-9F",
       "realTimeRefreshing": false,
       "options": {
         "triggersDomready": true,
