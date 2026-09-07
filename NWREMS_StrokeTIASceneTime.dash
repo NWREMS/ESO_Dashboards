@@ -1,5 +1,5 @@
 {
-  "title": "NWREMS: Chest Pain/STEMI Scene Time",
+  "title": "NWREMS: Stroke\\TIA Scene Time",
   "desc": "",
   "source": null,
   "type": "dashboard",
@@ -41,7 +41,7 @@
                     "maxWidth": 2048,
                     "height": 128,
                     "defaultWidth": 128,
-                    "widgetid": "6a68f4ef8368e7d493a23b21"
+                    "widgetid": "6a68f6b626b6b091e33e17fb"
                   }
                 ],
                 "width": 100,
@@ -62,7 +62,7 @@
                     "minWidth": 48,
                     "maxWidth": 1028,
                     "defaultWidth": 512,
-                    "widgetid": "6a5eaa4f8368e7d493a11e75"
+                    "widgetid": "6a5eb19c26b6b091e33cfb2c"
                   }
                 ],
                 "width": 50,
@@ -79,7 +79,7 @@
                     "maxWidth": 2048,
                     "height": "336px",
                     "defaultWidth": 512,
-                    "widgetid": "6a5eb11e26b6b091e33cfb1f",
+                    "widgetid": "6a5eb19c26b6b091e33cfb2d",
                     "autoHeight": "160px"
                   }
                 ],
@@ -202,6 +202,7 @@
         "merged": true,
         "isDashboardFilter": true,
         "title": "Primary Impression",
+        "collapsed": true,
         "datasource": {
           "title": "EMS",
           "id": "live:EMS",
@@ -212,22 +213,23 @@
           "explicit": true,
           "multiSelection": true,
           "members": [
-            "Chest Pain / Discomfort",
-            "ST elevation (STEMI) myocardial infarction of inferior wall"
+            "Stroke",
+            "Transient Cerebral Ischemic Attack (TIA)"
           ]
-        },
-        "collapsed": true
+        }
       },
       "instanceid": "FA91B-95B2-E3",
-      "isCascading": false
+      "isCascading": false,
+      "disabled": false
     }
   ],
-  "oid": "6a5ea67d26b6b091e33cfa45",
+  "oid": "6a5eb19c26b6b091e33cfb2b",
   "settings": {
     "autoUpdateOnFiltersChange": true
   },
   "filterRelations": [],
   "filterToDatasourceMapping": {},
+  "parentFolder": null,
   "allowChangeSubscription": false,
   "subscription": {
     "executionPerDay": 1,
@@ -242,7 +244,7 @@
       "isPdf": false
     },
     "context": {
-      "dashboardid": "6a5ea67d26b6b091e33cfa45"
+      "dashboardid": "6a5eb19c26b6b091e33cfb2b"
     },
     "startAt": "2026-07-20",
     "tzName": "America/Los_Angeles",
@@ -256,7 +258,7 @@
       "title": "Overall",
       "type": "indicator",
       "subtype": "indicator/numeric",
-      "oid": "6a5eaa4f8368e7d493a11e75",
+      "oid": "6a5eb19c26b6b091e33cfb2c",
       "desc": null,
       "source": null,
       "datasource": {
@@ -441,7 +443,7 @@
         "autoUpdateOnEveryChange": true,
         "supportsHierarchies": false
       },
-      "dashboardid": "6a5ea67d26b6b091e33cfa45",
+      "dashboardid": "6a5eb19c26b6b091e33cfb2b",
       "dataNotLoadedYet": false,
       "viewState": {
         "activeTab": "filters"
@@ -451,7 +453,7 @@
       "title": "By Lead Provider",
       "type": "pivot2",
       "subtype": "pivot2",
-      "oid": "6a5eb11e26b6b091e33cfb1f",
+      "oid": "6a5eb19c26b6b091e33cfb2d",
       "desc": null,
       "source": null,
       "datasource": {
@@ -608,13 +610,13 @@
         "drillToAnywhere": true,
         "autoUpdateOnEveryChange": true
       },
-      "dashboardid": "6a5ea67d26b6b091e33cfa45"
+      "dashboardid": "6a5eb19c26b6b091e33cfb2b"
     },
     {
       "title": "RICHTEXT_MAIN.TITLE",
       "type": "richtexteditor",
       "subtype": "richtexteditor",
-      "oid": "6a68f4ef8368e7d493a23b21",
+      "oid": "6a68f6b626b6b091e33e17fb",
       "desc": null,
       "source": null,
       "datasource": {
@@ -635,13 +637,13 @@
       },
       "style": {
         "content": {
-          "html": "<font color=\"#e6e6e6\"><font size=\"7\">Chest Pain/STEMI Scene Time</font><br><font size=\"5\">This dashboard shows the average on-scene time for calls involving chest pain or STEMI</font></font>",
+          "html": "<font color=\"#e6e6e6\"><font size=\"7\">Stroke/TIA Scene Time</font><br><font size=\"5\">This dashboard shows the average on-scene time in total and by person, for calls involving stroke/TIA.</font></font>",
           "vAlign": "valign-middle",
           "bgColor": "#117899",
           "textAlign": "center"
         }
       },
-      "instanceid": "6FD0F-9E46-76",
+      "instanceid": "6CA01-A276-56",
       "realTimeRefreshing": false,
       "options": {
         "triggersDomready": true,
@@ -658,7 +660,7 @@
         "supportsHierarchies": false,
         "dashboardFiltersMode": "filter"
       },
-      "dashboardid": "6a5ea67d26b6b091e33cfa45"
+      "dashboardid": "6a5eb19c26b6b091e33cfb2b"
     }
   ],
   "hierarchies": []
