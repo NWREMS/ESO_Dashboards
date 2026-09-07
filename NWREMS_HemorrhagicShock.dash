@@ -62,30 +62,13 @@
                     "maxWidth": 2048,
                     "height": "36px",
                     "defaultWidth": 128,
-                    "widgetid": "6a9b40461f8c45478bd0e958"
-                  }
-                ],
-                "width": 25.357364822871347,
-                "stretchable": false,
-                "pxlWidth": 408,
-                "index": 0
-              },
-              {
-                "elements": [
-                  {
-                    "minHeight": 64,
-                    "maxHeight": 2048,
-                    "minWidth": 64,
-                    "maxWidth": 2048,
-                    "height": "36px",
-                    "defaultWidth": 128,
                     "widgetid": "6a9b40c0fdc256800e260394"
                   }
                 ],
-                "width": 43.7538844002486,
+                "width": 43.5052827843381,
                 "stretchable": false,
-                "pxlWidth": 704,
-                "index": 1
+                "pxlWidth": 700,
+                "index": 0
               },
               {
                 "elements": [
@@ -99,10 +82,10 @@
                     "widgetid": "6a9b40de685aed98af4abd5d"
                   }
                 ],
-                "width": 30.88875077688005,
+                "width": 56.4947172156619,
                 "stretchable": false,
-                "pxlWidth": 497,
-                "index": 2
+                "pxlWidth": 909,
+                "index": 1
               }
             ]
           },
@@ -117,30 +100,13 @@
                     "maxWidth": 2048,
                     "height": "328px",
                     "defaultWidth": 128,
-                    "widgetid": "6a920079685aed98af499d15"
-                  }
-                ],
-                "width": 25.357364822871347,
-                "stretchable": false,
-                "pxlWidth": 0,
-                "index": 0
-              },
-              {
-                "elements": [
-                  {
-                    "minHeight": 64,
-                    "maxHeight": 2048,
-                    "minWidth": 64,
-                    "maxWidth": 2048,
-                    "height": "328px",
-                    "defaultWidth": 128,
                     "widgetid": "6a920079685aed98af499d16"
                   }
                 ],
-                "width": 21.8769422001243,
+                "width": 20.633934120571784,
                 "stretchable": false,
-                "pxlWidth": 0,
-                "index": 1
+                "pxlWidth": 332,
+                "index": 0
               },
               {
                 "elements": [
@@ -154,10 +120,10 @@
                     "widgetid": "6a9b402f1f8c45478bd0e953"
                   }
                 ],
-                "width": 21.8769422001243,
+                "width": 22.845267228624984,
                 "stretchable": false,
-                "pxlWidth": 0,
-                "index": 2
+                "pxlWidth": 367.578,
+                "index": 1
               },
               {
                 "elements": [
@@ -171,10 +137,10 @@
                     "widgetid": "6a920079685aed98af499d17"
                   }
                 ],
-                "width": 30.888750776880073,
+                "width": 56.52079865080322,
                 "stretchable": false,
-                "pxlWidth": 0,
-                "index": 3
+                "pxlWidth": 909.406,
+                "index": 2
               }
             ]
           },
@@ -187,10 +153,10 @@
                     "maxHeight": 2048,
                     "minWidth": 256,
                     "maxWidth": 2048,
-                    "height": "108px",
+                    "height": "200px",
                     "defaultWidth": 512,
                     "widgetid": "6a920079685aed98af499d11",
-                    "autoHeight": "108px"
+                    "autoHeight": "29px"
                   }
                 ],
                 "width": 100,
@@ -233,8 +199,8 @@
                     "maxWidth": 2048,
                     "defaultWidth": 512,
                     "widgetid": "6a920079685aed98af499d13",
-                    "height": "186px",
-                    "autoHeight": "186px"
+                    "height": "316px",
+                    "autoHeight": "316px"
                   }
                 ],
                 "width": 100,
@@ -344,37 +310,6 @@
       },
       "isCascading": false,
       "instanceid": "7395C-E1E2-EE"
-    },
-    {
-      "jaql": {
-        "table": "Narrative",
-        "column": "Medical Trauma",
-        "dim": "[Narrative.Medical Trauma]",
-        "datatype": "text",
-        "columnTitle": "Medical Trauma",
-        "tableTitle": "Narrative",
-        "merged": true,
-        "isDashboardFilter": true,
-        "collapsed": true,
-        "title": "Medical Trauma",
-        "datasource": {
-          "title": "EMS",
-          "id": "live:EMS",
-          "fullname": "live:EMS",
-          "live": true
-        },
-        "filter": {
-          "explicit": true,
-          "multiSelection": true,
-          "members": [
-            "Medical & Trauma",
-            "Trauma"
-          ]
-        }
-      },
-      "instanceid": "13850-371E-7A",
-      "isCascading": false,
-      "disabled": false
     },
     {
       "jaql": {
@@ -527,25 +462,17 @@
             "type": "LogicalExpression",
             "operator": "AND",
             "left": {
-              "type": "LogicalExpression",
-              "operator": "AND",
-              "left": {
-                "type": "Identifier",
-                "instanceId": "539E9-2CC4-75"
-              },
-              "right": {
-                "type": "Identifier",
-                "instanceId": "30717-289A-22"
-              }
+              "type": "Identifier",
+              "instanceId": "539E9-2CC4-75"
             },
             "right": {
               "type": "Identifier",
-              "instanceId": "7395C-E1E2-EE"
+              "instanceId": "30717-289A-22"
             }
           },
           "right": {
             "type": "Identifier",
-            "instanceId": "13850-371E-7A"
+            "instanceId": "7395C-E1E2-EE"
           }
         },
         "right": {
@@ -926,7 +853,7 @@
                   "id": "CASE\nWHEN(MIN([7D9B8-840]) < 90) THEN 1\nWHEN (MIN([7D9B8-840]) < MIN([DB4BF-4F2])) THEN 1\nELSE 0\nEND",
                   "index": 11
                 },
-                "disabled": true
+                "disabled": false
               }
             ]
           },
@@ -965,30 +892,32 @@
               {
                 "jaql": {
                   "type": "measure",
-                  "formula": "CASE\nWHEN(MIN([7D9B8-840]) < 90) THEN 1\nWHEN (MIN([7D9B8-840]) < MIN([DB4BF-4F2])) THEN 1\nELSE 0\nEND",
+                  "formula": "CASE\nWHEN[4AE6E-DFA] < (70 + 2 * [B1963-28A]) THEN 1\nELSE 0\nEND",
                   "context": {
-                    "[7D9B8-840]": {
+                    "[4AE6E-DFA]": {
                       "table": "Vital Signs",
                       "column": "Blood Pressure Systolic",
                       "dim": "[Vital Signs.Blood Pressure Systolic]",
                       "datatype": "numeric",
                       "columnTitle": "Blood Pressure Systolic",
                       "tableTitle": "Vital Signs",
-                      "title": "Blood Pressure Systolic"
+                      "title": "Median of Blood Pressure Systolic",
+                      "agg": "median"
                     },
-                    "[DB4BF-4F2]": {
-                      "table": "Vital Signs",
-                      "column": "Pulse Rate",
-                      "dim": "[Vital Signs.Pulse Rate]",
+                    "[B1963-28A]": {
+                      "table": "Patient",
+                      "column": "Patient Age In Years",
+                      "dim": "[Patient.Patient Age In Years]",
                       "datatype": "numeric",
-                      "columnTitle": "Pulse Rate",
-                      "tableTitle": "Vital Signs",
-                      "title": "Pulse Rate"
+                      "columnTitle": "Patient Age In Years",
+                      "tableTitle": "Patient",
+                      "agg": "median",
+                      "title": "Median of Patient Age In Years"
                     }
                   },
-                  "title": "In Shock",
                   "columnTitle": "Formula",
                   "datatype": "numeric",
+                  "title": "In Shock",
                   "datasource": {
                     "title": "EMS",
                     "id": "live:EMS",
@@ -1000,22 +929,7 @@
                     "equals": 1
                   }
                 },
-                "instanceid": "56584-E5A3-8D",
-                "format": {
-                  "mask": {
-                    "type": "number",
-                    "abbreviations": {
-                      "t": false,
-                      "b": false,
-                      "m": false,
-                      "k": false
-                    },
-                    "separated": true,
-                    "decimals": "auto",
-                    "abbreviateAll": false,
-                    "isdefault": true
-                  }
-                },
+                "instanceid": "980D7-4667-D0",
                 "panel": "scope"
               }
             ]
@@ -1324,25 +1238,6 @@
               {
                 "jaql": {
                   "table": "Narrative",
-                  "column": "Medical Trauma",
-                  "dim": "[Narrative.Medical Trauma]",
-                  "datatype": "text",
-                  "columnTitle": "Medical Trauma",
-                  "tableTitle": "Narrative",
-                  "merged": true,
-                  "title": "Medical/Trauma"
-                },
-                "instanceid": "CCE27-2245-3B",
-                "format": {},
-                "panel": "rows",
-                "field": {
-                  "id": "[Narrative.Medical Trauma]",
-                  "index": 3
-                }
-              },
-              {
-                "jaql": {
-                  "table": "Narrative",
                   "column": "Primary Impression",
                   "dim": "[Narrative.Primary Impression]",
                   "datatype": "text",
@@ -1355,7 +1250,7 @@
                 "instanceid": "89FD4-091B-5D",
                 "field": {
                   "id": "[Narrative.Primary Impression]",
-                  "index": 4
+                  "index": 3
                 },
                 "panel": "rows"
               },
@@ -1374,7 +1269,7 @@
                 "panel": "rows",
                 "field": {
                   "id": "[Narrative.Secondary Impression]",
-                  "index": 5
+                  "index": 4
                 }
               },
               {
@@ -1393,7 +1288,7 @@
                 "panel": "rows",
                 "field": {
                   "id": "[Incident Destination.Destination Location Name]",
-                  "index": 6
+                  "index": 5
                 }
               },
               {
@@ -1411,7 +1306,7 @@
                 "panel": "rows",
                 "field": {
                   "id": "[EMS Measures Vitals.Vital Sign Collection Count]",
-                  "index": 7
+                  "index": 6
                 }
               },
               {
@@ -1445,7 +1340,7 @@
                 "panel": "rows",
                 "field": {
                   "id": "[Vital Signs.Vital Sign Date Time (Calendar)]",
-                  "index": 8
+                  "index": 7
                 }
               },
               {
@@ -1463,7 +1358,7 @@
                 "panel": "rows",
                 "field": {
                   "id": "[Vital Signs.Blood Pressure Systolic]",
-                  "index": 9
+                  "index": 8
                 }
               },
               {
@@ -1481,7 +1376,7 @@
                 "panel": "rows",
                 "field": {
                   "id": "[Vital Signs.Pulse Rate]",
-                  "index": 10
+                  "index": 9
                 }
               }
             ]
@@ -1515,9 +1410,9 @@
                       "agg": "median"
                     }
                   },
-                  "title": "In Shock",
                   "columnTitle": "Formula",
-                  "datatype": "numeric"
+                  "datatype": "numeric",
+                  "title": "In Shock"
                 },
                 "instanceid": "D979C-75D0-07",
                 "format": {
@@ -1541,9 +1436,9 @@
                 "panel": "measures",
                 "field": {
                   "id": "CASE\nWHEN(MIN([7D9B8-840]) < 90) THEN 1\nWHEN (MIN([7D9B8-840]) < MIN([DB4BF-4F2])) THEN 1\nELSE 0\nEND",
-                  "index": 11
+                  "index": 10
                 },
-                "disabled": true
+                "disabled": false
               }
             ]
           },
@@ -1673,12 +1568,6 @@
               "title": "Patient Age",
               "singular": "Patient Age",
               "plural": "Patient Age"
-            },
-            {
-              "id": "medical/trauma",
-              "title": "Medical/Trauma",
-              "singular": "Medical/Trauma",
-              "plural": "Medical/Trauma"
             },
             {
               "id": "primary_impression",
@@ -1891,25 +1780,6 @@
               {
                 "jaql": {
                   "table": "Narrative",
-                  "column": "Medical Trauma",
-                  "dim": "[Narrative.Medical Trauma]",
-                  "datatype": "text",
-                  "columnTitle": "Medical Trauma",
-                  "tableTitle": "Narrative",
-                  "merged": true,
-                  "title": "Medical/Trauma"
-                },
-                "instanceid": "CCE27-2245-3B",
-                "format": {},
-                "panel": "rows",
-                "field": {
-                  "id": "[Narrative.Medical Trauma]",
-                  "index": 3
-                }
-              },
-              {
-                "jaql": {
-                  "table": "Narrative",
                   "column": "Primary Impression",
                   "dim": "[Narrative.Primary Impression]",
                   "datatype": "text",
@@ -1922,7 +1792,7 @@
                 "instanceid": "89FD4-091B-5D",
                 "field": {
                   "id": "[Narrative.Primary Impression]",
-                  "index": 4
+                  "index": 3
                 },
                 "panel": "rows"
               },
@@ -1941,7 +1811,7 @@
                 "panel": "rows",
                 "field": {
                   "id": "[Narrative.Secondary Impression]",
-                  "index": 5
+                  "index": 4
                 }
               },
               {
@@ -1960,7 +1830,7 @@
                 "panel": "rows",
                 "field": {
                   "id": "[Incident Destination.Destination Location Name]",
-                  "index": 6
+                  "index": 5
                 }
               },
               {
@@ -1978,7 +1848,7 @@
                 "panel": "rows",
                 "field": {
                   "id": "[EMS Measures Vitals.Vital Sign Collection Count]",
-                  "index": 7
+                  "index": 6
                 }
               },
               {
@@ -2012,7 +1882,7 @@
                 "panel": "rows",
                 "field": {
                   "id": "[Vital Signs.Vital Sign Date Time (Calendar)]",
-                  "index": 8
+                  "index": 7
                 }
               },
               {
@@ -2030,7 +1900,7 @@
                 "panel": "rows",
                 "field": {
                   "id": "[Vital Signs.Blood Pressure Systolic]",
-                  "index": 9
+                  "index": 8
                 }
               },
               {
@@ -2048,7 +1918,7 @@
                 "panel": "rows",
                 "field": {
                   "id": "[Vital Signs.Pulse Rate]",
-                  "index": 10
+                  "index": 9
                 }
               }
             ]
@@ -2082,9 +1952,9 @@
                       "agg": "median"
                     }
                   },
-                  "title": "In Shock",
                   "columnTitle": "Formula",
-                  "datatype": "numeric"
+                  "datatype": "numeric",
+                  "title": "In Shock"
                 },
                 "instanceid": "D979C-75D0-07",
                 "format": {
@@ -2108,9 +1978,9 @@
                 "panel": "measures",
                 "field": {
                   "id": "CASE\nWHEN(MIN([7D9B8-840]) < 90) THEN 1\nWHEN (MIN([7D9B8-840]) < MIN([DB4BF-4F2])) THEN 1\nELSE 0\nEND",
-                  "index": 11
+                  "index": 10
                 },
-                "disabled": true
+                "disabled": false
               }
             ]
           },
@@ -2242,12 +2112,6 @@
               "plural": "Patient Age"
             },
             {
-              "id": "medical/trauma",
-              "title": "Medical/Trauma",
-              "singular": "Medical/Trauma",
-              "plural": "Medical/Trauma"
-            },
-            {
               "id": "primary_impression",
               "title": "Primary Impression",
               "singular": "Primary Impression",
@@ -2343,56 +2207,6 @@
       },
       "dashboardid": "6a920079685aed98af499d10",
       "dataNotLoadedYet": false
-    },
-    {
-      "title": "RICHTEXT_MAIN.TITLE",
-      "type": "richtexteditor",
-      "subtype": "richtexteditor",
-      "oid": "6a920079685aed98af499d15",
-      "desc": null,
-      "source": null,
-      "datasource": {
-        "title": "EMS",
-        "id": "live:EMS",
-        "fullname": "live:EMS",
-        "live": true
-      },
-      "selection": null,
-      "metadata": {
-        "ignore": {
-          "dimensions": [],
-          "ids": [],
-          "all": false
-        },
-        "panels": [],
-        "usedFormulasMapping": {}
-      },
-      "style": {
-        "content": {
-          "html": "<div style=\"text-align: left;\"><br><ul><li><span style=\"font-size: 12.5px;\">Trauma</span></li><li><span style=\"font-size: 12.5px;\">Medical &amp; Trauma</span></li></ul><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div><div style=\"text-align: left;\"><span style=\"font-size: 12.5px;\"><br></span></div>",
-          "vAlign": "valign-middle",
-          "bgColor": "#FFFFFF",
-          "textAlign": "center"
-        }
-      },
-      "instanceid": "33BAA-D7DF-37",
-      "realTimeRefreshing": false,
-      "options": {
-        "triggersDomready": true,
-        "hideFromWidgetList": true,
-        "disableExportToCSV": true,
-        "disableExportToImage": true,
-        "toolbarButton": {
-          "css": "add-rich-text",
-          "tooltip": "RICHTEXT_MAIN.TOOLBAR_BUTTON"
-        },
-        "selector": false,
-        "disallowSelector": true,
-        "disallowWidgetTitle": true,
-        "supportsHierarchies": false,
-        "dashboardFiltersMode": "filter"
-      },
-      "dashboardid": "6a920079685aed98af499d10"
     },
     {
       "title": "RICHTEXT_MAIN.TITLE",
@@ -2526,56 +2340,6 @@
         }
       },
       "instanceid": "EE438-9F1D-01",
-      "realTimeRefreshing": false,
-      "options": {
-        "triggersDomready": true,
-        "hideFromWidgetList": true,
-        "disableExportToCSV": true,
-        "disableExportToImage": true,
-        "toolbarButton": {
-          "css": "add-rich-text",
-          "tooltip": "RICHTEXT_MAIN.TOOLBAR_BUTTON"
-        },
-        "selector": false,
-        "disallowSelector": true,
-        "disallowWidgetTitle": true,
-        "supportsHierarchies": false,
-        "dashboardFiltersMode": "filter"
-      },
-      "dashboardid": "6a920079685aed98af499d10"
-    },
-    {
-      "title": "RICHTEXT_MAIN.TITLE",
-      "type": "richtexteditor",
-      "subtype": "richtexteditor",
-      "oid": "6a9b40461f8c45478bd0e958",
-      "desc": null,
-      "source": null,
-      "datasource": {
-        "title": "EMS",
-        "id": "live:EMS",
-        "fullname": "live:EMS",
-        "live": true
-      },
-      "selection": null,
-      "metadata": {
-        "ignore": {
-          "dimensions": [],
-          "ids": [],
-          "all": false
-        },
-        "panels": [],
-        "usedFormulasMapping": {}
-      },
-      "style": {
-        "content": {
-          "html": "<span style=\"font-size: x-large;\">Medical/Trauma Field Criteria</span>",
-          "vAlign": "valign-middle",
-          "bgColor": "#FFFFFF",
-          "textAlign": "center"
-        }
-      },
-      "instanceid": "376D9-40D7-BB",
       "realTimeRefreshing": false,
       "options": {
         "triggersDomready": true,
