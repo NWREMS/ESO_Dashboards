@@ -31,6 +31,7 @@ Note: All of the dashboards here include "NWREMS:" at the start of their names. 
 | NWREMS_Diversions.dash | Shows incidents in which transport was diverted, and the facility diverted from. |
 | NWREMS_HemorrhagicShock.dash | Shows incidents in which the patient underwent hemorrhagic shock. |
 | NWREMS_HypotensiveTraumaPatients.dash | Shows incidents where trauma was indicated and systolic blood pressure was 90 or below. |
+| NWREMS_Intubations.dash | Provides information about the types and outcomes of intubations. |
 | NWREMS_NaloxoneAdministeredbyIncident.dash | Shows the total number of times Naloxone was administered, and the incident numbers. |
 | NWREMS_NaloxoneLeave-BehindKits.dash | Shows the number of times Naloxone leave-behind kits were issued, and the incidents. |
 | NWREMS_NarcoticControlledSubstanceAdministration.dash | Shows the number of times narcotic/controlled substances were administered, and the associated incidents. |

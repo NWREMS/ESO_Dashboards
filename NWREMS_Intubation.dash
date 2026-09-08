@@ -1,0 +1,862 @@
+{
+  "title": "NWREMS: Intubation",
+  "desc": "",
+  "source": null,
+  "type": "dashboard",
+  "style": {
+    "palette": {
+      "name": "Midnight Light",
+      "colors": [
+        "#117899",
+        "#60B8CC",
+        "#5CA793",
+        "#A2B86C",
+        "#EBC844",
+        "#ECAA38",
+        "#EF8B2C",
+        "#F16C20",
+        "#D94E1F",
+        "#C02E1D",
+        "#893B32",
+        "#0D3C55",
+        "#0F5B78"
+      ]
+    }
+  },
+  "layout": {
+    "instanceid": "4A778-1F54-9D",
+    "type": "columnar",
+    "columns": [
+      {
+        "width": 100,
+        "cells": [
+          {
+            "subcells": [
+              {
+                "elements": [
+                  {
+                    "minHeight": 64,
+                    "maxHeight": 2048,
+                    "minWidth": 64,
+                    "maxWidth": 2048,
+                    "height": 128,
+                    "defaultWidth": 128,
+                    "widgetid": "6aa05f81685aed98af4b191e"
+                  }
+                ],
+                "width": 100,
+                "stretchable": false,
+                "pxlWidth": 1607,
+                "index": 0
+              }
+            ]
+          },
+          {
+            "subcells": [
+              {
+                "elements": [
+                  {
+                    "minHeight": 256,
+                    "maxHeight": 2048,
+                    "minWidth": 256,
+                    "maxWidth": 2048,
+                    "height": "264px",
+                    "defaultWidth": 512,
+                    "widgetid": "6aa05e7dfdc256800e265b5b",
+                    "autoHeight": "108px"
+                  }
+                ],
+                "width": 50,
+                "stretchable": false,
+                "pxlWidth": 803.5,
+                "index": 0
+              },
+              {
+                "elements": [
+                  {
+                    "minHeight": 128,
+                    "maxHeight": 2048,
+                    "minWidth": 128,
+                    "maxWidth": 2048,
+                    "defaultWidth": 512,
+                    "widgetid": "6aa09004685aed98af4b26fe",
+                    "height": "264px",
+                    "autoHeight": "264px"
+                  }
+                ],
+                "width": 50,
+                "stretchable": false,
+                "pxlWidth": 803.5,
+                "index": 1
+              }
+            ]
+          }
+        ],
+        "pxlWidth": 1369,
+        "index": 0
+      }
+    ]
+  },
+  "original": null,
+  "dataExploration": true,
+  "lastOpened": null,
+  "previewLayout": [],
+  "datasource": {
+    "title": "EMS",
+    "id": "live:EMS",
+    "fullname": "live:EMS",
+    "live": true
+  },
+  "filters": [
+    {
+      "jaql": {
+        "table": "Incident Response",
+        "column": "Dispatched",
+        "dim": "[Incident Response.Dispatched (Calendar)]",
+        "datatype": "datetime",
+        "merged": true,
+        "level": "days",
+        "title": "Days in Dispatched",
+        "collapsed": true,
+        "isDashboardFilter": true,
+        "columnTitle": "Days in Dispatched",
+        "tableTitle": "Incident Response",
+        "datasource": {
+          "fullname": "live:EMS",
+          "id": "live:EMS",
+          "live": true,
+          "title": "EMS"
+        },
+        "filter": {
+          "last": {
+            "count": 360,
+            "offset": 0
+          }
+        }
+      },
+      "isCascading": false,
+      "instanceid": "1DF11-E819-C2",
+      "disabled": false
+    },
+    {
+      "jaql": {
+        "table": "Incident Response",
+        "column": "Is Locked",
+        "dim": "[Incident Response.Is Locked]",
+        "datatype": "text",
+        "merged": true,
+        "collapsed": true,
+        "title": "Is Locked",
+        "datasource": {
+          "fullname": "live:EMS",
+          "id": "live:EMS",
+          "live": true,
+          "title": "EMS"
+        },
+        "filter": {
+          "explicit": true,
+          "multiSelection": true,
+          "members": [
+            "true"
+          ]
+        },
+        "isDashboardFilter": true
+      },
+      "isCascading": false,
+      "instanceid": "4B8AE-00B4-18"
+    },
+    {
+      "jaql": {
+        "table": "Incident Response",
+        "column": "Is Active",
+        "dim": "[Incident Response.Is Active]",
+        "datatype": "text",
+        "merged": true,
+        "collapsed": true,
+        "title": "Is Active",
+        "datasource": {
+          "fullname": "live:EMS",
+          "id": "live:EMS",
+          "live": true,
+          "title": "EMS"
+        },
+        "filter": {
+          "explicit": true,
+          "multiSelection": true,
+          "members": [
+            "true"
+          ]
+        },
+        "isDashboardFilter": true
+      },
+      "isCascading": false,
+      "instanceid": "9D81E-84B8-E8"
+    },
+    {
+      "jaql": {
+        "table": "Flow Chart Treatment",
+        "column": "Treatment Name",
+        "dim": "[Flow Chart Treatment.Treatment Name]",
+        "datatype": "text",
+        "columnTitle": "Treatment Name",
+        "tableTitle": "Flow Chart Treatment",
+        "merged": true,
+        "isDashboardFilter": true,
+        "title": "Treatment Name",
+        "datasource": {
+          "title": "EMS",
+          "id": "live:EMS",
+          "fullname": "live:EMS",
+          "live": true
+        },
+        "filter": {
+          "explicit": true,
+          "multiSelection": true,
+          "members": [
+            "Manual Airway",
+            "Video Laryngoscopy"
+          ]
+        },
+        "collapsed": true
+      },
+      "instanceid": "2AE05-4C35-B0",
+      "isCascading": false
+    }
+  ],
+  "oid": "6aa05d60685aed98af4b18a0",
+  "settings": {
+    "autoUpdateOnFiltersChange": true
+  },
+  "filterRelations": [],
+  "filterToDatasourceMapping": {},
+  "allowChangeSubscription": false,
+  "subscription": {
+    "executionPerDay": 1,
+    "schedule": "0 0 0 * * *",
+    "isDataChange": false,
+    "type": "daily",
+    "reportType": {
+      "inline": true
+    },
+    "emailSettings": {
+      "isEmail": true,
+      "isPdf": false
+    },
+    "context": {
+      "dashboardid": "6aa05d60685aed98af4b18a0"
+    },
+    "startAt": "2026-09-08",
+    "tzName": "America/Los_Angeles",
+    "timezone": 420,
+    "active": false,
+    "subscribe": false
+  },
+  "isPublic": null,
+  "widgets": [
+    {
+      "title": "Attempts Required, by Type",
+      "type": "pivot2",
+      "subtype": "pivot2",
+      "oid": "6aa05e7dfdc256800e265b5b",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [],
+          "all": false
+        },
+        "panels": [
+          {
+            "name": "rows",
+            "items": [
+              {
+                "jaql": {
+                  "table": "Flow Chart Treatment",
+                  "column": "Treatment Name",
+                  "dim": "[Flow Chart Treatment.Treatment Name]",
+                  "datatype": "text",
+                  "columnTitle": "Treatment Name",
+                  "tableTitle": "Flow Chart Treatment",
+                  "merged": true,
+                  "title": "Type of Intubation"
+                },
+                "instanceid": "85CF3-8391-93",
+                "format": {},
+                "panel": "rows",
+                "field": {
+                  "id": "[Flow Chart Treatment.Treatment Name]",
+                  "index": 0
+                }
+              }
+            ]
+          },
+          {
+            "name": "values",
+            "items": [
+              {
+                "jaql": {
+                  "table": "Incident Response",
+                  "column": "Incident Number",
+                  "dim": "[Incident Response.Incident Number]",
+                  "datatype": "text",
+                  "columnTitle": "Incident Number",
+                  "tableTitle": "Incident Response",
+                  "merged": true,
+                  "title": "Attempts Required",
+                  "agg": "count"
+                },
+                "instanceid": "B4866-EDDE-7C",
+                "panel": "measures",
+                "field": {
+                  "id": "[Incident Response.Incident Number]",
+                  "index": 2
+                },
+                "format": {
+                  "databars": false,
+                  "color": {
+                    "type": "color"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "columns",
+            "items": [
+              {
+                "jaql": {
+                  "table": "Flow Chart Treatment",
+                  "column": "First Successful Advanced Airway Attempt Number",
+                  "dim": "[Flow Chart Treatment.First Successful Advanced Airway Attempt Number]",
+                  "datatype": "numeric",
+                  "columnTitle": "First Successful Advanced Airway Attempt Number",
+                  "tableTitle": "Flow Chart Treatment",
+                  "title": "First Successful Attempt"
+                },
+                "instanceid": "5AD07-BC72-57",
+                "format": {
+                  "mask": {
+                    "type": "number",
+                    "abbreviations": {
+                      "t": true,
+                      "b": true,
+                      "m": true,
+                      "k": false
+                    },
+                    "separated": true,
+                    "decimals": "auto",
+                    "abbreviateAll": false,
+                    "isdefault": true
+                  }
+                },
+                "panel": "columns",
+                "field": {
+                  "id": "[Flow Chart Treatment.First Successful Advanced Airway Attempt Number]",
+                  "index": 1
+                }
+              }
+            ]
+          },
+          {
+            "name": "filters",
+            "items": []
+          }
+        ],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "scroll": false,
+        "pageSize": 25,
+        "automaticHeight": true,
+        "colors": {
+          "rows": true,
+          "columns": false,
+          "headers": false,
+          "members": false,
+          "totals": false
+        },
+        "narration": {
+          "display": "above",
+          "verbosity": "low",
+          "labels": [
+            {
+              "id": "treatment_name",
+              "title": "Treatment Name",
+              "singular": "Treatment Name",
+              "plural": "Treatment Name"
+            },
+            {
+              "id": "first_successful_attempt",
+              "title": "First Successful Attempt",
+              "singular": "First Successful Attempt",
+              "plural": "First Successful Attempt"
+            }
+          ]
+        }
+      },
+      "instanceid": "08400-0019-D9",
+      "currentPage": 0,
+      "viewState": {
+        "activeTab": "filters"
+      },
+      "realTimeRefreshing": false,
+      "options": {
+        "dashboardFiltersMode": "filter",
+        "selector": false,
+        "triggersDomready": true,
+        "drillToAnywhere": true,
+        "autoUpdateOnEveryChange": true,
+        "selectorLocked": false
+      },
+      "dashboardid": "6aa05d60685aed98af4b18a0",
+      "drillToDashboardConfig": {
+        "drilledDashboardPrefix": "_drill",
+        "drilledDashboardsFolderPrefix": "",
+        "displayFilterPane": true,
+        "displayDashboardsPane": true,
+        "displayToolbarRow": true,
+        "displayHeaderRow": true,
+        "volatile": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drillToDashboardNavigateType": 2,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "excludeFilterDims": [],
+        "includeFilterDims": [],
+        "drilledDashboardDisplayType": 2,
+        "dashboardIds": [],
+        "modalWindowResize": false,
+        "showFolderNameOnMenuSelection": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "showJTDIcon": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "forceZeroInsteadNull": false,
+        "mergeTargetDashboardFilters": false,
+        "drillToDashboardByName": false
+      }
+    },
+    {
+      "title": "RICHTEXT_MAIN.TITLE",
+      "type": "richtexteditor",
+      "subtype": "richtexteditor",
+      "oid": "6aa05f81685aed98af4b191e",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [],
+          "all": false
+        },
+        "panels": [],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "content": {
+          "html": "<font color=\"#e6e6e6\"><font size=\"7\">Intubations</font><br><font size=\"5\">This dashboard provides information about the types and outcomes of intubations.</font></font>",
+          "vAlign": "valign-middle",
+          "bgColor": "#117899",
+          "textAlign": "center"
+        }
+      },
+      "instanceid": "444C7-C1E1-56",
+      "realTimeRefreshing": false,
+      "options": {
+        "triggersDomready": true,
+        "hideFromWidgetList": true,
+        "disableExportToCSV": true,
+        "disableExportToImage": true,
+        "toolbarButton": {
+          "css": "add-rich-text",
+          "tooltip": "RICHTEXT_MAIN.TOOLBAR_BUTTON"
+        },
+        "selector": false,
+        "disallowSelector": true,
+        "disallowWidgetTitle": true,
+        "supportsHierarchies": false,
+        "dashboardFiltersMode": "filter"
+      },
+      "dashboardid": "6aa05d60685aed98af4b18a0"
+    },
+    {
+      "title": "Incidence of Hypoxemia or Hypotension Within 5 MInutes of Intubation",
+      "type": "pivot2",
+      "subtype": "pivot2",
+      "oid": "6aa09004685aed98af4b26fe",
+      "desc": null,
+      "source": null,
+      "datasource": {
+        "title": "EMS",
+        "id": "live:EMS",
+        "fullname": "live:EMS",
+        "live": true
+      },
+      "selection": null,
+      "metadata": {
+        "ignore": {
+          "dimensions": [],
+          "ids": [],
+          "all": false
+        },
+        "panels": [
+          {
+            "name": "rows",
+            "items": [
+              {
+                "jaql": {
+                  "table": "Incident Response",
+                  "column": "Dispatched",
+                  "dim": "[Incident Response.Dispatched (Calendar)]",
+                  "datatype": "datetime",
+                  "columnTitle": "Dispatched",
+                  "tableTitle": "Incident Response",
+                  "merged": true,
+                  "title": "Incident Date",
+                  "dateTimeLevel": "seconds",
+                  "bucket": "0"
+                },
+                "instanceid": "19656-D453-46",
+                "panel": "rows",
+                "field": {
+                  "id": "[Incident Response.Dispatched (Calendar)]_years",
+                  "index": 0
+                },
+                "hierarchies": [],
+                "format": {
+                  "mask": {
+                    "years": "yyyy",
+                    "quarters": "yyyy Q",
+                    "months": "MM/yyyy",
+                    "weeks": "ww yyyy",
+                    "days": "shortDate",
+                    "minutes": "HH:mm",
+                    "seconds": "MM/dd/yyyy HH:mm:ss",
+                    "dateAndTime": "MM/dd/yyyy HH:mm:ss",
+                    "isdefault": true
+                  }
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Incident Response",
+                  "column": "Incident Number",
+                  "dim": "[Incident Response.Incident Number]",
+                  "datatype": "text",
+                  "columnTitle": "Incident Number",
+                  "tableTitle": "Incident Response",
+                  "merged": true,
+                  "title": "Incident Number"
+                },
+                "instanceid": "1033E-A9D2-83",
+                "format": {},
+                "panel": "rows",
+                "field": {
+                  "id": "[Incident Response.Incident Number]",
+                  "index": 1
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Flow Chart Treatment",
+                  "column": "First Successful Advanced Airway Attempt Number",
+                  "dim": "[Flow Chart Treatment.First Successful Advanced Airway Attempt Number]",
+                  "datatype": "numeric",
+                  "columnTitle": "First Successful Advanced Airway Attempt Number",
+                  "tableTitle": "Flow Chart Treatment",
+                  "title": "Attempts Required"
+                },
+                "instanceid": "EFBC8-2905-34",
+                "panel": "rows",
+                "field": {
+                  "id": "[Flow Chart Treatment.First Successful Advanced Airway Attempt Number]",
+                  "index": 2
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Vital Signs",
+                  "column": "SpO2",
+                  "dim": "[Vital Signs.SpO2]",
+                  "datatype": "numeric",
+                  "columnTitle": "SpO2",
+                  "tableTitle": "Vital Signs",
+                  "title": "SpO2"
+                },
+                "instanceid": "D101B-CF07-05",
+                "format": {
+                  "mask": {
+                    "type": "number",
+                    "abbreviations": {
+                      "t": true,
+                      "b": true,
+                      "m": true,
+                      "k": false
+                    },
+                    "separated": true,
+                    "decimals": "auto",
+                    "abbreviateAll": false,
+                    "isdefault": true
+                  }
+                },
+                "panel": "rows",
+                "field": {
+                  "id": "[Vital Signs.SpO2]",
+                  "index": 3
+                }
+              },
+              {
+                "jaql": {
+                  "table": "Vital Signs",
+                  "column": "Blood Pressure Systolic",
+                  "dim": "[Vital Signs.Blood Pressure Systolic]",
+                  "datatype": "numeric",
+                  "columnTitle": "Blood Pressure Systolic",
+                  "tableTitle": "Vital Signs",
+                  "title": "Blood Pressure Systolic"
+                },
+                "instanceid": "A3E2A-FBB9-34",
+                "panel": "rows",
+                "field": {
+                  "id": "[Vital Signs.Blood Pressure Systolic]",
+                  "index": 4
+                }
+              }
+            ]
+          },
+          {
+            "name": "values",
+            "items": []
+          },
+          {
+            "name": "columns",
+            "items": []
+          },
+          {
+            "name": "filters",
+            "items": [
+              {
+                "jaql": {
+                  "type": "measure",
+                  "formula": "MEDIAN(MNDIFF([C026C-A5B], [DE8A9-377]))",
+                  "context": {
+                    "[C026C-A5B]": {
+                      "table": "Vital Signs",
+                      "column": "Vital Sign Date Time",
+                      "dim": "[Vital Signs.Vital Sign Date Time (Calendar)]",
+                      "datatype": "datetime",
+                      "columnTitle": "Vital Sign Date Time",
+                      "tableTitle": "Vital Signs",
+                      "merged": true,
+                      "title": "Time in Vital Sign Date Time",
+                      "dateTimeLevel": "seconds",
+                      "bucket": "0"
+                    },
+                    "[DE8A9-377]": {
+                      "table": "Flow Chart Treatment",
+                      "column": "Treatment Date",
+                      "dim": "[Flow Chart Treatment.Treatment Date (Calendar)]",
+                      "datatype": "datetime",
+                      "columnTitle": "Treatment Date",
+                      "tableTitle": "Flow Chart Treatment",
+                      "merged": true,
+                      "title": "Time in Treatment Date",
+                      "dateTimeLevel": "seconds",
+                      "bucket": "0"
+                    }
+                  },
+                  "columnTitle": "Formula",
+                  "title": "Minutes After Intubation",
+                  "datatype": "numeric",
+                  "datasource": {
+                    "fullname": "live:EMS",
+                    "id": "live:EMS",
+                    "live": true,
+                    "title": "EMS"
+                  },
+                  "collapsed": false,
+                  "filter": {
+                    "from": 0,
+                    "to": "5"
+                  }
+                },
+                "instanceid": "DA2F9-056C-D1",
+                "format": {
+                  "mask": {
+                    "type": "number",
+                    "abbreviations": {
+                      "t": false,
+                      "b": false,
+                      "m": false,
+                      "k": false
+                    },
+                    "separated": true,
+                    "decimals": "auto",
+                    "abbreviateAll": false,
+                    "isdefault": true
+                  }
+                },
+                "panel": "scope"
+              },
+              {
+                "jaql": {
+                  "type": "measure",
+                  "formula": "CASE\nWHEN [1A6CA-DD6] < 90 THEN 1\nWHEN [0762C-D1F] < 90 THEN 1\nELSE 0\nEND",
+                  "context": {
+                    "[0762C-D1F]": {
+                      "table": "Vital Signs",
+                      "column": "Blood Pressure Systolic",
+                      "dim": "[Vital Signs.Blood Pressure Systolic]",
+                      "datatype": "numeric",
+                      "columnTitle": "Blood Pressure Systolic",
+                      "tableTitle": "Vital Signs",
+                      "agg": "median",
+                      "title": "Median of Blood Pressure Systolic"
+                    },
+                    "[1A6CA-DD6]": {
+                      "table": "Vital Signs",
+                      "column": "SpO2",
+                      "dim": "[Vital Signs.SpO2]",
+                      "datatype": "numeric",
+                      "columnTitle": "SpO2",
+                      "tableTitle": "Vital Signs",
+                      "agg": "median",
+                      "title": "Median of SpO2"
+                    }
+                  },
+                  "columnTitle": "Formula",
+                  "datatype": "numeric",
+                  "title": "Is Hypoxemic or Hypotensive",
+                  "datasource": {
+                    "fullname": "live:EMS",
+                    "id": "live:EMS",
+                    "live": true,
+                    "title": "EMS"
+                  },
+                  "collapsed": false,
+                  "filter": {
+                    "equals": 1
+                  }
+                },
+                "instanceid": "C2436-F0D0-1F",
+                "panel": "scope"
+              }
+            ]
+          }
+        ],
+        "usedFormulasMapping": {}
+      },
+      "style": {
+        "scroll": false,
+        "pageSize": 25,
+        "automaticHeight": true,
+        "colors": {
+          "rows": true,
+          "columns": false,
+          "headers": false,
+          "members": false,
+          "totals": false
+        },
+        "narration": {
+          "display": "above",
+          "verbosity": "low",
+          "labels": [
+            {
+              "id": "incident_date",
+              "title": "Incident Date",
+              "singular": "Incident Date",
+              "plural": "Incident Date"
+            },
+            {
+              "id": "incident_number",
+              "title": "Incident Number",
+              "singular": "Incident Number",
+              "plural": "Incident Number"
+            },
+            {
+              "id": "first_successful_attempt",
+              "title": "First Successful Attempt",
+              "singular": "First Successful Attempt",
+              "plural": "First Successful Attempt"
+            },
+            {
+              "id": "spo2",
+              "title": "SpO2",
+              "singular": "SpO2",
+              "plural": "SpO2"
+            },
+            {
+              "id": "blood_pressure_systolic",
+              "title": "Blood Pressure Systolic",
+              "singular": "Blood Pressure Systolic",
+              "plural": "Blood Pressure Systolic"
+            }
+          ]
+        }
+      },
+      "instanceid": "F6E96-9772-A9",
+      "drillToDashboardConfig": {
+        "drilledDashboardPrefix": "_drill",
+        "drilledDashboardsFolderPrefix": "",
+        "displayFilterPane": true,
+        "displayDashboardsPane": true,
+        "displayToolbarRow": true,
+        "displayHeaderRow": true,
+        "volatile": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drillToDashboardNavigateType": 2,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "excludeFilterDims": [],
+        "includeFilterDims": [],
+        "drilledDashboardDisplayType": 2,
+        "dashboardIds": [],
+        "modalWindowResize": false,
+        "showFolderNameOnMenuSelection": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "showJTDIcon": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "forceZeroInsteadNull": false,
+        "mergeTargetDashboardFilters": false,
+        "drillToDashboardByName": false
+      },
+      "viewState": {
+        "activeTab": "filters"
+      },
+      "realTimeRefreshing": false,
+      "options": {
+        "dashboardFiltersMode": "filter",
+        "selector": false,
+        "triggersDomready": true,
+        "drillToAnywhere": true,
+        "autoUpdateOnEveryChange": true
+      },
+      "dashboardid": "6aa05d60685aed98af4b18a0"
+    }
+  ],
+  "hierarchies": []
+}
